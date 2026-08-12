@@ -150,6 +150,17 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
 
 /* 路線圖 */
 .route-img{width:100%;border-radius:14px;margin-bottom:10px}
+.mini-map{background:#fff;border-radius:14px;padding:12px;margin-bottom:10px;border:1px solid #e3e1ec}
+.mini-line{display:flex;align-items:center;gap:5px;overflow-x:auto;padding:8px 2px}
+.mini-st{min-width:70px;text-align:center;font-size:10px;color:#555}
+.mini-dot{width:14px;height:14px;border-radius:50%;background:#e63946;border:3px solid #ffd8dc;margin:0 auto 4px}
+.mini-bar{height:4px;min-width:28px;background:#e63946;border-radius:3px}
+.how-row{display:grid;grid-template-columns:34px 1fr;gap:8px;margin:8px 0}
+.how-n{width:30px;height:30px;border-radius:50%;background:#3C3489;color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px}
+.airport-plan{background:#fff;border-radius:14px;padding:12px;margin-bottom:10px;overflow-x:auto}
+.ap-flow{display:flex;align-items:center;gap:5px;min-width:600px;padding:8px 0}
+.ap-node{min-width:88px;text-align:center;background:#f4f2ff;border:1px solid #d9d4ff;border-radius:10px;padding:8px 5px;font-size:10px;line-height:1.4}
+.ap-arr{color:#534AB7;font-size:18px;font-weight:700}
 </style>
 </head>
 <body>
@@ -226,7 +237,6 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
       <div class="ib iba">現場沒有紙本議程，需使用AMEE Events／Swapcard App。免費寄物處在Foyer E、不可隔夜；建議自備水瓶。</div>
       <button class="bigbtn" onclick="gm('Austria Center Vienna Vorsorgeweg 1')">📍 開啟AMEE會場導航</button>
     </div></div>
-    <div class="ib iba">⬇️ 下方是舊版行程備份，請以最上方「最新版」與 AMEE 詳細卡為準。</div>
     <div style="display:none">
     <!-- 舊版行程備份（隱藏） -->
     <!-- 日曆總覽 -->
@@ -542,6 +552,37 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
   <div id="itrans" class="isec">
     <div class="ib ibg"><strong>🚇 每日門到門交通</strong><br>點日期展開；每一段都可按「開啟路線圖」，Google Maps 會顯示步行、站牌、月台與轉乘。當天班次與月台仍以 App／車站看板為準。</div>
 
+    <div class="card"><div class="card-hdr" onclick="tog('firsteu')"><span class="db bconf">先看</span><span class="c-title">第一次在歐洲搭車：照這6步</span><span class="chev">▾</span></div><div class="card-body open" id="firsteu">
+      <div class="how-row"><div class="how-n">1</div><div><div class="sname">出門前輸入完整地名</div><div class="sdesc">Google Maps選「大眾運輸」圖示，不只看路線號碼，也核對<strong>方向終點站</strong>與預計下車站。提早10分鐘出門。</div></div></div>
+      <div class="how-row"><div class="how-n">2</div><div><div class="sname">先有有效車票，再進月台／上車</div><div class="sdesc">App票確認已生效；紙票依城市規則打票。不要等查票員出現才買，歐洲多採不設閘門、隨機查票。</div></div></div>
+      <div class="how-row"><div class="how-n">3</div><div><div class="sname">看「路線號＋方向」</div><div class="sdesc">例如維也納U1去AMEE：紅色U1＋方向Leopoldau。回飯店則同一條U1、反方向Oberlaa。</div></div></div>
+      <div class="how-row"><div class="how-n">4</div><div><div class="sname">推車優先找電梯符號 ♿／Lift</div><div class="sdesc">不要扛推車走長扶梯。進電梯前再確認樓層標示的是所需月台與方向；尖峰時讓乘客先下再上。</div></div></div>
+      <div class="how-row"><div class="how-n">5</div><div><div class="sname">上車後立刻確認下一站</div><div class="sdesc">看車內螢幕或站名廣播；下車前一站整理包包、牽好小孩。公車／電車必要時提前按STOP。</div></div></div>
+      <div class="how-row"><div class="how-n">6</div><div><div class="sname">走錯不要慌</div><div class="sdesc">地鐵坐過站：下一站下車，依同一路線反方向搭回。搭錯公車：在安全站點下車重新導航；不要在車門關閉時衝門。</div></div></div>
+    </div></div>
+
+    <div class="card"><div class="card-hdr" onclick="tog('kidguide')"><span class="db bp">4歲</span><span class="c-title">帶4歲孩子搭車安全與省力</span><span class="chev">▾</span></div><div class="card-body" id="kidguide">
+      <div class="ib ibg">👧 維也納：未入學幼兒免費；林茲：成人有效票可免費帶未滿6歲兒童；布拉格：未滿6歲免費。護照影本與孩子護照隨身，以備年齡查驗。長途火車與跨區票仍依訂票結果。</div>
+      <div class="sdesc">• 月台上讓孩子站在你與牆面之間，遠離黃色／白色安全線。<br>• 上車順序：一位成人先上、另一位推車與孩子後上；下車相反，一位成人先下接應。<br>• 每天只安排一個「一定要完成」的主景點；下午預留休息、廁所和臨時改搭計程車的彈性。<br>• 帶折疊推車、防雨罩、小零食、水、濕紙巾、替換衣物與孩子姓名聯絡卡。<br>• 電車軌道可能與人行道共用，過街前左右都看；不要只聽車聲。</div>
+    </div></div>
+
+    <div class="mini-map">
+      <div class="sname">🔴 維也納 U1：你最常用的一條線</div>
+      <div class="mini-line"><div class="mini-st"><div class="mini-dot"></div>Oberlaa方向</div><div class="mini-bar"></div><div class="mini-st"><div class="mini-dot"></div>Hauptbahnhof<br>Adina</div><div class="mini-bar"></div><div class="mini-st"><div class="mini-dot"></div>Karlsplatz<br>轉U4</div><div class="mini-bar"></div><div class="mini-st"><div class="mini-dot"></div>Stephansplatz<br>舊城</div><div class="mini-bar"></div><div class="mini-st"><div class="mini-dot"></div>Praterstern</div><div class="mini-bar"></div><div class="mini-st"><div class="mini-dot"></div>Kaisermühlen<br>AMEE</div><div class="mini-bar"></div><div class="mini-st"><div class="mini-dot"></div>Leopoldau方向</div></div>
+      <div class="ib iba">去AMEE搭往 <strong>Leopoldau</strong>；回Adina搭往 <strong>Oberlaa</strong>。不要只看U1，方向也要一起看。</div>
+    </div>
+
+    <div class="card"><div class="card-hdr" onclick="tog('citysystems')"><span class="db bt">四城市</span><span class="c-title">地鐵／電車票怎麼買、怎麼打票</span><span class="chev">▾</span></div><div class="card-body" id="citysystems">
+      <div class="sec-lbl">🇦🇹 維也納 Vienna</div><div class="sdesc"><strong>辨認：</strong>U為地鐵、S為市郊火車、D等數字／字母為電車、公車多為數字＋A。<br><strong>買票：</strong>WienMobil App或地鐵站紅色售票機。電子票依畫面生效；需打票的空白紙票在藍色驗票機打票。機場在核心區外，不能只靠市區票。<br><strong>推車：</strong>找Lift／♿，車門旁推車標誌區停放並踩煞車。</div>
+      <button class="nb" onclick="openUrl('https://www.wienerlinien.at/web/wl-en/network-maps')">🗺️ 維也納官方路線圖</button> <button class="nb" onclick="openUrl('https://www.wienerlinien.at/web/wl-en/wienmobil-enjoy-mobile-freedom')">📱 WienMobil說明</button>
+      <div class="sec-lbl">🇦🇹 林茲 Linz</div><div class="sdesc"><strong>主力：</strong>Tram 1／2／3／4沿Hauptbahnhof—Landstraße—Hauptplatz行駛；Pöstlingbergbahn是上山觀光線。<br><strong>買票：</strong>LinzMobil App、售票機；搭乘前確認有效。4歲孩子在成人有效票規則下通常免費。上山線可能需特定票／組合票。</div>
+      <button class="nb" onclick="openUrl('https://www.linzag.at/media/dokumente/linien_1/infomaterial_1/linien-linienfahrplan.pdf')">🗺️ 林茲官方PDF</button> <button class="nb" onclick="openUrl('https://services.linzag.at/efa/')">🔎 Linz即時查車</button>
+      <div class="sec-lbl">🇦🇹 薩爾斯堡 Salzburg</div><div class="sdesc"><strong>辨認：</strong>市區多為Obus無軌電車；25號連接Hbf、市中心、Hellbrunn與Untersbergbahn。<br><strong>買票：</strong>Salzburg Verkehr App可查班次、票價並買票。若飯店提供Guest Mobility Ticket，先出示／啟用；超出適用區或跨國仍另買。上車看車頭終點、下車前按STOP。</div>
+      <button class="nb" onclick="openUrl('https://salzburg-verkehr.at/en/')">🗺️ Salzburg官方查車</button> <button class="nb" onclick="openUrl('https://salzburg-verkehr.at/fahrplaene/salzburg-verkehr-app/')">📱 官方App說明</button>
+      <div class="sec-lbl">🇨🇿 布拉格 Prague</div><div class="sdesc"><strong>辨認：</strong>Metro A綠、B黃、C紅；Tram 22去城堡，17沿河。<br><strong>買票：</strong>PID Lítačka App或地鐵站／站牌售票機。紙票第一次進地鐵驗票區或第一次上電車時只打一次；手機票要等倒數完成、顯示有效後才上車。4歲免費。<br><strong>推車：</strong>老城石板路顛簸，城堡採上山搭22、一路下坡最省力。</div>
+      <button class="nb" onclick="openUrl('https://pid.cz/en/maps-and-schematics/')">🗺️ 布拉格官方路線圖</button> <button class="nb" onclick="openUrl('https://pid.cz/en/tickets-and-fare/how-to-buy-ticket/')">🎫 購票打票教學</button>
+    </div></div>
+
     <div class="ib ibp">👩‍👧 <strong>妹妹一家：8/12晚出發，8/13早上抵達</strong></div>
     <div class="card"><div class="card-hdr" onclick="tog('tr13')"><span class="db bmei">8/13</span><span class="c-title">VIE機場→Novotel→景點→回飯店</span><span class="chev">▾</span></div><div class="card-body" id="tr13">
       <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rp">VIE行李轉盤→機場火車站</div><div class="rd">領完行李跟著綠色「Train／Bahnhof」指標下樓。ÖBB紅色售票機選 Flughafen Wien→Wien Hauptbahnhof；24小時市區票不能單獨涵蓋機場外圍段。</div></div></div>
@@ -683,6 +724,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
 <!-- 路線圖分頁 -->
 <div id="tab-transmap" class="tab">
   <div class="ib ibp">🗂️ 維也納地鐵路線圖 + 主要景點位置</div>
+  <button class="bigbtn" onclick="jumpTransport()">🚇 看更詳細交通教學與每日走法</button>
   <div class="map-wrap" style="height:350px">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d85303!2d16.37!3d48.21!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d079e5136ca3f%3A0xfdc9d5e87b4f4b5a!2sVienna!5e0!3m2!1sen!2sat!4v1" allowfullscreen loading="lazy"></iframe>
   </div>
@@ -691,12 +733,60 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
   <div class="qbtns">
     <button class="qbtn" onclick="gm('Vienna U-Bahn')">🚇 維也納地鐵圖</button>
     <button class="qbtn" onclick="gm('Praha Metro')">🚇 布拉格地鐵圖</button>
+    <button class="qbtn" onclick="openUrl('https://www.linzag.at/media/dokumente/linien_1/infomaterial_1/linien-linienfahrplan.pdf')">🚋 林茲官方圖</button>
+    <button class="qbtn" onclick="openUrl('https://salzburg-verkehr.at/en/')">🚌 薩爾斯堡查車</button>
   </div>
 </div>
 
 <!-- 機場分頁 -->
 <div id="tab-airport" class="tab">
   <div class="ib ibg" style="margin-bottom:12px">✈️ 已確認機票 · 華航 · 訂位代號：FG9E28</div>
+
+  <div class="airport-plan">
+    <div class="sname">🛬 抵達維也納後的平面流程（向右滑看完整）</div>
+    <div class="ap-flow"><div class="ap-node">✈️ 下飛機<br>Arrivals</div><div class="ap-arr">›</div><div class="ap-node">🛂 入境審查<br>Passport Control</div><div class="ap-arr">›</div><div class="ap-node">🧳 領行李<br>Baggage Claim</div><div class="ap-arr">›</div><div class="ap-node">🚪 海關出口<br>Exit / Customs</div><div class="ap-arr">›</div><div class="ap-node">🚆 Train／Bahnhof<br>下樓</div><div class="ap-arr">›</div><div class="ap-node">🎫 ÖBB售票機<br>買Railjet票</div><div class="ap-arr">›</div><div class="ap-node">🚄 Wien Hbf<br>約15分鐘</div></div>
+  </div>
+
+  <div class="card"><div class="card-hdr" onclick="tog('vie-arrive-full')"><span class="db bp">抵達</span><span class="c-title">VIE下飛機→Railjet→飯店，逐步走</span><span class="chev">▾</span></div><div class="card-body open" id="vie-arrive-full">
+    <div class="how-row"><div class="how-n">1</div><div><div class="sname">下飛機只跟「Arrivals／Baggage Claim」</div><div class="sdesc">不要跟Transfer轉機指標。帶孩子慢慢走，途中看到廁所先使用；護照拿在成人手上。</div></div></div>
+    <div class="how-row"><div class="how-n">2</div><div><div class="sname">Passport Control 入境審查</div><div class="sdesc">排非EU／All Passports隊伍。準備3本護照、回程機票、住宿資料；可能被問來幾天、住哪裡，簡單回答Holiday、14 days及飯店名稱即可。</div></div></div>
+    <div class="how-row"><div class="how-n">3</div><div><div class="sname">Baggage Claim 領行李</div><div class="sdesc">看螢幕找航班號碼對應轉盤。先取推車再拿行李；確認所有行李件數後才離開，離開管制區通常不能回去。</div></div></div>
+    <div class="how-row"><div class="how-n">4</div><div><div class="sname">Customs 海關→Arrivals Hall</div><div class="sdesc">無需申報走綠色Nothing to declare；需申報走紅色。出來就是抵達大廳，可找到ÖBB櫃檯與售票機。</div></div></div>
+    <div class="how-row"><div class="how-n">5</div><div><div class="sname">找火車：跟「Train／Bahnhof」圖示</div><div class="sdesc">不是跟CAT綠色廣告走就一定正確；你們目的地是Wien Hauptbahnhof，最簡單選<strong>ÖBB Railjet直達</strong>。火車站由抵達大廳可全程無障礙、室內通行，找Lift／電梯。</div></div></div>
+    <div class="how-row"><div class="how-n">6</div><div><div class="sname">買票：Flughafen Wien→Wien Hbf</div><div class="sdesc">在紅色ÖBB售票機選English，目的地輸入Wien Hbf；人數選2 Adults＋1 Child、輸入孩子年齡4。付款後保留紙票；若App買票，確認畫面已生效。不要只買維也納核心區24小時票。</div></div></div>
+    <div class="how-row"><div class="how-n">7</div><div><div class="sname">看月台電子板再下樓</div><div class="sdesc">找目的地經Wien Hauptbahnhof的Railjet／RJ；核對出發時間、列車號、月台。搭電梯到月台，推車上車後踩煞車，行李不要擋通道。</div></div></div>
+    <div class="how-row"><div class="how-n">8</div><div><div class="sname">Wien Hbf下車→飯店</div><div class="sdesc">妹妹一家前往Novotel：依Canettistraße出口。你們前往Leonardo：依Sonnwendgasse出口。不要急著跟人潮走，先看出口名稱再搭電梯。</div></div></div>
+    <button class="bigbtn" onclick="openUrl('https://viennaairport.com/passagiere/flughafen/flughafenplan')">🗺️ 開啟維也納機場官方互動平面圖</button>
+    <button class="nb" onclick="gd('Vienna International Airport','Novotel Wien Hauptbahnhof')">👩‍👧 機場→Novotel</button> <button class="nb" onclick="gd('Vienna International Airport','Leonardo Hotel Vienna Hauptbahnhof')">👨‍👩‍👧 機場→Leonardo</button>
+  </div></div>
+
+  <div class="airport-plan">
+    <div class="sname">🛫 返台離境平面流程（華航目前在Terminal 1A）</div>
+    <div class="ap-flow"><div class="ap-node">🚄 機場火車站</div><div class="ap-arr">›</div><div class="ap-node">⬆️ Flugterminal<br>上樓</div><div class="ap-arr">›</div><div class="ap-node">🖥️ 航班看板<br>先確認</div><div class="ap-arr">›</div><div class="ap-node">🏢 Terminal 1A<br>111–120</div><div class="ap-arr">›</div><div class="ap-node">💶 DEV退稅<br>托運品先驗證</div><div class="ap-arr">›</div><div class="ap-node">🧳 華航報到<br>托運行李</div><div class="ap-arr">›</div><div class="ap-node">🔍 安檢＋出境</div><div class="ap-arr">›</div><div class="ap-node">🚪 看螢幕找Gate</div></div>
+  </div>
+
+  <div class="card"><div class="card-hdr" onclick="tog('vie-depart-full')"><span class="db bconf">返台</span><span class="c-title">Adina→機場→華航櫃檯→退稅→登機</span><span class="chev">▾</span></div><div class="card-body open" id="vie-depart-full">
+    <div class="ib ibr"><strong>重要更正：</strong>維也納機場官方目前列華航在 <strong>Terminal 1A、Check-in 111–120</strong>。到場後仍須先看Departure航班電子板，若當日櫃檯異動，以看板為準。</div>
+    <div class="how-row"><div class="how-n">1</div><div><div class="sname">07:15–07:30離開Adina</div><div class="sdesc">CI 11:15起飛，又要退稅與帶4歲孩子，不建議08:00才離開。前一晚完成線上報到、整理退稅單、護照、信用卡與商品。</div></div></div>
+    <div class="how-row"><div class="how-n">2</div><div><div class="sname">Adina步行→Wien Hbf</div><div class="sdesc">Google Maps選步行；帶行李走平坦路線與電梯。ÖBB售票機／App買Wien Hbf→Flughafen Wien，搭Railjet直達約15分鐘。</div></div></div>
+    <div class="how-row"><div class="how-n">3</div><div><div class="sname">機場站下車→跟「Flugterminal／Departures」</div><div class="sdesc">搭電梯或手扶梯上樓。先停在大型Departure看板前，找China Airlines／CI航班，拍下Terminal、Check-in counter與Gate資訊。</div></div></div>
+    <div class="how-row"><div class="how-n">4</div><div><div class="sname">前往Terminal 1A、111–120</div><div class="sdesc">跟Terminal 1A指標走；不要直接去Terminal 3。到華航區先確認櫃檯是否已開，再決定退稅與托運順序。</div></div></div>
+    <div class="how-row"><div class="how-n">5</div><div><div class="sname">有退稅：托運商品先做DEV驗證</div><div class="sdesc">先取得登機證。於DEV自助機掃護照與登機證，畫面選出放在托運行李內的商品；需要人工檢查時，到DEV／Customs櫃檯並出示商品。<strong>驗證完成前不要把退稅商品托運。</strong>手提商品通常在安檢後、登機門附近辦理驗證。</div></div></div>
+    <div class="how-row"><div class="how-n">6</div><div><div class="sname">華航報到、托運</div><div class="sdesc">準備護照、訂位資料與登機證。確認行李直掛TPE、領取行李條；詢問推車可用到哪裡及是否在登機門交運。</div></div></div>
+    <div class="how-row"><div class="how-n">7</div><div><div class="sname">Security安檢→Passport Control出境</div><div class="sdesc">液體與電子用品依現場規則取出；孩子的水可先問安檢。過安檢後再經非申根出境查驗，護照與登機證不要收進大行李。</div></div></div>
+    <div class="how-row"><div class="how-n">8</div><div><div class="sname">看螢幕找登機門，不要只相信舊截圖</div><div class="sdesc">Gate可能稍後才公布或臨時更改。抵達登機門後再買水、上廁所；最晚於登機時間前回到Gate。</div></div></div>
+    <button class="bigbtn" onclick="openUrl('https://viennaairport.com/passagiere/flughafen/flughafenplan')">🗺️ 開啟官方機場平面圖</button>
+    <button class="nb" onclick="openUrl('https://viennaairport.com/en/vat-refund')">💶 官方退稅流程</button> <button class="nb" onclick="openUrl('https://viennaairport.com/en/passengers/airport/airlines')">🛫 查航空公司航廈</button> <button class="nb" onclick="gd('Adina Serviced Apartments Vienna Belvedere','Vienna International Airport Terminal 1A')">📍 Adina→T1A</button>
+  </div></div>
+
+  <div class="card"><div class="card-hdr" onclick="tog('vie-lost')"><span class="db bext">迷路</span><span class="c-title">在機場找不到路時，直接照這張卡</span><span class="chev">▾</span></div><div class="card-body" id="vie-lost">
+    <div class="ib iba">抵達找火車，向工作人員說：<br><strong>Excuse me, where is the ÖBB train station for the Railjet to Wien Hauptbahnhof?</strong></div>
+    <div class="ib iba">返台找華航，說：<br><strong>Excuse me, where is Terminal 1A and the China Airlines check-in counter?</strong></div>
+    <div class="ib iba">找退稅，說：<br><strong>Where is the DEV tax-free validation area? The goods are in my checked baggage.</strong></div>
+    <div class="sdesc">機場服務櫃檯位於出發層Terminal 1、Terminal 3及抵達大廳；機場客服電話：+43 1 7007 0。迷路時不要拖著孩子一直走，停在航班看板或Information「i」附近請工作人員指路。</div>
+  </div></div>
+
+  <div style="display:none">
 
   <div class="card">
     <div class="card-hdr" onclick="tog('ap-dep')"><span class="db bt">去程</span><span class="c-title">華航 CI · 8/12(三) TPE 23:30出發</span><span class="chev">▾</span></div>
@@ -718,6 +808,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
       <div class="ap-step"><span class="ap-step-n">2</span><span class="ap-t">辦理退稅（Tax Refund）</span><div class="ap-d">在海關蓋章，再到退稅窗口領現</div></div>
       <div class="ap-step"><span class="ap-step-n">3</span><span class="ap-t">11:15 起飛返台</span><div class="ap-d">9/1(二) 05:30抵達桃園T1</div></div>
     </div>
+  </div>
   </div>
 </div>
 
@@ -782,6 +873,8 @@ function tog(id){
 
 function gm(q){ window.open('https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q),'_blank'); }
 function gd(o,d){ window.open('https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(o)+'&destination='+encodeURIComponent(d)+'&travelmode=transit','_blank'); }
+function openUrl(u){ window.open(u,'_blank'); }
+function jumpTransport(){ showTab('plan'); ishow('itrans','it4'); window.scrollTo(0,0); }
 
 function toTWD(){ var v=parseFloat(document.getElementById('eurIn').value); document.getElementById('twdIn').value=isNaN(v)?'':Math.round(v*rate); }
 function toEUR(){ var v=parseFloat(document.getElementById('twdIn').value); document.getElementById('eurIn').value=isNaN(v)?'':(v/rate).toFixed(2); }
