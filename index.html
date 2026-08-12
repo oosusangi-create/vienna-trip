@@ -155,9 +155,9 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
 <body>
 
 <div class="hdr">
-  <span class="hdr-badge">v6 · 2026</span>
-  <h1>🇦🇹 維也納親子完整攻略</h1>
-  <p>8/12–8/31 · 雙家庭同遊 · 維也納+格拉茲+布拉格 · AMEE整合版</p>
+  <span class="hdr-badge">最終版 · 2026</span>
+  <h1>🇦🇹🇨🇿 奧捷親子大環線</h1>
+  <p>8/12–8/26 · 維也納＋林茲＋薩爾斯堡＋布拉格 · AMEE整合版</p>
 </div>
 
 <!-- 地圖分頁 -->
@@ -183,8 +183,6 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
       <button class="qbtn" style="text-align:left" onclick="gm('Leonardo Hotel Vienna Hauptbahnhof')">🏨 兩家8/18–19 · Leonardo Wien Hbf ✅</button>
       <button class="qbtn" style="text-align:left" onclick="gm('The Gold Bank Prague')">🏨 兩家8/19–22 · The Gold Bank Prague ✅</button>
       <button class="qbtn" style="text-align:left" onclick="gm('Adina Serviced Apartments Vienna Belvedere')">🏨 兩家8/22–25 · Adina Belvedere ✅</button>
-      <button class="qbtn" style="text-align:left" onclick="gm('Hotel max70 Salzburg')">🏨 你家8/25–29 · HOTEL max70 ✅</button>
-      <button class="qbtn" style="text-align:left" onclick="gm('Adina Serviced Apartments Vienna Belvedere')">🏨 你家8/29–31 · Adina Vienna ✅</button>
     </div>
   </div>
 </div>
@@ -196,11 +194,41 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
     <div class="itab" id="it1" onclick="ishow('ihotel','it1')">🏨 住宿</div>
     <div class="itab" id="it2" onclick="ishow('ifood','it2')">🍽️ 美食</div>
     <div class="itab" id="it3" onclick="ishow('isave','it3')">💰 省錢</div>
-    <div class="itab" id="it4" onclick="ishow('imust','it4')">📍 必去</div>
+    <div class="itab" id="it4" onclick="ishow('itrans','it4')">🚇 每日交通</div>
   </div>
 
   <!-- 行程子分頁 -->
   <div id="iday" class="isec show">
+    <div class="ib ibg"><strong>📅 奧捷大環線 14 天最終版</strong><br>8/12–8/26 · 維也納＋林茲＋薩爾斯堡＋布拉格</div>
+    <div class="card"><div class="card-hdr" onclick="tog('newfinal')"><span class="db bconf">最新版</span><span class="c-title">點此查看 8/12–8/26 完整最終行程</span><span class="chev">▾</span></div><div class="card-body" id="newfinal">
+      <div class="tbox"><div class="tbox-t">8/12（三）台北出發</div>23:30 華航 CI 班機起飛前往維也納。</div>
+      <div class="tbox"><div class="tbox-t">8/13（四）維也納初訪</div>抵達→Novotel Wien Hbf寄放行李→10:30軍事史博物館HGM→12:30 Ribs of Vienna→14:00霍夫堡→14:30 Café Demel→Böhmerwald晚餐。</div>
+      <div class="tbox"><div class="tbox-t">8/14（五）林茲</div>08:57 IC546（票面月台8A–B）→10:28 Linz Hbf→Park Inn寄放行李→登山鐵道與Grottenbahn→主廣場、Café Jindrak→Donaulände。</div>
+      <div class="tbox"><div class="tbox-t">8/15（六）林茲科技藝術</div>JINDRAK早餐→阿爾斯電子藝術中心→林茲城堡博物館→新主教座堂→Wirtshaus Keintzel。</div>
+      <div class="tbox"><div class="tbox-t">8/16（日）薩爾斯堡</div>10:14 IC1142→11:38 Salzburg Süd→轉S-Bahn至Hbf→Hotel Cocoon寄放行李→Café Mozart→薩爾斯堡要塞→米拉貝爾花園→Soja Ramen、SPAR。</div>
+      <div class="tbox"><div class="tbox-t">8/17（一）薩爾斯堡郊區</div>09:15搭25號至溫特斯山纜車→11:30海爾布倫惡作劇噴泉→14:00自然之屋→17:00僧侶山→Mr Wen Asia Food。</div>
+      <div class="tbox"><div class="tbox-t">8/18（二）重返維也納</div>10:00 ICE1211→12:47 Wien Hbf→Leonardo寄放行李、會合→司法宮、國會、市政廳、Landtmann→14:30科技博物館→卡爾教堂、金色大廳→Magic Noodle。</div>
+      <div class="tbox"><div class="tbox-t">8/19（三）布拉格</div>06:39 RegioJet（第3車廂／61–66座）→10:56 Prague→The Gold Bank→火藥塔、天文鐘、泰恩教堂、哈維爾市集、無限書塔→Tram17至跳舞的房子。</div>
+      <div class="tbox"><div class="tbox-t">8/20（四）布拉格城堡</div>Tram22上山→城堡B路線→小城區、約翰藍儂牆、坎帕島→查理大橋→烤豬腳與啤酒。</div>
+      <div class="tbox"><div class="tbox-t">8/21（五）布拉格</div>萊特納公園→Café Louvre→伏爾塔瓦河夕陽遊船。</div>
+      <div class="tbox"><div class="tbox-t">8/22（六）返回維也納</div>11:00退房、瓦茨拉夫廣場→12:30 Praha hl.n.→13:01 RegioJet（第3車廂／61–66座）→17:21 Vienna→Adina入住→百水公寓→Plachutta Wollzeile。</div>
+      <div class="tbox"><div class="tbox-t">8/23（日）AMEE＋家人行程</div>AMEE：Adina→U1 Südtiroler Platz–Hauptbahnhof，搭往Leopoldau→Kaisermühlen–VIC下車→依Austria Center指標步行至Entrance Hall。家人：ERZHERZOGTUM→自然史博物館→藝術史博物館→Tram D至美景宮→Figlmüller（已預約）。</div>
+      <div class="tbox"><div class="tbox-t">8/24（一）美泉宮與精品採購</div>美泉宮、Café Residenz→動物園→U4至Schwedenplatz→Fenster-Café→聖斯德望主教座堂→Kohlmarkt／Graben。</div>
+      <div class="tbox"><div class="tbox-t">8/25（二）返台</div>建議07:15–07:30退房→Wien Hbf搭Railjet至Flughafen Wien→退稅與報到→11:15華航起飛。08:00才離開可能偏趕。</div>
+      <div class="tbox"><div class="tbox-t">8/26（三）抵達台灣</div>清晨／上午抵達桃園機場。</div>
+    </div></div>
+    <div class="card"><div class="card-hdr" onclick="tog('amee23detail')"><span class="db bconf">AMEE</span><span class="c-title">8/23 Adina→會場詳細走法與報到</span><span class="chev">▾</span></div><div class="card-body" id="amee23detail">
+      <div class="ib ibr"><strong>會場：</strong>Austria Center Vienna，Vorsorgeweg 1, 1220 Vienna<br><strong>8/23報到：</strong>08:00–21:30，Entrance Hall</div>
+      <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">出發</div><div class="rp">Adina步行至U1</div><div class="rd">從Karl-Popper-Straße 6步行約7–10分鐘，到「Südtiroler Platz–Hauptbahnhof」站，找紅色U1標誌。</div></div></div>
+      <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">不用轉車</div><div class="rp">U1往Leopoldau方向</div><div class="rd">在「Kaisermühlen–VIC」下車；依Austria Center Vienna／VIC指標出站，步行約5–8分鐘到Entrance Hall。</div></div></div>
+      <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">到場</div><div class="rp">掃個人QR Code列印名牌</div><div class="rd">在AMEE Events／Swapcard App開啟個人QR Code，到自助機掃碼。領到的名牌可作會議期間維也納市區交通票。</div></div></div>
+      <div class="ib ibp">16:30–17:15：First-time attendee orientation，Hall F／Level 0。<br>19:00起：Networking Reception，Exhibition Hall。</div>
+      <div class="ib iba">現場沒有紙本議程，需使用AMEE Events／Swapcard App。免費寄物處在Foyer E、不可隔夜；建議自備水瓶。</div>
+      <button class="bigbtn" onclick="gm('Austria Center Vienna Vorsorgeweg 1')">📍 開啟AMEE會場導航</button>
+    </div></div>
+    <div class="ib iba">⬇️ 下方是舊版行程備份，請以最上方「最新版」與 AMEE 詳細卡為準。</div>
+    <div style="display:none">
+    <!-- 舊版行程備份（隱藏） -->
     <!-- 日曆總覽 -->
     <div style="background:#1e1e1e;color:#e8e8e8;border-radius:12px;padding:12px 13px;font-size:11px;line-height:2;margin-bottom:10px">
       <div style="color:#6C5CE7;font-weight:700;margin-bottom:4px">📅 雙家庭完整行程 · FG9E28</div>
@@ -442,12 +470,13 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
     </div>
   </div>
 
+    </div>
   <!-- 住宿子分頁 -->
   <div id="ihotel" class="isec">
     <div class="ib ibg">✅ <strong>住宿全部確認！</strong><br>
     你妹：Novotel Hbf→Park Inn Linz→Cocoon Salzburg→Leonardo Hbf<br>
     兩家：The Gold Bank Prague→Adina Belvedere Vienna<br>
-    你家：HOTEL max70 Salzburg→Adina Vienna</div>
+    8/22–8/25：Adina Serviced Apartments Vienna</div>
 
     <div class="sec-lbl">你妹家（8/13–8/18）</div>
     <div class="hcard confirmed"><div class="hnm">Novotel Wien Hauptbahnhof <span class="hrec" style="background:#E1F5EE;color:#0F6E56">8/13–14</span></div><div class="hdet">📍 Wien Hbf步行1分 · 4星 · 兒童遊戲區+操場 · 12歲以下早餐免費</div><div class="htags"><span class="ht htm">車站1分</span><span class="ht htf">親子遊戲區</span><span class="ht htp">€96–140/晚</span></div><button class="nb" onclick="gm('Novotel Wien Hauptbahnhof')">📍 導航</button></div>
@@ -459,9 +488,9 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
     <div class="hcard confirmed"><div class="hnm">The Gold Bank Prague ✅ <span class="hrec" style="background:#E1F5EE;color:#0F6E56">8/19–22</span></div><div class="hdet">📍 Praha 1舊城核心 · 步行到天文鐘、查理大橋</div><div class="htags"><span class="ht htm">舊城核心</span><span class="ht htf">親子ok</span></div><button class="nb" onclick="gm('The Gold Bank Prague')">📍 導航</button></div>
     <div class="hcard confirmed"><div class="hnm">Adina Serviced Apartments Vienna ✅ <span class="hrec" style="background:#E1F5EE;color:#0F6E56">8/22–25</span></div><div class="hdet">📍 Karl-Popper-Straße 6 · U1 Südtiroler Platz旁 · 評分8.6 · 有廚房！<br>✓ 無需預付款 · 入住前一天14:00前免費取消</div><div class="htags"><span class="ht htk">完整廚房</span><span class="ht htm">地鐵5分</span><span class="ht htp">€88–120/晚</span></div><button class="nb" onclick="gm('Adina Serviced Apartments Vienna Belvedere')">📍 導航</button></div>
 
-    <div class="sec-lbl">你家（8/25–8/31）— 已確認</div>
+    <div style="display:none"><div class="sec-lbl">舊版延伸住宿（已取消）</div>
     <div class="hcard confirmed"><div class="hnm">HOTEL max70 Salzburg ✅ <span class="hrec" style="background:#E1F5EE;color:#0F6E56">8/25–29</span></div><div class="hdet">📍 Maxglaner Hauptstrasse 70 · 4晚 · Comfort Plus Balcony<br>2位成人＋1位4歲兒童 · 總價 €613.58<br>入住15:00–22:30 · 退房07:00–10:30</div><div class="htags"><span class="ht htm">已確認</span><span class="ht htk">有陽台</span><span class="ht htp">€613.58</span></div><button class="nb" onclick="gm('Hotel max70 Salzburg')">📍 導航</button></div>
-    <div class="hcard confirmed"><div class="hnm">Adina Serviced Apartments Vienna ✅ <span class="hrec" style="background:#E1F5EE;color:#0F6E56">8/29–31</span></div><div class="hdet">確認號碼：<strong>CI60J2YK</strong><br>訂房人：TianYi Huang<br>入住：2026/8/29（六）· 退房：2026/8/31（一）<br>Family Studio · 23–28㎡ · 2晚<br>2位成人＋1位兒童</div><div class="htags"><span class="ht htm">已確認</span><span class="ht htk">Family Studio</span><span class="ht htp">2晚</span></div><button class="nb" onclick="gm('Adina Serviced Apartments Vienna Belvedere')">📍 導航</button></div>
+    <div class="hcard confirmed"><div class="hnm">Adina Serviced Apartments Vienna ✅ <span class="hrec" style="background:#E1F5EE;color:#0F6E56">8/29–31</span></div><div class="hdet">舊版資料</div></div></div>
   </div>
 
   <!-- 美食子分頁 -->
@@ -509,8 +538,103 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
     </div>
   </div>
 
-  <!-- 必去子分頁 -->
-  <div id="imust" class="isec">
+  <!-- 每日門到門交通 -->
+  <div id="itrans" class="isec">
+    <div class="ib ibg"><strong>🚇 每日門到門交通</strong><br>點日期展開；每一段都可按「開啟路線圖」，Google Maps 會顯示步行、站牌、月台與轉乘。當天班次與月台仍以 App／車站看板為準。</div>
+
+    <div class="ib ibp">👩‍👧 <strong>妹妹一家：8/12晚出發，8/13早上抵達</strong></div>
+    <div class="card"><div class="card-hdr" onclick="tog('tr13')"><span class="db bmei">8/13</span><span class="c-title">VIE機場→Novotel→景點→回飯店</span><span class="chev">▾</span></div><div class="card-body" id="tr13">
+      <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rp">VIE行李轉盤→機場火車站</div><div class="rd">領完行李跟著綠色「Train／Bahnhof」指標下樓。ÖBB紅色售票機選 Flughafen Wien→Wien Hauptbahnhof；24小時市區票不能單獨涵蓋機場外圍段。</div></div></div>
+      <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rp">Railjet直達 Wien Hbf</div><div class="rd">看電子看板找 Wien Hauptbahnhof 方向的 Railjet；約15分鐘。到站後依「Canettistraße」出口，Novotel就在車站旁。</div><button class="nb" onclick="gd('Vienna International Airport','Novotel Wien Hauptbahnhof')">🗺️ 機場→飯店</button></div></div>
+      <div class="tbox"><div class="tbox-t">當日順序</div>Novotel→HGM軍事史博物館→Ribs of Vienna→霍夫堡→Demel→Böhmerwald→Novotel。</div>
+      <button class="nb" onclick="gd('Novotel Wien Hauptbahnhof','Heeresgeschichtliches Museum Vienna')">🗺️ 飯店→HGM</button> <button class="nb" onclick="gd('Böhmerwald Vienna','Novotel Wien Hauptbahnhof')">🏨 晚餐→飯店</button>
+    </div></div>
+
+    <div class="card"><div class="card-hdr" onclick="tog('tr14')"><span class="db bmei">8/14</span><span class="c-title">Novotel→林茲→Park Inn→回飯店</span><span class="chev">▾</span></div><div class="card-body" id="tr14">
+      <div class="tbox"><div class="tbox-t">08:57 IC546</div>Novotel退房→步行至Wien Hbf→看電子板確認IC546及月台8A–B→10:28 Linz Hbf。</div>
+      <div class="rd">Linz Hbf出站後搭Tram 1／2／3／4往市中心，在「Mozartkreuzung」下車，步行約5分鐘至Park Inn寄放行李。</div>
+      <button class="nb" onclick="gd('Linz Hauptbahnhof','Park Inn by Radisson Linz')">🗺️ Linz站→飯店</button>
+      <div class="tbox"><div class="tbox-t">當日順序</div>Park Inn→Hauptplatz→Pöstlingbergbahn／Grottenbahn→Café Jindrak→Donaulände→Park Inn。</div>
+      <button class="nb" onclick="gd('Donaulände Linz','Park Inn by Radisson Linz')">🏨 河畔→飯店</button>
+    </div></div>
+
+    <div class="card"><div class="card-hdr" onclick="tog('tr15')"><span class="db bmei">8/15</span><span class="c-title">林茲市區一日＋回Park Inn</span><span class="chev">▾</span></div><div class="card-body" id="tr15">
+      <div class="tbox"><div class="tbox-t">步行＋電車最簡單</div>Park Inn→JINDRAK Landstraße 70→Tram至Hauptplatz→步行過橋到Ars Electronica→林茲城堡→新主教座堂→Wirtshaus Keintzel→Park Inn。</div>
+      <button class="nb" onclick="gd('Park Inn by Radisson Linz','Jindrak Landstraße 70 Linz')">🗺️ 飯店→早餐</button> <button class="nb" onclick="gd('Wirtshaus Keintzel Linz','Park Inn by Radisson Linz')">🏨 晚餐→飯店</button>
+    </div></div>
+
+    <div class="card"><div class="card-hdr" onclick="tog('tr16')"><span class="db bmei">8/16</span><span class="c-title">Park Inn→Salzburg Süd→Cocoon→回飯店</span><span class="chev">▾</span></div><div class="card-body" id="tr16">
+      <div class="rd">退房後從Park Inn搭Tram至Linz Hbf；10:14搭IC1142。11:38 Salzburg Süd下車後，依電子板搭往Salzburg Hbf的S-Bahn；到Hbf出站，Cocoon在站旁。</div>
+      <button class="nb" onclick="gd('Salzburg Süd','Cocoon Salzburg')">🗺️ 南站→Cocoon</button>
+      <div class="tbox"><div class="tbox-t">當日順序</div>Cocoon→糧食胡同／Café Mozart→薩爾斯堡要塞→米拉貝爾花園→Soja Ramen→Hbf SPAR→步行回Cocoon。</div>
+      <button class="nb" onclick="gd('Soja Ramen Salzburg','Cocoon Salzburg')">🏨 晚餐→飯店</button>
+    </div></div>
+
+    <div class="card"><div class="card-hdr" onclick="tog('tr17s')"><span class="db bmei">8/17</span><span class="c-title">Cocoon→25號公車景點→回飯店</span><span class="chev">▾</span></div><div class="card-body" id="tr17s">
+      <div class="rd">Cocoon步行至Salzburg Hbf站前公車區，搭25號往Untersbergbahn。先在纜車站下車；回程同線在Schloss Hellbrunn下車。之後25號回市區，前往Haus der Natur與Mönchsberg。</div>
+      <button class="nb" onclick="gd('Cocoon Salzburg','Untersbergbahn')">🗺️ 飯店→纜車</button>
+      <div class="rd">晚餐Mr Wen後，用Google Maps選大眾運輸回Salzburg Hbf，再步行回Cocoon。</div>
+      <button class="nb" onclick="gd('Mr Wen Asia Food Salzburg','Cocoon Salzburg')">🏨 晚餐→飯店</button>
+    </div></div>
+
+    <div class="ib ibp">👨‍👩‍👧 <strong>你們一家：8/17晚出發，8/18抵達；妹妹一家同日由薩爾斯堡回維也納</strong></div>
+    <div class="card"><div class="card-hdr" onclick="tog('tr18')"><span class="db bconf">8/18</span><span class="c-title">你們VIE→Leonardo；妹妹Salzburg→Leonardo</span><span class="chev">▾</span></div><div class="card-body" id="tr18">
+      <div class="sec-lbl">你們一家</div><div class="rd">VIE領行李→跟Train／Bahnhof下樓→買Flughafen Wien→Wien Hbf票→搭Railjet直達Wien Hbf→依Sonnwendgasse出口步行約3–5分鐘到Leonardo Hotel寄放行李。</div>
+      <button class="nb" onclick="gd('Vienna International Airport','Leonardo Hotel Vienna Hauptbahnhof')">🗺️ VIE→Leonardo</button>
+      <div class="sec-lbl">妹妹一家</div><div class="rd">Cocoon退房→步行Salzburg Hbf→10:00 ICE1211→12:47 Wien Hbf→Sonnwendgasse出口→步行至Leonardo，兩家會合。</div>
+      <div class="tbox"><div class="tbox-t">下午／晚上</div>司法宮等市區景點→科技博物館→卡爾教堂／金色大廳→Magic Noodle→Leonardo。</div>
+      <button class="nb" onclick="gd('Magic Noodle Vienna','Leonardo Hotel Vienna Hauptbahnhof')">🏨 晚餐→飯店</button>
+    </div></div>
+
+    <div class="card"><div class="card-hdr" onclick="tog('tr19')"><span class="db bpg">8/19</span><span class="c-title">Leonardo→RegioJet→The Gold Bank→回飯店</span><span class="chev">▾</span></div><div class="card-body" id="tr19">
+      <div class="rd">前一晚打包。約05:50從Leonardo步行到Wien Hbf，找RegioJet 06:39與月台；第3車廂61–66座。10:56抵達Praha hl.n.後，步行約10–15分鐘或搭電車至The Gold Bank寄放行李。</div>
+      <button class="nb" onclick="gd('Praha hlavní nádraží','The Gold Bank Prague')">🗺️ 布拉格站→飯店</button>
+      <div class="tbox"><div class="tbox-t">回飯店</div>跳舞的房子附近搭Tram 17往市中心，下車後依Google Maps步行至The Gold Bank。</div>
+      <button class="nb" onclick="gd('Dancing House Prague','The Gold Bank Prague')">🏨 跳舞的房子→飯店</button>
+    </div></div>
+
+    <div class="card"><div class="card-hdr" onclick="tog('tr20')"><span class="db bpg">8/20</span><span class="c-title">The Gold Bank→城堡→查理大橋→回飯店</span><span class="chev">▾</span></div><div class="card-body" id="tr20">
+      <div class="rd">飯店步行至Jindřišská／Václavské náměstí一帶站牌，搭Tram 22往城堡方向，於Pražský hrad下車。一路下坡玩至小城與查理大橋。</div>
+      <button class="nb" onclick="gd('The Gold Bank Prague','Prague Castle')">🗺️ 飯店→城堡</button>
+      <div class="rd">晚餐後從老城區步行約15–20分鐘回The Gold Bank；小孩累可直接叫Bolt。</div>
+      <button class="nb" onclick="gd('Charles Bridge Prague','The Gold Bank Prague')">🏨 查理大橋→飯店</button>
+    </div></div>
+
+    <div class="card"><div class="card-hdr" onclick="tog('tr21')"><span class="db bpg">8/21</span><span class="c-title">公園→Café Louvre→遊船→回飯店</span><span class="chev">▾</span></div><div class="card-body" id="tr21">
+      <div class="tbox"><div class="tbox-t">順序</div>The Gold Bank→萊特納公園→Café Louvre→遊船碼頭→The Gold Bank。</div>
+      <button class="nb" onclick="gd('The Gold Bank Prague','Letná Park Prague')">🗺️ 飯店→公園</button> <button class="nb" onclick="gd('Prague Boats','The Gold Bank Prague')">🏨 碼頭→飯店</button>
+    </div></div>
+
+    <div class="card"><div class="card-hdr" onclick="tog('tr22')"><span class="db bp">8/22</span><span class="c-title">The Gold Bank→Praha hl.n.→Adina</span><span class="chev">▾</span></div><div class="card-body" id="tr22">
+      <div class="rd">11:00退房，可先寄行李；逛瓦茨拉夫廣場後，最晚12:30走到Praha hl.n.。13:01 RegioJet→17:21 Vienna。請確認票面抵達站；若是Wien Hbf，依Sonnwendgasse／Canettistraße出口，步行約5–10分鐘到Adina。</div>
+      <button class="nb" onclick="gd('Wien Hauptbahnhof','Adina Serviced Apartments Vienna Belvedere')">🗺️ Wien Hbf→Adina</button>
+      <div class="rd">百水公寓與Plachutta晚餐後，搭大眾運輸回Wien Hbf一帶，再步行回Adina。</div>
+      <button class="nb" onclick="gd('Plachutta Wollzeile','Adina Serviced Apartments Vienna Belvedere')">🏨 晚餐→Adina</button>
+    </div></div>
+
+    <div class="card"><div class="card-hdr" onclick="tog('tr23')"><span class="db bconf">8/23</span><span class="c-title">AMEE與家人兩條路線＋回Adina</span><span class="chev">▾</span></div><div class="card-body" id="tr23">
+      <div class="sec-lbl">你去AMEE</div><div class="rd">Adina→U1 Südtiroler Platz–Hauptbahnhof→往Leopoldau→Kaisermühlen–VIC→步行Austria Center。回程原路搭U1往Oberlaa，在Südtiroler Platz–Hauptbahnhof下車→步行Adina。</div>
+      <button class="nb" onclick="gd('Adina Serviced Apartments Vienna Belvedere','Austria Center Vienna')">🗺️ Adina→AMEE</button> <button class="nb" onclick="gd('Austria Center Vienna','Adina Serviced Apartments Vienna Belvedere')">🏨 AMEE→Adina</button>
+      <div class="sec-lbl">家人</div><div class="rd">Adina→U1到Karlsplatz→轉U2／步行博物館區→自然史、藝術史博物館→Tram D至Schloss Belvedere→Figlmüller→U1回Hauptbahnhof→Adina。</div>
+      <button class="nb" onclick="gd('Figlmüller Wollzeile','Adina Serviced Apartments Vienna Belvedere')">🏨 晚餐→Adina</button>
+    </div></div>
+
+    <div class="card"><div class="card-hdr" onclick="tog('tr24')"><span class="db bp">8/24</span><span class="c-title">Adina→美泉宮→舊城→回飯店</span><span class="chev">▾</span></div><div class="card-body" id="tr24">
+      <div class="rd">Adina→U1 Südtiroler Platz至Karlsplatz→轉U4往Hütteldorf→Schönbrunn下車→步行皇宮。動物園在園區較深處，預留步行時間。</div>
+      <button class="nb" onclick="gd('Adina Serviced Apartments Vienna Belvedere','Schönbrunn Palace')">🗺️ Adina→美泉宮</button>
+      <div class="rd">傍晚U4由Hietzing／Schönbrunn往Heiligenstadt至Schwedenplatz→Fenster-Café、教堂、精品街。回程Stephansplatz搭U1往Oberlaa，在Südtiroler Platz下車。</div>
+      <button class="nb" onclick="gd('Stephansplatz Vienna','Adina Serviced Apartments Vienna Belvedere')">🏨 舊城→Adina</button>
+    </div></div>
+
+    <div class="card"><div class="card-hdr" onclick="tog('tr25')"><span class="db bconf">8/25</span><span class="c-title">Adina→VIE機場</span><span class="chev">▾</span></div><div class="card-body" id="tr25">
+      <div class="ib ibr">CI 11:15起飛且需退稅，建議07:15–07:30離開，不要等到08:00。</div>
+      <div class="rd">Adina退房→帶行李步行Wien Hbf→ÖBB App／紅色售票機買Wien Hbf→Flughafen Wien→搭Railjet直達機場→跟Flugterminal指標上樓。市區票不能單獨當完整機場票。</div>
+      <button class="nb" onclick="gd('Adina Serviced Apartments Vienna Belvedere','Vienna International Airport')">🗺️ Adina→VIE機場</button>
+    </div></div>
+  </div>
+
+  <!-- 舊必去頁（不再顯示） -->
+  <div id="imust" class="isec" style="display:none">
     <div class="ib ibg" style="margin-bottom:10px">⭐ 維也納親子必去路線（09:00–18:00）</div>
     <div class="must-item">
       <div class="must-t">🌅 早上</div>
@@ -575,21 +699,21 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
   <div class="ib ibg" style="margin-bottom:12px">✈️ 已確認機票 · 華航 · 訂位代號：FG9E28</div>
 
   <div class="card">
-    <div class="card-hdr" onclick="tog('ap-dep')"><span class="db bt">去程</span><span class="c-title">CI0063 · 8/17(一) TPE 23:30出發</span><span class="chev">▾</span></div>
+    <div class="card-hdr" onclick="tog('ap-dep')"><span class="db bt">去程</span><span class="c-title">華航 CI · 8/12(三) TPE 23:30出發</span><span class="chev">▾</span></div>
     <div class="card-body" id="ap-dep">
       <div class="ib ibp">桃園 第1航廈（T1）→ 維也納 第3航廈（T3）· 飛行13小時</div>
       <div class="ap-step"><span class="ap-step-n">1</span><span class="ap-t">20:00前抵達機場</span><div class="ap-d">帶小孩建議提早！華航在桃園T1報到，計程車或機捷A1</div></div>
       <div class="ap-step"><span class="ap-step-n">2</span><span class="ap-t">辦理報到 · 行李托運</span><div class="ap-d">華航自助報到機或到指定櫃台，確認訂位代號FG9E28</div></div>
       <div class="ap-step"><span class="ap-step-n">3</span><span class="ap-t">海關 · 安全檢查</span><div class="ap-d">先確認PIN碼、充電器、嬰兒用品放隨身行李</div></div>
       <div class="ap-step"><span class="ap-step-n">4</span><span class="ap-t">23:30 起飛！</span><div class="ap-d">告訴華航帶小孩，可優先登機。華航有兒童餐（出發前72小時預訂）</div></div>
-      <div class="ap-step"><span class="ap-step-n">5</span><span class="ap-t">8/18 06:30 抵達VIE T3</span><div class="ap-d">出海關→領行李→跟你妹會合！搭S-Bahn或計程車到Leonardo Hotel</div></div>
+      <div class="ap-step"><span class="ap-step-n">5</span><span class="ap-t">8/13 抵達VIE T3</span><div class="ap-d">出海關→領行李→前往Novotel Wien Hauptbahnhof寄放行李</div></div>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-hdr" onclick="tog('ap-ret')"><span class="db bconf">回程</span><span class="c-title">CI0064 · 8/31(一) VIE 11:15出發</span><span class="chev">▾</span></div>
+    <div class="card-hdr" onclick="tog('ap-ret')"><span class="db bconf">回程</span><span class="c-title">華航 CI · 8/25(二) VIE 11:15出發</span><span class="chev">▾</span></div>
     <div class="card-body" id="ap-ret">
-      <div class="ib ibp">維也納 T3 → 桃園 T1 · 9/1(二) 05:30抵台</div>
+      <div class="ib ibp">維也納 T3 → 桃園 T1 · 8/26(三)抵台</div>
       <div class="ap-step"><span class="ap-step-n">1</span><span class="ap-t">08:30前到達VIE機場</span><div class="ap-d">Wien Hbf搭S7→機場約25分€4.2，或計程車€35–45</div></div>
       <div class="ap-step"><span class="ap-step-n">2</span><span class="ap-t">辦理退稅（Tax Refund）</span><div class="ap-d">在海關蓋章，再到退稅窗口領現</div></div>
       <div class="ap-step"><span class="ap-step-n">3</span><span class="ap-t">11:15 起飛返台</span><div class="ap-d">9/1(二) 05:30抵達桃園T1</div></div>
@@ -632,7 +756,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
 <script>
 var rate = 36.79;
 var TABS = ['map','plan','fx','transmap','airport','sos'];
-var ISECS = ['iday','ihotel','ifood','isave','imust'];
+var ISECS = ['iday','ihotel','ifood','isave','itrans'];
 
 function showTab(n){
   TABS.forEach(function(t){
@@ -657,6 +781,7 @@ function tog(id){
 }
 
 function gm(q){ window.open('https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q),'_blank'); }
+function gd(o,d){ window.open('https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(o)+'&destination='+encodeURIComponent(d)+'&travelmode=transit','_blank'); }
 
 function toTWD(){ var v=parseFloat(document.getElementById('eurIn').value); document.getElementById('twdIn').value=isNaN(v)?'':Math.round(v*rate); }
 function toEUR(){ var v=parseFloat(document.getElementById('twdIn').value); document.getElementById('eurIn').value=isNaN(v)?'':(v/rate).toFixed(2); }
@@ -687,9 +812,7 @@ function updateHotelFx(){
     ['Cocoon Salzburg（2晚）',180],
     ['Leonardo Wien Hbf（1晚）',89],
     ['The Gold Bank Prague（3晚）',450],
-    ['Adina Belvedere Vienna（3晚）',300],
-    ['HOTEL max70 Salzburg（4晚）',613.58],
-    ['Adina Vienna（2晚）',240]
+    ['Adina Belvedere Vienna（3晚）',300]
   ];
   var html='';
   rows.forEach(function(row){
