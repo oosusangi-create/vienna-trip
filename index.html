@@ -6,17 +6,17 @@
 <title>奧捷親子旅遊 2026</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-width:700px;margin:0 auto;padding-bottom:70px}
-.hdr{background:linear-gradient(135deg,#3C3489,#534AB7);color:#fff;padding:14px 16px;border-radius:0 0 16px 16px}
-.hdr h1{font-size:16px;font-weight:700}
-.hdr p{font-size:11px;opacity:0.8;margin-top:3px}
-.hdr-badge{float:right;background:rgba(255,255,255,0.2);padding:3px 8px;border-radius:8px;font-size:10px}
+body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-width:700px;margin:0 auto;padding-bottom:78px;font-size:15px}
+.hdr{background:linear-gradient(135deg,#3C3489,#534AB7);color:#fff;padding:16px 18px;border-radius:0 0 16px 16px}
+.hdr h1{font-size:20px;font-weight:700}
+.hdr p{font-size:13px;opacity:0.85;margin-top:4px}
+.hdr-badge{float:right;background:rgba(255,255,255,0.2);padding:4px 10px;border-radius:8px;font-size:12px}
 
 /* 底部導覽 */
 .bnav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:700px;background:#fff;border-top:1px solid #e0dfd8;display:flex;z-index:200;padding-bottom:env(safe-area-inset-bottom)}
-.bn{flex:1;padding:8px 1px 6px;display:flex;flex-direction:column;align-items:center;gap:1px;cursor:pointer;font-size:9px;color:#999;border:none;background:transparent}
+.bn{flex:1;padding:8px 1px 6px;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;font-size:11px;color:#999;border:none;background:transparent}
 .bn.active{color:#3C3489}
-.bn-icon{font-size:20px;line-height:1}
+.bn-icon{font-size:21px;line-height:1}
 
 /* 主分頁 */
 .tab{display:none;padding:12px}
@@ -24,143 +24,166 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
 
 /* 子分頁（行程） */
 .itabs{display:flex;gap:6px;margin-bottom:12px;overflow-x:auto;padding-bottom:4px}
-.itab{flex-shrink:0;padding:6px 12px;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;border:1.5px solid #e0dfe8;color:#666;white-space:nowrap}
+.itab{flex-shrink:0;padding:7px 14px;border-radius:20px;font-size:14px;cursor:pointer;background:#fff;border:1.5px solid #e0dfe8;color:#666;white-space:nowrap}
 .itab.active{background:#3C3489;color:#fff;border-color:#3C3489}
 .isec{display:none}
 .isec.show{display:block}
 
 /* 卡片 */
 .card{background:#fff;border-radius:14px;margin-bottom:10px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,0.07)}
-.card-hdr{padding:12px 14px;cursor:pointer;display:flex;align-items:center;gap:8px}
+.card-hdr{padding:13px 14px;cursor:pointer;display:flex;align-items:center;gap:8px}
 .card-hdr:hover{background:#fafaf8}
-.db{padding:3px 8px;border-radius:6px;font-size:10px;font-weight:700;color:#fff;white-space:nowrap}
+.db{padding:4px 9px;border-radius:6px;font-size:12px;font-weight:700;color:#fff;white-space:nowrap}
 .bt{background:#534AB7}
 .bp{background:#169F48}
 .bconf{background:#E63946}
 .bext{background:#2D7DD2}
 .bmei{background:#854F0B}
 .bpg{background:#DAA520}
-.c-title{font-size:13px;font-weight:600;flex:1}
-.c-sub{font-size:10px;color:#999}
-.chev{font-size:12px;color:#999;margin-left:4px}
+.c-title{font-size:15px;font-weight:600;flex:1}
+.c-sub{font-size:12px;color:#999}
+.chev{font-size:14px;color:#999;margin-left:4px}
 .card-body{display:none;padding:0 14px 14px}
 .card-body.open{display:block}
 
 /* 景點行 */
 .spot{display:flex;gap:10px;margin-bottom:10px;align-items:flex-start}
-.sico{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
-.sname{font-size:13px;font-weight:600;margin-bottom:2px}
-.sdesc{font-size:11px;color:#666;line-height:1.5}
-.stag{font-size:10px;color:#534AB7;background:#EEEDFE;padding:2px 6px;border-radius:4px;display:inline-block;margin-top:3px}
+.sico{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
+.sname{font-size:15px;font-weight:600;margin-bottom:2px}
+.sdesc{font-size:13px;color:#666;line-height:1.55}
+.stag{font-size:12px;color:#534AB7;background:#EEEDFE;padding:2px 7px;border-radius:4px;display:inline-block;margin-top:3px}
 
 /* 路線步驟 */
-.rstop{display:flex;gap:8px;margin-bottom:8px}
+.rstop{display:flex;gap:8px;margin-bottom:9px}
 .rlw{display:flex;flex-direction:column;align-items:center;width:16px;flex-shrink:0}
-.rdot{width:10px;height:10px;background:#3C3489;border-radius:50%;flex-shrink:0;margin-top:3px}
+.rdot{width:10px;height:10px;background:#3C3489;border-radius:50%;flex-shrink:0;margin-top:4px}
 .rline{width:2px;flex:1;background:#e0dfe8;margin:3px 0}
 .rc{flex:1}
-.rt{font-size:10px;color:#888;margin-bottom:1px}
-.rp{font-size:13px;font-weight:600;margin-bottom:2px}
-.rd{font-size:11px;color:#666;line-height:1.5}
-.rtip{font-size:10px;color:#534AB7;margin-top:2px}
+.rt{font-size:12px;color:#888;margin-bottom:1px}
+.rp{font-size:15px;font-weight:600;margin-bottom:2px}
+.rd{font-size:13px;color:#666;line-height:1.55}
+.rtip{font-size:12px;color:#534AB7;margin-top:2px}
 
 /* 資訊框 */
-.ib{border-radius:10px;padding:8px 12px;font-size:11px;line-height:1.6;margin-bottom:10px}
+.ib{border-radius:10px;padding:10px 13px;font-size:13px;line-height:1.6;margin-bottom:10px}
 .ibg{background:#E1F5EE;color:#0F6E56}
 .iba{background:#FFF3CD;color:#856404}
 .ibr{background:#FCE8E8;color:#C62828}
 .ibp{background:#EEEDFE;color:#3C3489}
 
 /* 交通框 */
-.tbox{background:#f0eeff;border-radius:10px;padding:10px 12px;font-size:11px;line-height:1.8;margin-bottom:10px}
+.tbox{background:#f0eeff;border-radius:10px;padding:11px 13px;font-size:13px;line-height:1.8;margin-bottom:10px}
 .tbox-t{font-weight:700;color:#3C3489;margin-bottom:4px}
 
 /* 飯店卡 */
-.hcard{background:#f8f8f5;border-radius:12px;padding:12px;margin-bottom:8px;border:1px solid #e8e8e0}
+.hcard{background:#f8f8f5;border-radius:12px;padding:13px;margin-bottom:8px;border:1px solid #e8e8e0}
 .hcard.confirmed{border:2px solid #169F48;background:#F4FBF7}
 .hcard.considering{border:1.5px solid #534AB7;background:#EEEDFE}
-.hnm{font-size:13px;font-weight:700;margin-bottom:4px}
-.hrec{font-size:10px;padding:2px 6px;border-radius:4px;margin-left:4px}
-.hdet{font-size:11px;color:#666;line-height:1.6;margin-bottom:6px}
+.hnm{font-size:15px;font-weight:700;margin-bottom:4px}
+.hrec{font-size:12px;padding:2px 7px;border-radius:4px;margin-left:4px}
+.hdet{font-size:13px;color:#666;line-height:1.6;margin-bottom:6px}
 .htags{display:flex;flex-wrap:wrap;gap:4px}
-.ht{font-size:10px;padding:2px 6px;border-radius:4px;background:#f0f0e8;color:#555}
+.ht{font-size:12px;padding:3px 7px;border-radius:4px;background:#f0f0e8;color:#555}
 .htp{background:#FAEEDA;color:#854F0B}
 .htm{background:#E1F5EE;color:#0F6E56}
 .htk{background:#E6F1FB;color:#1565C0}
 .htf{background:#FCE8E8;color:#C62828}
-.sec-lbl{font-size:11px;font-weight:700;color:#888;margin:14px 0 6px;padding-left:2px;text-transform:uppercase;letter-spacing:0.5px}
+.sec-lbl{font-size:13px;font-weight:700;color:#888;margin:14px 0 6px;padding-left:2px;text-transform:uppercase;letter-spacing:0.5px}
 
 /* 餐廳卡 */
-.fcard{background:#f8f8f5;border-radius:12px;padding:12px;margin-bottom:8px;border:1px solid #e8e8e0}
-.fnm{font-size:13px;font-weight:700;margin-bottom:4px}
-.fd{font-size:11px;color:#666;line-height:1.6}
-.ft{font-size:10px;padding:2px 6px;border-radius:4px;margin-right:3px;margin-bottom:4px;display:inline-block}
+.fcard{background:#f8f8f5;border-radius:12px;padding:13px;margin-bottom:8px;border:1px solid #e8e8e0}
+.fnm{font-size:15px;font-weight:700;margin-bottom:4px}
+.fd{font-size:13px;color:#666;line-height:1.6}
+.ft{font-size:12px;padding:2px 7px;border-radius:4px;margin-right:3px;margin-bottom:4px;display:inline-block}
 .ftf{background:#FCE8E8;color:#C62828}
 .ftk{background:#E1F5EE;color:#0F6E56}
 .ftb{background:#EEEDFE;color:#3C3489}
 
 /* 省錢分頁 */
-.sblk{background:#fff;border-radius:14px;padding:14px;margin-bottom:10px}
-.sblk h3{font-size:13px;font-weight:700;margin-bottom:10px;color:#3C3489}
+.sblk{background:#fff;border-radius:14px;padding:15px;margin-bottom:10px}
+.sblk h3{font-size:15px;font-weight:700;margin-bottom:10px;color:#3C3489}
 .si{display:flex;gap:10px;margin-bottom:8px;align-items:flex-start}
-.si-n{width:26px;height:26px;border-radius:50%;background:#3C3489;color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.si h4{font-size:12px;font-weight:700;margin-bottom:2px}
-.si p{font-size:11px;color:#666;line-height:1.5}
+.si-n{width:28px;height:28px;border-radius:50%;background:#3C3489;color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.si h4{font-size:14px;font-weight:700;margin-bottom:2px}
+.si p{font-size:13px;color:#666;line-height:1.5}
 
 /* 每日路線 */
-.must-item{background:#fff;border-radius:12px;padding:12px;margin-bottom:8px}
-.must-t{font-size:12px;font-weight:700;color:#3C3489;margin-bottom:6px}
+.must-item{background:#fff;border-radius:12px;padding:13px;margin-bottom:8px}
+.must-t{font-size:14px;font-weight:700;color:#3C3489;margin-bottom:6px}
 
 /* 匯率換算 */
 .fx-box{background:linear-gradient(135deg,#3C3489,#6C5CE7);border-radius:20px;padding:20px;color:#fff;margin-bottom:12px}
 .fx-inp{background:rgba(255,255,255,0.15);border-radius:12px;padding:12px;margin-bottom:10px}
-.fx-label{font-size:11px;opacity:0.8;margin-bottom:6px}
-.fx-inp input{width:100%;background:transparent;border:none;border-bottom:2px solid rgba(255,255,255,0.5);color:#fff;font-size:26px;font-weight:700;outline:none;padding-bottom:3px}
+.fx-label{font-size:13px;opacity:0.85;margin-bottom:6px}
+.fx-inp input{width:100%;background:transparent;border:none;border-bottom:2px solid rgba(255,255,255,0.5);color:#fff;font-size:28px;font-weight:700;outline:none;padding-bottom:3px}
 .fx-arrow{text-align:center;font-size:22px;opacity:0.7;margin:6px 0}
 .fx-btns{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
-.fx-btn{background:rgba(255,255,255,0.2);border:none;color:#fff;padding:10px;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer}
-.fx-rate{font-size:11px;opacity:0.75;margin-top:10px;display:flex;justify-content:space-between;align-items:center}
-.fx-update{background:rgba(255,255,255,0.2);border:none;color:#fff;padding:4px 10px;border-radius:6px;font-size:11px;cursor:pointer}
-.hotel-fx{background:#fff;border-radius:14px;padding:14px;margin-bottom:10px}
-.hotel-fx h3{font-size:13px;font-weight:700;color:#3C3489;margin-bottom:10px}
-.hotel-fx-row{display:flex;justify-content:space-between;font-size:12px;padding:5px 0;border-bottom:1px solid #f0f0e8;color:#555}
+.fx-btn{background:rgba(255,255,255,0.2);border:none;color:#fff;padding:11px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer}
+.fx-rate{font-size:13px;opacity:0.8;margin-top:10px;display:flex;justify-content:space-between;align-items:center}
+.fx-update{background:rgba(255,255,255,0.2);border:none;color:#fff;padding:5px 11px;border-radius:6px;font-size:13px;cursor:pointer}
+.hotel-fx{background:#fff;border-radius:14px;padding:15px;margin-bottom:10px}
+.hotel-fx h3{font-size:15px;font-weight:700;color:#3C3489;margin-bottom:10px}
+.hotel-fx-row{display:flex;justify-content:space-between;font-size:14px;padding:6px 0;border-bottom:1px solid #f0f0e8;color:#555}
 
 /* 地圖 */
 .map-wrap{border-radius:14px;overflow:hidden;height:260px;background:#ddd;margin-bottom:10px}
 .map-wrap iframe{width:100%;height:100%;border:none}
 .qbtns{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
-.qbtn{padding:7px 12px;border-radius:20px;border:1.5px solid #e0dfe8;background:#fff;font-size:12px;cursor:pointer;white-space:nowrap}
+.qbtn{padding:8px 14px;border-radius:20px;border:1.5px solid #e0dfe8;background:#fff;font-size:14px;cursor:pointer;white-space:nowrap}
 .qbtn:hover{background:#EEEDFE;border-color:#3C3489;color:#3C3489}
-.nb{background:#3C3489;color:#fff;border:none;padding:6px 12px;border-radius:8px;font-size:11px;cursor:pointer;margin-top:4px}
-.bigbtn{width:100%;background:#3C3489;color:#fff;border:none;padding:12px;border-radius:12px;font-size:13px;font-weight:700;cursor:pointer;margin-bottom:8px}
-.hint{background:#FFF3CD;border-radius:10px;padding:10px 12px;font-size:11px;color:#856404;line-height:1.6}
+.nb{background:#3C3489;color:#fff;border:none;padding:8px 14px;border-radius:8px;font-size:13px;cursor:pointer;margin-top:4px}
+.bigbtn{width:100%;background:#3C3489;color:#fff;border:none;padding:13px;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;margin-bottom:8px}
+.hint{background:#FFF3CD;border-radius:10px;padding:11px 13px;font-size:13px;color:#856404;line-height:1.6}
 
 /* 機場 */
-.ap-step{background:#fff;border-radius:12px;padding:12px;margin-bottom:8px}
-.ap-step-n{background:#3C3489;color:#fff;width:24px;height:24px;border-radius:50%;font-size:12px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;margin-right:8px}
-.ap-t{font-size:13px;font-weight:700;margin-bottom:4px}
-.ap-d{font-size:11px;color:#666;line-height:1.6}
+.ap-step{background:#fff;border-radius:12px;padding:13px;margin-bottom:8px}
+.ap-step-n{background:#3C3489;color:#fff;width:26px;height:26px;border-radius:50%;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;margin-right:8px}
+.ap-t{font-size:15px;font-weight:700;margin-bottom:4px}
+.ap-d{font-size:13px;color:#666;line-height:1.6}
 
 /* SOS */
-.sos-card{background:#fff;border-radius:14px;padding:14px;margin-bottom:10px}
-.sos-title{font-size:14px;font-weight:700;margin-bottom:10px;color:#C62828}
-.sos-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #f5f4ef}
-.sos-name{font-size:12px;font-weight:600}
-.sos-num{font-size:13px;font-weight:700;color:#3C3489}
+.sos-card{background:#fff;border-radius:14px;padding:15px;margin-bottom:10px}
+.sos-title{font-size:16px;font-weight:700;margin-bottom:10px;color:#C62828}
+.sos-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid #f5f4ef}
+.sos-name{font-size:14px;font-weight:600}
+.sos-num{font-size:15px;font-weight:700;color:#3C3489}
 
 /* 路線圖 */
 .route-img{width:100%;border-radius:14px;margin-bottom:10px}
-.mini-map{background:#fff;border-radius:14px;padding:12px;margin-bottom:10px;border:1px solid #e3e1ec}
+.mini-map{background:#fff;border-radius:14px;padding:13px;margin-bottom:10px;border:1px solid #e3e1ec}
 .mini-line{display:flex;align-items:center;gap:5px;overflow-x:auto;padding:8px 2px}
-.mini-st{min-width:70px;text-align:center;font-size:10px;color:#555}
+.mini-st{min-width:74px;text-align:center;font-size:12px;color:#555}
 .mini-dot{width:14px;height:14px;border-radius:50%;background:#e63946;border:3px solid #ffd8dc;margin:0 auto 4px}
 .mini-bar{height:4px;min-width:28px;background:#e63946;border-radius:3px}
-.how-row{display:grid;grid-template-columns:34px 1fr;gap:8px;margin:8px 0}
-.how-n{width:30px;height:30px;border-radius:50%;background:#3C3489;color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px}
-.airport-plan{background:#fff;border-radius:14px;padding:12px;margin-bottom:10px;overflow-x:auto}
+.how-row{display:grid;grid-template-columns:36px 1fr;gap:8px;margin:9px 0}
+.how-n{width:32px;height:32px;border-radius:50%;background:#3C3489;color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+.airport-plan{background:#fff;border-radius:14px;padding:13px;margin-bottom:10px;overflow-x:auto}
 .ap-flow{display:flex;align-items:center;gap:5px;min-width:600px;padding:8px 0}
-.ap-node{min-width:88px;text-align:center;background:#f4f2ff;border:1px solid #d9d4ff;border-radius:10px;padding:8px 5px;font-size:10px;line-height:1.4}
+.ap-node{min-width:92px;text-align:center;background:#f4f2ff;border:1px solid #d9d4ff;border-radius:10px;padding:9px 6px;font-size:12px;line-height:1.4}
 .ap-arr{color:#534AB7;font-size:18px;font-weight:700}
+
+/* 花費紀錄 */
+.exp-form{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.exp-form label{font-size:12px;color:#888;margin-bottom:3px;display:block}
+.exp-form select,.exp-form input{width:100%;padding:9px 10px;border-radius:8px;border:1.5px solid #e0dfe8;font-size:14px;background:#fdfdfb;font-family:inherit}
+.exp-form .full{grid-column:1/3}
+.exp-add-btn{grid-column:1/3;background:#3C3489;color:#fff;border:none;padding:12px;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer}
+.exp-total{background:linear-gradient(135deg,#3C3489,#6C5CE7);border-radius:16px;padding:16px;color:#fff;margin-bottom:10px}
+.exp-total-n{font-size:26px;font-weight:700}
+.exp-total-l{font-size:12px;opacity:0.85}
+.exp-split{display:flex;gap:8px;margin-top:12px}
+.exp-split-card{flex:1;background:rgba(255,255,255,0.15);border-radius:10px;padding:9px}
+.exp-split-t{font-size:11px;opacity:0.85}
+.exp-split-n{font-size:16px;font-weight:700;margin-top:2px}
+.exp-cat-row{display:flex;justify-content:space-between;align-items:center;font-size:13px;padding:7px 0;border-bottom:1px solid #f0f0e8}
+.exp-item{background:#f8f8f5;border-radius:10px;padding:10px 12px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.exp-item-l{flex:1}
+.exp-item-t{font-size:13px;font-weight:600}
+.exp-item-s{font-size:11px;color:#888;margin-top:2px}
+.exp-item-amt{font-size:14px;font-weight:700;color:#3C3489;white-space:nowrap}
+.exp-del{background:#FCE8E8;color:#C62828;border:none;border-radius:6px;padding:5px 9px;font-size:11px;cursor:pointer}
+.exp-tag{font-size:10px;padding:2px 6px;border-radius:4px;background:#EEEDFE;color:#3C3489;display:inline-block;margin-right:4px}
+.exp-empty{text-align:center;color:#999;font-size:13px;padding:20px 0}
 </style>
 </head>
 <body>
@@ -236,6 +259,186 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
       <div class="tbox"><div class="tbox-t">8/30（日）維也納最後悠閒日</div>Café Central→舊城散步→Praterstern→普拉特百年摩天輪→U1回Adina；晚上打包。</div>
       <div class="tbox"><div class="tbox-t">8/31（一）你們返台</div>07:15–07:30離開Adina→Wien Hbf→Railjet至VIE→Terminal 1A華航報到、退稅→11:15起飛。</div>
     </div></div>
+    <!-- 你妹行程 -->
+    <div class="ib ibp" style="margin-bottom:8px">👩‍👧 <strong>你妹家先出發（8/13–8/18）</strong></div>
+
+    <div class="card">
+      <div class="card-hdr" onclick="tog('d_s12')"><span class="db bmei">妹8/12</span><span class="c-title">桃園機場報到・華航飛維也納</span><span class="chev">▾</span></div>
+      <div class="card-body" id="d_s12">
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">20:00–20:30</div><div class="rp">抵達桃園機場</div><div class="rd">先看航班看板確認航廈與報到櫃檯，再依序辦理報到、托運、出境與登機。</div></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div></div><div class="rc"><div class="rt">23:30</div><div class="rp">華航班機起飛</div><div class="rd">告知地勤帶4歲孩子，通常可優先登機；兒童餐建議出發前72小時預訂。</div></div></div>
+        <div class="ib iba">帶4歲孩子：護照與登機證由一位大人統一保管；推車在櫃檯確認是機邊托運或一般托運；隨身包留一套衣物、薄外套、濕紙巾、熟悉零食與空水壺。</div>
+        <button class="bigbtn" onclick="showAirportDeparture()">✈️ 打開機場逐步教學</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hdr" onclick="tog('d_s13')"><span class="db bmei">妹8/13</span><span class="c-title">抵達·ZOOM兒博·Albertina</span><span class="chev">▾</span></div>
+      <div class="card-body" id="d_s13">
+        <div class="ib ibp">💡 剛下飛機先搭Railjet到Wien Hbf、寄放行李；今天以軍事史博物館與舊城經典為主。</div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">落地後</div><div class="rp">VIE行李轉盤→機場火車站</div><div class="rd">領完行李跟著綠色「Train／Bahnhof」指標下樓。ÖBB紅色售票機選 Flughafen Wien→Wien Hauptbahnhof；市區24小時票不能單獨涵蓋機場外圍段，2大＋1名4歲兒童。</div></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">約15分</div><div class="rp">Railjet直達→Wien Hbf→Novotel</div><div class="rd">看電子板找Wien Hauptbahnhof方向的Railjet，依「Canettistraße」出口出站，Novotel就在車站旁，先寄放行李。</div><button class="nb" onclick="gd('Vienna International Airport','Novotel Wien Hauptbahnhof')">🗺️ 機場→Novotel</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">10:30</div><div class="rp">維也納軍事史博物館 HGM</div><div class="rd">大砲、飛機與戰車展區，室內平坦好推推車。從Novotel步行或依即時導航前往。</div><button class="nb" onclick="gm('Heeresgeschichtliches Museum Vienna')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">12:30</div><div class="rp">Ribs of Vienna 午餐</div><div class="rd">一公尺豬肋排，份量超大，維也納必吃！</div><button class="nb" onclick="gm('Ribs of Vienna')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">14:00</div><div class="rp">霍夫堡皇宮散策</div><div class="rd">英雄廣場→皇宮建築群→米歇爾廣場，採平面散步路線，適合孩子。</div><button class="nb" onclick="gm('Heldenplatz Vienna')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">14:30</div><div class="rp">Café Demel 德梅爾咖啡館</div><div class="rd">沙河蛋糕＋Espresso，經典維也納咖啡館體驗。</div><button class="nb" onclick="gm('Café Demel Vienna')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div></div><div class="rc"><div class="rt">晚餐</div><div class="rp">Böhmerwald→步行回Novotel</div><div class="rd">用餐後步行或依導航走回Novotel，結束首日行程。</div><button class="nb" onclick="gd('Böhmerwald Vienna','Novotel Wien Hauptbahnhof')">🏨 晚餐→飯店</button></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hdr" onclick="tog('d_s14')"><span class="db bmei">妹8/14</span><span class="c-title">搭IC→林茲·童話洞穴火車</span><span class="chev">▾</span></div>
+      <div class="card-body" id="d_s14">
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">08:20前</div><div class="rp">Novotel退房→步行Wien Hbf</div><div class="rd">車站就在飯店旁，走路約1分鐘；先看大型電子板確認IC546月台。</div></div></div>
+        <div class="tbox"><div class="tbox-t">🚆 IC 546 Wien Hbf 08:57→Linz Hbf 10:28</div>票面月台8A–B，仍以當日看板為準。</div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">10:28後</div><div class="rp">Linz Hbf→Park Inn寄放行李</div><div class="rd">出站搭Tram 1／2／3／4往市中心，在「Mozartkreuzung」下車，步行約5分鐘到Park Inn。</div><button class="nb" onclick="gd('Linz Hauptbahnhof','Park Inn by Radisson Linz')">🗺️ Linz站→飯店</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">午後</div><div class="rp">佩斯特靈貝格登山鐵道·童話洞穴火車</div><div class="rd">林茲很有特色的古老登山鐵道＋洞穴小火車，很適合4歲孩子。</div><button class="nb" onclick="gm('Pöstlingberg Grottenbahn Linz')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div></div><div class="rc"><div class="rt">下午茶</div><div class="rp">Café Jindrak 正宗林茲塔</div><div class="rd">林茲塔（Linzer Torte）全球最古老蛋糕！在發源地吃最道地，之後沿Donaulände河畔散步回Park Inn。</div><button class="nb" onclick="gd('Café Jindrak Linz','Park Inn by Radisson Linz')">🏨 晚餐→飯店</button></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hdr" onclick="tog('d_s15')"><span class="db bmei">妹8/15</span><span class="c-title">林茲·阿爾斯電子藝術·城堡</span><span class="chev">▾</span></div>
+      <div class="card-body" id="d_s15">
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">早餐</div><div class="rp">JINDRAK Landstraße 70</div><div class="rd">從Park Inn步行或搭電車前往，享用道地林茲塔配咖啡。</div><button class="nb" onclick="gd('Park Inn by Radisson Linz','Jindrak Landstraße 70 Linz')">🗺️ 飯店→早餐</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">上午</div><div class="rp">Tram至Hauptplatz→步行過橋</div><div class="rd">搭電車到主廣場後，步行過多瑙河橋至阿爾斯電子藝術中心。</div></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">上午</div><div class="rp">阿爾斯電子藝術中心（Ars Electronica）</div><div class="rd">Deep Space 8K超大互動投影牆！未來博物館，小孩驚呼連連。</div><button class="nb" onclick="gm('Ars Electronica Center Linz')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">下午</div><div class="rp">林茲城堡博物館</div><div class="rd">俯瞰多瑙河的中世紀城堡，沿河步行可達。</div><button class="nb" onclick="gm('Linz Castle Museum')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">下午</div><div class="rp">新主教座堂（Mariendom）</div><div class="rd">彩繪玻璃超美，中庭平坦安全，適合孩子跑跳。</div><button class="nb" onclick="gm('Mariendom Linz')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div></div><div class="rc"><div class="rt">晚餐</div><div class="rp">Wirtshaus Keintzel→回Park Inn</div><div class="rd">傳統奧地利菜，用餐後步行或依導航回飯店。</div><button class="nb" onclick="gd('Wirtshaus Keintzel Linz','Park Inn by Radisson Linz')">🏨 晚餐→飯店</button></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hdr" onclick="tog('d_s16')"><span class="db bmei">妹8/16</span><span class="c-title">搭IC→薩爾斯堡·高地要塞·玩具博物館</span><span class="chev">▾</span></div>
+      <div class="card-body" id="d_s16">
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">上午</div><div class="rp">Park Inn退房→Tram→Linz Hbf</div><div class="rd">搭電車回中央車站，看電子板確認IC1142月台。</div></div></div>
+        <div class="tbox"><div class="tbox-t">🚆 IC 1142 Linz 10:14→Salzburg Süd 11:38</div>票面月台6A–F，下車後轉S-Bahn至Salzburg Hbf。</div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">S-Bahn後</div><div class="rp">Salzburg Hbf→Cocoon寄放行李</div><div class="rd">出站依即時導航步行，Cocoon就在車站旁，先寄放行李輕裝出門。</div><button class="nb" onclick="gd('Salzburg Süd','Cocoon Salzburg')">🗺️ 南站→Cocoon</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">13:30</div><div class="rp">高地要塞（Hohensalzburg）纜車</div><div class="rd">搭纜車上山，俯瞰全景！下山順路去聖彼得修道院烘焙坊。</div><button class="nb" onclick="gm('Festung Hohensalzburg')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">下山後</div><div class="rp">聖彼得修道院傳統烘焙坊</div><div class="rd">要塞下山後順路前往，再步行到米拉貝爾花園。</div><button class="nb" onclick="gm('Stiftsbäckerei St Peter Salzburg')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">17:00</div><div class="rp">米拉貝爾花園（免費）</div><div class="rd">《真善美》取景地！平坦好走，適合拍照放電。</div><button class="nb" onclick="gm('Mirabell Palace Salzburg')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div></div><div class="rc"><div class="rt">晚餐</div><div class="rp">Soja Ramen→Hbf SPAR採買→回Cocoon</div><div class="rd">用餐後在車站SPAR買隔日早餐與零食，步行回飯店。</div><button class="nb" onclick="gd('Soja Ramen Salzburg','Cocoon Salzburg')">🏨 晚餐→飯店</button></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hdr" onclick="tog('d_s17')"><span class="db bmei">妹8/17</span><span class="c-title">溫特斯山纜車·海布倫噴水宮·自然之屋</span><span class="chev">▾</span></div>
+      <div class="card-body" id="d_s17">
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">09:15</div><div class="rp">Cocoon→步行Hbf→25號公車</div><div class="rd">從飯店步行至Salzburg Hbf站前公車區，搭25號直達溫特斯山纜車站。</div><button class="nb" onclick="gd('Cocoon Salzburg','Untersbergbahn')">🗺️ 飯店→纜車</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">09:30</div><div class="rp">溫特斯山纜車</div><div class="rd">阿爾卑斯群峰壯麗視野！搭同線25號回程，在Schloss Hellbrunn下車。</div><button class="nb" onclick="gm('Untersberg Salzburg')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">11:30</div><div class="rp">海布倫惡作劇噴水宮</div><div class="rd">地板突然噴水！⚠️帶換洗衣服，週一有營業。</div><div class="stag">⚠️帶換洗衣服！</div><button class="nb" onclick="gm('Schloss Hellbrunn Salzburg')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">14:00</div><div class="rp">自然之屋（Haus der Natur）</div><div class="rd">恐龍化石、科學互動裝置，25號回市區後步行前往。</div><button class="nb" onclick="gm('Haus der Natur Salzburg')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">17:00</div><div class="rp">僧侶山觀景台落日</div><div class="rd">搭快速電梯登頂，俯瞰薩爾斯堡全景。</div><button class="nb" onclick="gm('Mönchsberg Salzburg')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div></div><div class="rc"><div class="rt">晚餐</div><div class="rp">Mr Wen Asia Food→回Cocoon</div><div class="rd">用大眾運輸回Salzburg Hbf，再步行回飯店。</div><button class="nb" onclick="gd('Mr Wen Asia Food Salzburg','Cocoon Salzburg')">🏨 晚餐→飯店</button></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hdr" onclick="tog('d_s18')"><span class="db bmei">妹8/18</span><span class="c-title">搭ICE→維也納·與你家會合！</span><span class="chev">▾</span></div>
+      <div class="card-body" id="d_s18">
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">上午</div><div class="rp">Cocoon退房→步行Salzburg Hbf</div><div class="rd">確認3人行李與ICE電子票，提早到站看電子板。</div></div></div>
+        <div class="tbox"><div class="tbox-t">🚆 ICE 1211 Salzburg 10:00→Wien Hbf 12:47</div>抵達後依「Sonnwendgasse」出口，步行約3–5分鐘到Leonardo寄放行李。</div>
+        <div class="ib ibg">🎉 你們一家今天06:30抵達維也納！中午兩家在Leonardo會合！</div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">午後</div><div class="rp">司法宮·國會·市政廳·Landtmann</div><div class="rd">市區經典建築散步路線，行經Café Landtmann可稍作休息。</div><button class="nb" onclick="gm('Rathaus Vienna')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">14:30</div><div class="rp">科技博物館（Technisches Museum）</div><div class="rd">火車頭與物理裝置，6歲以下免費！</div><button class="nb" onclick="gm('Technisches Museum Wien')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">傍晚</div><div class="rp">卡爾教堂·金色大廳</div><div class="rd">外觀散步拍照，接續前往晚餐地點。</div><button class="nb" onclick="gm('Karlskirche Vienna')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div></div><div class="rc"><div class="rt">晚餐</div><div class="rp">Magic Noodle→回Leonardo</div><div class="rd">亞洲熱湯麵，連續奔波後吃碗熱湯麵最舒服！</div><button class="nb" onclick="gd('Magic Noodle Vienna','Leonardo Hotel Vienna Hauptbahnhof')">🏨 晚餐→飯店</button></div></div>
+      </div>
+    </div>
+
+    <div class="ib ibg" style="margin:10px 0">🎉 8/18晚兩家正式會合！→出發布拉格！</div>
+
+    <!-- 布拉格 -->
+    <div class="card">
+      <div class="card-hdr" onclick="tog('d_p19')"><span class="db bpg">8/19</span><span class="c-title">RegioJet→布拉格·無限書塔·跳舞的房子</span><span class="c-sub">兩家</span><span class="chev">▾</span></div>
+      <div class="card-body" id="d_p19">
+        <div class="ib ibr">⚠️ 很早！前一晚打包完成，約05:50從Leonardo出發。</div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">05:50</div><div class="rp">Leonardo步行→Wien Hbf</div><div class="rd">找RegioJet月台，確認車廂位置圖，走到第3車廂區段。</div></div></div>
+        <div class="tbox"><div class="tbox-t">🚆 RegioJet 06:39出發（第3車廂／61–66座）→10:56抵Praha hl.n.</div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">10:56後</div><div class="rp">Praha hl.n.→The Gold Bank寄放行李</div><div class="rd">步行約10–15分鐘或搭電車前往，先寄放行李輕裝出門。</div><button class="nb" onclick="gd('Praha hlavní nádraží','The Gold Bank Prague')">🗺️ 布拉格站→飯店</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">下午</div><div class="rp">火藥塔·天文鐘·泰恩教堂</div><div class="rd">整點小人偶出現！哈維爾市集有趣味紀念品可逛。</div><button class="nb" onclick="gm('Prague Astronomical Clock')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">下午</div><div class="rp">市立圖書館「無限書塔 Idiom」</div><div class="rd">書本疊成的圓柱形書塔！免費參觀，超級打卡點。</div><button class="nb" onclick="gm('Prague City Library')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div></div><div class="rc"><div class="rt">傍晚</div><div class="rp">Tram17→跳舞的房子→回The Gold Bank</div><div class="rd">解構主義建築，河畔散步拍照後搭電車返回飯店。</div><button class="nb" onclick="gd('Dancing House Prague','The Gold Bank Prague')">🏨 跳舞的房子→飯店</button></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hdr" onclick="tog('d_p20')"><span class="db bpg">8/20</span><span class="c-title">布拉格城堡·小城區·約翰藍儂牆·查理大橋</span><span class="c-sub">兩家</span><span class="chev">▾</span></div>
+      <div class="card-body" id="d_p20">
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">上午</div><div class="rp">The Gold Bank步行至站牌→Tram22</div><div class="rd">於Jindřišská／Václavské náměstí一帶搭車，往城堡方向，在Pražský hrad下車。</div><button class="nb" onclick="gd('The Gold Bank Prague','Prague Castle')">🗺️ 飯店→城堡</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">上午</div><div class="rp">布拉格城堡（B路線）</div><div class="rd">聖維特主教座堂＋黃金巷，線上買票免排隊；順石板路下坡省體力。</div><button class="nb" onclick="gm('Prague Castle')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">下午</div><div class="rp">小城區·約翰藍儂牆·坎帕島</div><div class="rd">五顏六色塗鴉牆！坎帕島草坪看青銅巨嬰雕塑放電。</div><button class="nb" onclick="gm('John Lennon Wall Prague')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">傍晚</div><div class="rp">查理大橋漫步</div><div class="rd">30座聖人雕像，伏爾塔瓦河景色一覽無遺。</div><button class="nb" onclick="gm('Charles Bridge Prague')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div></div><div class="rc"><div class="rt">晚餐</div><div class="rp">捷克烤豬腳＋啤酒→回The Gold Bank</div><div class="rd">物價比維也納便宜約40%！飯後步行約15–20分鐘回飯店，孩子累可直接叫Bolt。</div><button class="nb" onclick="gd('Charles Bridge Prague','The Gold Bank Prague')">🏨 查理大橋→飯店</button></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hdr" onclick="tog('d_p21')"><span class="db bpg">8/21</span><span class="c-title">萊特納公園·Café Louvre·伏爾塔瓦河遊船</span><span class="c-sub">兩家</span><span class="chev">▾</span></div>
+      <div class="card-body" id="d_p21">
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">上午</div><div class="rp">The Gold Bank→萊特納公園（Letná Park）</div><div class="rd">巨型節拍器＋布拉格紅屋頂全景！兒童遊樂場放電，免費入場。</div><button class="nb" onclick="gd('The Gold Bank Prague','Letná Park Prague')">🗺️ 飯店→公園</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">中午</div><div class="rp">百年羅浮咖啡館（Café Louvre）</div><div class="rd">1902年老咖啡館，空間寬敞、推車友善。</div><button class="nb" onclick="gm('Café Louvre Prague')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">午後</div><div class="rp">Botanicus 天然保養品採購</div><div class="rd">布拉格必買！台灣買不到，先買水與小點心備船上使用。</div><button class="nb" onclick="gm('Botanicus Prague Old Town')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div></div><div class="rc"><div class="rt">傍晚</div><div class="rp">伏爾塔瓦河夕陽遊船→回The Gold Bank</div><div class="rd">水上欣賞城堡點燈與橘紅夕陽，船後依導航步行或搭車回飯店。</div><button class="nb" onclick="gd('Prague Boats','The Gold Bank Prague')">🏨 碼頭→飯店</button></div></div>
+      </div>
+    </div>
+
+    <div class="ib ibg" style="margin:10px 0">🚆 8/22 RegioJet 13:01返回維也納！</div>
+
+    <!-- 維也納兩家 -->
+    <div class="card">
+      <div class="card-hdr" onclick="tog('d_v22')"><span class="db bp">8/22</span><span class="c-title">返維也納·Naschmarkt跳蚤·貝爾維第·百水</span><span class="c-sub">兩家</span><span class="chev">▾</span></div>
+      <div class="card-body" id="d_v22">
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">11:00</div><div class="rp">The Gold Bank退房（可先寄行李）</div><div class="rd">逛瓦茨拉夫廣場，最晚12:30走到Praha hl.n.。</div></div></div>
+        <div class="tbox"><div class="tbox-t">🚆 RegioJet Prague 13:01→Vienna 17:21</div>（第3車廂／61–66座）請確認票面抵達站；若為Wien Hbf，依Sonnwendgasse／Canettistraße出口步行約5–10分鐘到Adina。</div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">17:21後</div><div class="rp">Wien Hbf→Adina</div><div class="rd">先寄放行李入住，稍作休息。</div><button class="nb" onclick="gd('Wien Hauptbahnhof','Adina Serviced Apartments Vienna Belvedere')">🗺️ Wien Hbf→Adina</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">傍晚</div><div class="rp">百水公寓（Hundertwasserhaus）</div><div class="rd">全球最奇特公寓建築，外觀免費參觀！</div><button class="nb" onclick="gm('Hundertwasserhaus Vienna')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div></div><div class="rc"><div class="rt">晚餐</div><div class="rp">Plachutta Wollzeile→回Adina</div><div class="rd">經典清燉牛肉湯；用餐後搭大眾運輸回Wien Hbf一帶，再步行回Adina。</div><button class="nb" onclick="gd('Plachutta Wollzeile','Adina Serviced Apartments Vienna Belvedere')">🏨 晚餐→Adina</button></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hdr" onclick="tog('d_v23')"><span class="db bconf">★AMEE</span><span class="c-title">AMEE研討會（你）+ 自然史博物館·藝術史</span><span class="c-sub">8/23日</span><span class="chev">▾</span></div>
+      <div class="card-body" id="d_v23">
+        <div class="ib ibr">★ AMEE 2026 · Austria Center Vienna · 8/23報到08:00–21:30，Entrance Hall</div>
+        <div class="sec-lbl">你去AMEE</div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rp">Adina→U1 Südtiroler Platz–Hauptbahnhof</div><div class="rd">搭往<strong>Leopoldau</strong>方向，於Kaisermühlen–VIC下車，依Austria Center指標步行至Entrance Hall。</div><button class="nb" onclick="gd('Adina Serviced Apartments Vienna Belvedere','Austria Center Vienna')">🗺️ Adina→AMEE</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div></div><div class="rc"><div class="rp">回程</div><div class="rd">原路搭U1往<strong>Oberlaa</strong>方向，於Südtiroler Platz–Hauptbahnhof下車，步行回Adina。</div><button class="nb" onclick="gd('Austria Center Vienna','Adina Serviced Apartments Vienna Belvedere')">🏨 AMEE→Adina</button></div></div>
+        <div class="sec-lbl">家人行程</div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">上午</div><div class="rp">ERZHERZOGTUM早餐→自然史博物館</div><div class="rd">皇帝煎餅後前往，14歲以下完全免費！恐龍骨架＋隕石。</div><button class="nb" onclick="gm('Naturhistorisches Museum Wien')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">午後</div><div class="rp">藝術史博物館→穹頂咖啡廳</div><div class="rd">穹頂下喝Espresso，氣氛絕美！</div><button class="nb" onclick="gm('Kunsthistorisches Museum Vienna')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">傍晚</div><div class="rp">Tram D→美景宮庭園</div><div class="rd">花園免費散步，接續前往晚餐。</div><button class="nb" onclick="gm('Belvedere Palace Vienna')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div></div><div class="rc"><div class="rt">晚餐</div><div class="rp">Figlmüller Wollzeile（已預約）→回Adina</div><div class="rd">AMEE參加者19:00另有Networking Reception。</div><button class="nb" onclick="gd('Figlmüller Wollzeile','Adina Serviced Apartments Vienna Belvedere')">🏨 晚餐→Adina</button></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hdr" onclick="tog('d_v24')"><span class="db bp">8/24</span><span class="c-title">美泉宮·動物園·Figlmüller百年炸豬排</span><span class="c-sub">兩家</span><span class="chev">▾</span></div>
+      <div class="card-body" id="d_v24">
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rp">Adina→U1 Südtiroler Platz→轉U4</div><div class="rd">於Karlsplatz轉U4往Hütteldorf方向，Schönbrunn下車步行皇宮。</div><button class="nb" onclick="gd('Adina Serviced Apartments Vienna Belvedere','Schönbrunn Palace')">🗺️ Adina→美泉宮</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">上午</div><div class="rp">美泉宮（熊布朗宮）</div><div class="rd">大人€22、小孩€14。Café Residenz皇家甜點不要錯過！</div><button class="nb" onclick="gm('Schönbrunn Palace Vienna')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">午餐後</div><div class="rp">美泉宮動物園（Tiergarten）</div><div class="rd">1752年最古老！大人€20、小孩€10。遊園小火車省腿力。動物園在園區較深處，預留步行時間。</div><button class="nb" onclick="gm('Tiergarten Schönbrunn')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">傍晚</div><div class="rp">U4→Schwedenplatz→Fenster-Café</div><div class="rd">特色甜筒咖啡；散步至聖斯德望主教座堂及Kohlmarkt／Graben精品街。</div><button class="nb" onclick="gm('Fenster Café Vienna')">📍 導航</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div></div><div class="rc"><div class="rt">回程</div><div class="rp">Stephansplatz→U1往Oberlaa→Adina</div><div class="rd">晚餐彈性安排在舊城精品街周邊，或回Adina附近用餐。</div><button class="nb" onclick="gd('Stephansplatz Vienna','Adina Serviced Apartments Vienna Belvedere')">🏨 舊城→Adina</button></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-hdr" onclick="tog('d_v25')"><span class="db bconf">8/25</span><span class="c-title">你妹返台·你家搭ICE→薩爾斯堡</span><span class="c-sub">二</span><span class="chev">▾</span></div>
+      <div class="card-body" id="d_v25">
+        <div class="ib ibr">⚠️ 你妹 CI0064 11:15 起飛；你家 ICE 11:13 開車，無法送機。早餐後分開前往機場與中央車站。</div>
+        <div class="sec-lbl">妹妹一家返台</div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div></div><div class="rc"><div class="rt">07:15–07:30</div><div class="rp">Adina→步行Wien Hbf→Railjet→VIE T1A</div><div class="rd">CI 11:15起飛且需退稅，建議07:15–07:30離開Adina；步行至Wien Hbf後搭Railjet直達機場。</div><button class="nb" onclick="gd('Adina Serviced Apartments Vienna Belvedere','Vienna International Airport Terminal 1A')">🗺️ 妹妹→VIE</button></div></div>
+        <div class="sec-lbl">你們一家去薩爾斯堡</div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">09:45–10:00</div><div class="rp">Adina退房→步行到 Wien Hauptbahnhof</div><div class="rd">由Karl-Popper-Straße出發，依路標走向「Hauptbahnhof／BahnhofCity」約5–10分鐘。進站後看藍色電子看板找<strong>ICE 1214、Salzburg、11:13</strong>；票面月台7，仍以電子看板為準。</div><button class="nb" onclick="gm('Wien Hauptbahnhof')">📍 中央車站</button></div></div>
+        <div class="tbox"><div class="tbox-t">🚆 已購票：ICE 1214</div>Wien Hbf 11:13 → Salzburg Hbf 14:00｜3人｜車程2小時47分。進月台不需閘門，直接上車；查票時打開ÖBB App的Show ticket，並準備護照。</div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">14:00</div><div class="rp">Salzburg Hbf→HOTEL max70</div><div class="rd">出站往「Südtiroler Platz／Bus」方向，到站前公車區找<strong>1號公車</strong>；上車前用Salzburg Verkehr App輸入終點「Salzburg Glansteg」確認方向。於Glansteg下車，飯店約步行1分鐘。</div><button class="nb" onclick="gm('Salzburg Glansteg')">📍 Glansteg站</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div></div><div class="rc"><div class="rt">15:00</div><div class="rp">HOTEL max70 入住</div><div class="rd">向櫃台索取Guest Mobility Ticket。下午只去米拉貝爾花園或附近散步，讓4歲孩子休息。</div><button class="nb" onclick="gm('Hotel max70 Salzburg')">📍 飯店</button></div></div>
+      </div>
+    </div>
+
+
     <div class="card"><div class="card-hdr" onclick="tog('amee23detail')"><span class="db bconf">AMEE</span><span class="c-title">8/23 Adina→會場詳細走法與報到</span><span class="chev">▾</span></div><div class="card-body" id="amee23detail">
       <div class="ib ibr"><strong>會場：</strong>Austria Center Vienna，Vorsorgeweg 1, 1220 Vienna<br><strong>8/23報到：</strong>08:00–21:30，Entrance Hall</div>
       <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">出發</div><div class="rp">Adina步行至U1</div><div class="rd">從Karl-Popper-Straße 6步行約7–10分鐘，到「Südtiroler Platz–Hauptbahnhof」站，找紅色U1標誌。</div></div></div>
@@ -246,17 +449,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
       <button class="bigbtn" onclick="gm('Austria Center Vienna Vorsorgeweg 1')">📍 開啟AMEE會場導航</button>
     </div></div>
 
-    <div class="ib ibp"><strong>👨‍👩‍👧 你們一家延伸行程｜8/25–8/31</strong><br>以下每一天都包含時間、交通、購票、景點及回飯店方式。點日期展開。</div>
-
-    <div class="card"><div class="card-hdr" onclick="tog('plan25full')"><span class="db bconf">8/25</span><span class="c-title">維也納→薩爾斯堡→HOTEL max70</span><span class="chev">▾</span></div><div class="card-body open" id="plan25full">
-      <div class="ib ibr"><strong>兩家今天分開：</strong>妹妹一家約07:15–07:30前往VIE搭11:15華航；你們一家搭11:13 ICE1214前往薩爾斯堡。</div>
-      <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">09:30前</div><div class="rp">早餐、整理、Adina退房</div><div class="rd">再次確認護照、ICE電子票、3件行李。從Karl-Popper-Straße步行約5–10分鐘到Wien Hbf；走電梯與無障礙入口。</div></div></div>
-      <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">10:20–10:30</div><div class="rp">抵達Wien Hbf找月台</div><div class="rd">看大型電子板找<strong>11:13／ICE1214／Salzburg</strong>。票面月台7僅供參考；以當天看板與ÖBB App為準。再依車廂位置圖走到正確區段。</div></div></div>
-      <div class="tbox"><div class="tbox-t">🚆 已購票 ICE1214</div>11:13 Wien Hbf→14:00 Salzburg Hbf，約2小時47分。進月台通常無閘門，直接上車；查票時出示QR Code與護照。</div>
-      <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">14:00</div><div class="rp">Salzburg Hbf→Glansteg</div><div class="rd">出站往Südtiroler Platz／Bus，找到<strong>1號公車</strong>。上車前核對車頭方向及Salzburg Verkehr App；在Salzburg Glansteg下車，步行約1分鐘到HOTEL max70。</div></div></div>
-      <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">15:00後</div><div class="rp">入住、索取Guest Mobility Ticket</div><div class="rd">向櫃檯索取3人的交通QR Code／PDF。今天只排飯店附近或米拉貝爾花園，讓4歲孩子休息；晚餐後搭1號回Glansteg。</div></div></div>
-      <button class="nb" onclick="gd('Wien Hauptbahnhof','Salzburg Hauptbahnhof')">🚆 火車路線</button> <button class="nb" onclick="gd('Salzburg Hauptbahnhof','Hotel max70 Salzburg')">🏨 車站→飯店</button>
-    </div></div>
+    <div class="ib ibp"><strong>👨‍👩‍👧 你們一家延伸行程｜8/26–8/31</strong><br>以下每一天都包含時間、交通、購票、景點及回飯店方式。點日期展開。</div>
 
     <div class="card"><div class="card-hdr" onclick="tog('plan26full')"><span class="db bconf">8/26</span><span class="c-title">國王湖電動船與紅頂教堂</span><span class="chev">▾</span></div><div class="card-body" id="plan26full">
       <div class="ib ibr">🇩🇪 國王湖在德國：3人護照帶著。Guest Mobility Ticket只適用其涵蓋範圍，德國段與船票須另外購買。</div>
@@ -313,267 +506,6 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
       <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">完成報到後</div><div class="rp">安檢→出境→登機門</div><div class="rd">持續查看Gate是否異動；過關後先找廁所、補水，於登機時間前回Gate。9/1抵達台灣。</div></div></div>
       <button class="nb" onclick="gd('Adina Serviced Apartments Vienna Belvedere','Vienna International Airport Terminal 1A')">🗺️ Adina→VIE T1A</button> <button class="nb" onclick="openUrl('https://viennaairport.com/passagiere/flughafen/flughafenplan')">✈️ 機場平面圖</button>
     </div></div>
-    <div style="display:none">
-    <!-- 舊版行程備份（隱藏） -->
-    <!-- 日曆總覽 -->
-    <div style="background:#1e1e1e;color:#e8e8e8;border-radius:12px;padding:12px 13px;font-size:11px;line-height:2;margin-bottom:10px">
-      <div style="color:#6C5CE7;font-weight:700;margin-bottom:4px">📅 雙家庭完整行程</div>
-      <span style="color:#DAA520">你妹家先出發</span><br>
-      <span style="color:#aaa">8/13四</span> 抵達·ZOOM兒博·Albertina 🏨Novotel<br>
-      <span style="color:#aaa">8/14五</span> 搭IC→林茲·童話洞穴火車 🏨Park Inn<br>
-      <span style="color:#aaa">8/15六</span> 阿爾斯電子藝術·林茲城堡 🏨Park Inn<br>
-      <span style="color:#aaa">8/16日</span> 搭IC→薩爾斯堡·高地要塞·玩具博物館 🏨Cocoon<br>
-      <span style="color:#aaa">8/17一</span> 溫特斯山纜車·海布倫噴水宮 🏨Cocoon<br>
-      <span style="color:#aaa">8/18二</span> 搭ICE→維也納·科技博物館 🏨Leonardo<br>
-      <span style="color:#6EC6FF">你家出發</span><br>
-      <span style="color:#aaa">8/17一</span> CI0063 TPE 23:30起飛✈️<br>
-      <span style="color:#aaa">8/18二</span> VIE 06:30抵達 ⭐兩家會合！🏨Leonardo<br>
-      <span style="color:#DAA520">兩家→布拉格</span><br>
-      <span style="color:#aaa">8/19三</span> RegioJet 06:39→布拉格·無限書塔 🏨The Gold Bank<br>
-      <span style="color:#aaa">8/20四</span> 布拉格城堡·小城區·查理大橋 🏨The Gold Bank<br>
-      <span style="color:#aaa">8/21五</span> 萊特納公園·Café Louvre·遊船 🏨The Gold Bank<br>
-      <span style="color:#DAA520">兩家→維也納</span><br>
-      <span style="color:#aaa">8/22六</span> RegioJet 13:01返維也納·Naschmarkt 🏨Adina<br>
-      <span style="color:#E63946">8/23日</span> ★AMEE研討會·自然史博物館 🏨Adina<br>
-      <span style="color:#aaa">8/24一</span> 美泉宮·動物園·Figlmüller炸豬排 🏨Adina<br>
-      <span style="color:#E63946">8/25二</span> 你妹CI0064 11:15回台✈️／你家ICE 11:13→薩爾斯堡 🏨max70<br>
-      <span style="color:#6EC6FF">你家繼續</span><br>
-      <span style="color:#E63946">8/26三</span> ⭐國王湖·電動船·紅頂教堂 🏨max70<br>
-      <span style="color:#E63946">8/27四</span> ⭐哈修塔特一日遊 🏨max70<br>
-      <span style="color:#aaa">8/28五</span> 海布倫噴水宮·自然之屋 🏨max70<br>
-      <span style="color:#aaa">8/29六</span> 薩爾斯堡採購·IC743 16:11→維也納 🏨Adina<br>
-      <span style="color:#aaa">8/30日</span> 普拉特摩天輪（週日照常！）<br>
-      <span style="color:#E63946">8/31一</span> CI0064 VIE 11:15→9/1抵台✈️
-    </div>
-
-    <!-- 你妹行程 -->
-    <div class="ib ibp" style="margin-bottom:8px">👩‍👧 <strong>你妹家先出發（8/13–8/18）</strong></div>
-
-    <div class="card">
-      <div class="card-hdr" onclick="tog('d_s12')"><span class="db bmei">妹8/12</span><span class="c-title">桃園機場報到・華航飛維也納</span><span class="chev">▾</span></div>
-      <div class="card-body" id="d_s12">
-        <div class="tbox"><div class="tbox-t">23:30 華航班機</div>建議20:00–20:30抵達桃園機場；先看航班看板確認航廈與報到櫃檯，再依序辦理報到、托運、出境與登機。</div>
-        <div class="ib iba">帶4歲孩子：護照與登機證由一位大人統一保管；推車在櫃檯確認是機邊托運或一般托運；隨身包留一套衣物、薄外套、濕紙巾、熟悉零食與空水壺。</div>
-        <button class="bigbtn" onclick="showAirportDeparture()">✈️ 打開機場逐步教學</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-hdr" onclick="tog('d_s13')"><span class="db bmei">妹8/13</span><span class="c-title">抵達·ZOOM兒博·Albertina</span><span class="chev">▾</span></div>
-      <div class="card-body" id="d_s13">
-        <button class="bigbtn" onclick="openTransport('tr13')">🚇 打開 8/13 本日逐段走法</button>
-        <div class="ib iba">💡 剛下飛機先搭Railjet到Wien Hbf、寄放行李；今天以軍事史博物館與舊城經典為主。</div>
-        <div class="spot"><div class="sico" style="background:#FAEEDA">🏨</div><div><div class="sname">Novotel Wien Hbf 寄放行李</div><div class="sdesc">8/13–14住宿，Wien Hbf步行1分</div><button class="nb" onclick="gm('Novotel Wien Hauptbahnhof')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#E6F1FB">🛡️</div><div><div class="sname">10:30 維也納軍事史博物館 HGM</div><div class="sdesc">大砲、飛機與戰車展區；從飯店先步行或依即時導航前往。</div><button class="nb" onclick="gm('Heeresgeschichtliches Museum Vienna')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#FCF0F0">🍖</div><div><div class="sname">12:30 Ribs of Vienna 一公尺豬肋排</div><div class="sdesc">份量超大，維也納必吃！</div><button class="nb" onclick="gm('Ribs of Vienna')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#EEEDFE">🏛️</div><div><div class="sname">14:00 霍夫堡皇宮散策</div><div class="sdesc">英雄廣場→皇宮建築群→米歇爾廣場，採平面散步路線。</div><button class="nb" onclick="gm('Heldenplatz Vienna')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#E1F5EE">☕</div><div><div class="sname">14:30 Café Demel 德梅爾咖啡館</div><div class="sdesc">沙河蛋糕＋Espresso；晚上Böhmerwald晚餐後回Novotel。</div><button class="nb" onclick="gm('Café Demel Vienna')">📍 導航</button></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-hdr" onclick="tog('d_s14')"><span class="db bmei">妹8/14</span><span class="c-title">搭IC→林茲·童話洞穴火車</span><span class="chev">▾</span></div>
-      <div class="card-body" id="d_s14">
-        <button class="bigbtn" onclick="openTransport('tr14')">🚇 打開 8/14 本日逐段走法</button>
-        <div class="tbox"><div class="tbox-t">🚆 IC 546 Wien Hbf 08:57→Linz 10:28（月台8A-B）</div></div>
-        <div class="spot"><div class="sico" style="background:#E6F1FB">🚂</div><div><div class="sname">佩斯特靈貝格登山鐵道·童話洞穴火車</div><div class="sdesc">林茲很有特色的古老登山鐵道＋洞穴小火車，很適合4歲孩子。</div><button class="nb" onclick="gm('Pöstlingberg Grottenbahn Linz')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#FAEEDA">🎂</div><div><div class="sname">Café Jindrak 正宗林茲塔</div><div class="sdesc">林茲塔（Linzer Torte）全球最古老蛋糕！在發源地吃最道地</div><button class="nb" onclick="gm('Café Jindrak Linz')">📍 導航</button></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-hdr" onclick="tog('d_s15')"><span class="db bmei">妹8/15</span><span class="c-title">林茲·阿爾斯電子藝術·城堡</span><span class="chev">▾</span></div>
-      <div class="card-body" id="d_s15">
-        <button class="bigbtn" onclick="openTransport('tr15')">🚇 打開 8/15 本日逐段走法</button>
-        <div class="spot"><div class="sico" style="background:#E6F1FB">🖥️</div><div><div class="sname">阿爾斯電子藝術中心（Ars Electronica）</div><div class="sdesc">Deep Space 8K 超大互動投影牆！未來博物館，小孩驚呼連連</div><button class="nb" onclick="gm('Ars Electronica Center Linz')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#FAEEDA">🏰</div><div><div class="sname">林茲城堡博物館</div><div class="sdesc">俯瞰多瑙河的中世紀城堡</div><button class="nb" onclick="gm('Linz Castle Museum')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#EEEDFE">⛪</div><div><div class="sname">新主教座堂（Mariendom）</div><div class="sdesc">彩繪玻璃超美，中庭平坦安全</div><button class="nb" onclick="gm('Mariendom Linz')">📍 導航</button></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-hdr" onclick="tog('d_s16')"><span class="db bmei">妹8/16</span><span class="c-title">搭IC→薩爾斯堡·高地要塞·玩具博物館</span><span class="chev">▾</span></div>
-      <div class="card-body" id="d_s16">
-        <button class="bigbtn" onclick="openTransport('tr16')">🚇 打開 8/16 本日逐段走法</button>
-        <div class="tbox"><div class="tbox-t">🚆 IC 1142 Linz 10:14→Salzburg Süd 11:38（月台6A-F）→轉S-Bahn</div></div>
-        <div class="spot"><div class="sico" style="background:#FAEEDA">🏰</div><div><div class="sname">13:30 高地要塞（Hohensalzburg）纜車</div><div class="sdesc">搭纜車上山，俯瞰全景！聖彼得修道院烘焙坊</div><button class="nb" onclick="gm('Festung Hohensalzburg')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#E6F1FB">🥖</div><div><div class="sname">聖彼得修道院傳統烘焙坊</div><div class="sdesc">要塞下山後順路前往，再步行到米拉貝爾花園。</div><button class="nb" onclick="gm('Stiftsbäckerei St Peter Salzburg')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#EEEDFE">🌸</div><div><div class="sname">17:00 米拉貝爾花園（免費）</div><div class="sdesc">《真善美》取景地！</div><button class="nb" onclick="gm('Mirabell Palace Salzburg')">📍 導航</button></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-hdr" onclick="tog('d_s17')"><span class="db bmei">妹8/17</span><span class="c-title">溫特斯山纜車·海布倫噴水宮·自然之屋</span><span class="chev">▾</span></div>
-      <div class="card-body" id="d_s17">
-        <button class="bigbtn" onclick="openTransport('tr17s')">🚇 打開 8/17 本日逐段走法</button>
-        <div class="spot"><div class="sico" style="background:#E1F5EE">🚡</div><div><div class="sname">09:15 溫特斯山纜車</div><div class="sdesc">搭25號公車直達！阿爾卑斯群峰壯麗視野</div><button class="nb" onclick="gm('Untersberg Salzburg')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#E6F1FB">💦</div><div><div class="sname">11:30 海布倫惡作劇噴水宮</div><div class="sdesc">地板突然噴水！⚠️帶換洗衣服！週一有營業</div><div class="stag">⚠️帶換洗衣服！</div><button class="nb" onclick="gm('Schloss Hellbrunn Salzburg')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#FAEEDA">🦕</div><div><div class="sname">14:00 自然之屋（Haus der Natur）</div><div class="sdesc">恐龍化石、科學互動裝置</div><button class="nb" onclick="gm('Haus der Natur Salzburg')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#EEEDFE">🌅</div><div><div class="sname">17:00 僧侶山觀景台落日</div><div class="sdesc">搭快速電梯登頂，俯瞰薩爾斯堡</div><button class="nb" onclick="gm('Mönchsberg Salzburg')">📍 導航</button></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-hdr" onclick="tog('d_s18')"><span class="db bmei">妹8/18</span><span class="c-title">搭ICE→維也納·與你家會合！</span><span class="chev">▾</span></div>
-      <div class="card-body" id="d_s18">
-        <button class="bigbtn" onclick="openTransport('tr18')">🚇 打開 8/18 本日逐段走法</button>
-        <div class="tbox"><div class="tbox-t">🚆 ICE 1211 Salzburg 10:00→Wien Hbf 12:47</div></div>
-        <div class="ib ibg">🎉 你家今天 06:30 抵達維也納！中午兩家會合！</div>
-        <div class="spot"><div class="sico" style="background:#E6F1FB">🔬</div><div><div class="sname">14:30 科技博物館（Technisches Museum）</div><div class="sdesc">火車頭與物理裝置，6歲以下免費！</div><button class="nb" onclick="gm('Technisches Museum Wien')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#FCF0F0">🍜</div><div><div class="sname">晚餐 Magic Noodle 亞洲熱湯麵</div><div class="sdesc">連續奔波後吃碗熱湯麵最舒服！</div><button class="nb" onclick="gm('Magic Noodle Vienna')">📍 導航</button></div></div>
-      </div>
-    </div>
-
-    <div class="ib ibg" style="margin:10px 0">🎉 8/18晚兩家正式會合！→出發布拉格！</div>
-
-    <!-- 布拉格 -->
-    <div class="card">
-      <div class="card-hdr" onclick="tog('d_p19')"><span class="db bpg">8/19</span><span class="c-title">RegioJet→布拉格·無限書塔·跳舞的房子</span><span class="c-sub">兩家</span><span class="chev">▾</span></div>
-      <div class="card-body" id="d_p19">
-        <button class="bigbtn" onclick="openTransport('tr19')">🚇 打開 8/19 本日逐段走法</button>
-        <div class="tbox"><div class="tbox-t">🚆 RegioJet 06:39出發（3車廂/61-66座）→10:56抵Praha</div>⚠️很早！前一晚打包完成</div>
-        <div class="spot"><div class="sico" style="background:#EEEDFE">🏰</div><div><div class="sname">下午 火藥塔·天文鐘·泰恩教堂</div><div class="sdesc">整點小人偶出現！哈維爾市集有趣味紀念品</div><button class="nb" onclick="gm('Prague Astronomical Clock')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#E6F1FB">📚</div><div><div class="sname">市立圖書館「無限書塔 Idiom」</div><div class="sdesc">書本疊成的圓柱形書塔！免費參觀，超級打卡點</div><button class="nb" onclick="gm('Prague City Library')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#E1F5EE">🏠</div><div><div class="sname">傍晚 搭Tram17→跳舞的房子</div><div class="sdesc">解構主義建築，河畔散步拍照</div><button class="nb" onclick="gm('Dancing House Prague')">📍 導航</button></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-hdr" onclick="tog('d_p20')"><span class="db bpg">8/20</span><span class="c-title">布拉格城堡·小城區·約翰藍儂牆·查理大橋</span><span class="c-sub">兩家</span><span class="chev">▾</span></div>
-      <div class="card-body" id="d_p20">
-        <button class="bigbtn" onclick="openTransport('tr20')">🚇 打開 8/20 本日逐段走法</button>
-        <div class="spot"><div class="sico" style="background:#FAEEDA">🏰</div><div><div class="sname">上午 搭Tram22→布拉格城堡（B路線）</div><div class="sdesc">聖維特主教座堂+黃金巷，順石板路下坡省體力！線上買票免排隊</div><button class="nb" onclick="gm('Prague Castle')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#EEEDFE">🎨</div><div><div class="sname">下午 小城區·約翰藍儂牆·坎帕島</div><div class="sdesc">五顏六色塗鴉牆！坎帕島草坪看青銅巨嬰雕塑放電</div><button class="nb" onclick="gm('John Lennon Wall Prague')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#E6F1FB">🌉</div><div><div class="sname">傍晚 查理大橋漫步</div><div class="sdesc">30座聖人雕像，伏爾塔瓦河景色一覽無遺</div><button class="nb" onclick="gm('Charles Bridge Prague')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#FCF0F0">🍖</div><div><div class="sname">晚餐 捷克烤豬腳+啤酒</div><div class="sdesc">物價比維也納便宜40%！</div></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-hdr" onclick="tog('d_p21')"><span class="db bpg">8/21</span><span class="c-title">萊特納公園·Café Louvre·伏爾塔瓦河遊船</span><span class="c-sub">兩家</span><span class="chev">▾</span></div>
-      <div class="card-body" id="d_p21">
-        <button class="bigbtn" onclick="openTransport('tr21')">🚇 打開 8/21 本日逐段走法</button>
-        <div class="spot"><div class="sico" style="background:#E1F5EE">🌳</div><div><div class="sname">萊特納公園（Letná Park）</div><div class="sdesc">巨型節拍器+布拉格紅屋頂全景！兒童遊樂場放電，免費</div><button class="nb" onclick="gm('Letná Park Prague')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#EEEDFE">☕</div><div><div class="sname">百年羅浮咖啡館（Café Louvre）</div><div class="sdesc">1902年老咖啡館，寬敞推車友善</div><button class="nb" onclick="gm('Café Louvre Prague')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#FAEEDA">🛍️</div><div><div class="sname">Botanicus 天然保養品採購</div><div class="sdesc">布拉格必買！台灣買不到</div><button class="nb" onclick="gm('Botanicus Prague Old Town')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#E6F1FB">⛵</div><div><div class="sname">傍晚 伏爾塔瓦河夕陽遊船</div><div class="sdesc">水上欣賞城堡點燈與橘紅夕陽</div></div></div>
-      </div>
-    </div>
-
-    <div class="ib ibg" style="margin:10px 0">🚆 8/22 RegioJet 13:01返回維也納！</div>
-
-    <!-- 維也納兩家 -->
-    <div class="card">
-      <div class="card-hdr" onclick="tog('d_v22')"><span class="db bp">8/22</span><span class="c-title">返維也納·Naschmarkt跳蚤·貝爾維第·百水</span><span class="c-sub">兩家</span><span class="chev">▾</span></div>
-      <div class="card-body" id="d_v22">
-        <button class="bigbtn" onclick="openTransport('tr22')">🚇 打開 8/22 本日逐段走法</button>
-        <div class="tbox"><div class="tbox-t">🚆 RegioJet Prague 13:01→Vienna 17:21</div></div>
-        <div class="spot"><div class="sico" style="background:#E6F1FB">🏘️</div><div><div class="sname">百水公寓（Hundertwasserhaus）</div><div class="sdesc">全球最奇特公寓建築，外觀免費！</div><button class="nb" onclick="gm('Hundertwasserhaus Vienna')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#FCF0F0">🍲</div><div><div class="sname">Plachutta Wollzeile 晚餐</div><div class="sdesc">經典清燉牛肉湯；用餐後依本日走法回Adina。</div><button class="nb" onclick="gm('Plachutta Wollzeile')">📍 導航</button></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-hdr" onclick="tog('d_v23')"><span class="db bconf">★AMEE</span><span class="c-title">AMEE研討會（你）+ 自然史博物館·藝術史</span><span class="c-sub">8/23日</span><span class="chev">▾</span></div>
-      <div class="card-body" id="d_v23">
-        <button class="bigbtn" onclick="openTransport('tr23')">🚇 打開 8/23 本日兩條逐段走法</button>
-        <div class="ib ibr">★ AMEE 2026 · Austria Center Vienna · U1 Kaisermühlen-VIC</div>
-        <div class="spot"><div class="sico" style="background:#E1F5EE">🦕</div><div><div class="sname">家人→自然史博物館</div><div class="sdesc">14歲以下完全免費！恐龍骨架+隕石</div><button class="nb" onclick="gm('Naturhistorisches Museum Wien')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#EEEDFE">🖼️</div><div><div class="sname">藝術史博物館→穹頂咖啡廳</div><div class="sdesc">穹頂下喝Espresso，氣氛絕美！</div><button class="nb" onclick="gm('Kunsthistorisches Museum Vienna')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#FCF0F0">🌹</div><div><div class="sname">傍晚 搭Tram D→美景宮庭園</div><div class="sdesc">花園免費散步</div><button class="nb" onclick="gm('Belvedere Palace Vienna')">📍 導航</button></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-hdr" onclick="tog('d_v24')"><span class="db bp">8/24</span><span class="c-title">美泉宮·動物園·Figlmüller百年炸豬排</span><span class="c-sub">兩家</span><span class="chev">▾</span></div>
-      <div class="card-body" id="d_v24">
-        <button class="bigbtn" onclick="openTransport('tr24')">🚇 打開 8/24 本日逐段走法</button>
-        <div class="spot"><div class="sico" style="background:#FAEEDA">🏰</div><div><div class="sname">美泉宮（熊布朗宮）</div><div class="sdesc">大人€22，小孩€14，U4 Schönbrunn。Café Residenz皇家甜點！</div><button class="nb" onclick="gm('Schönbrunn Palace Vienna')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#EAF3DE">🐘</div><div><div class="sname">美泉宮動物園（Tiergarten）</div><div class="sdesc">1752年最古老！大人€20，小孩€10。遊園小火車省腿力</div><button class="nb" onclick="gm('Tiergarten Schönbrunn')">📍 導航</button></div></div>
-        <div class="spot"><div class="sico" style="background:#FCF0F0">☕</div><div><div class="sname">Schwedenplatz→Fenster-Café→舊城精品街</div><div class="sdesc">U4直達Schwedenplatz，散步至聖斯德望主教座堂及Kohlmarkt／Graben；晚餐彈性安排。</div><button class="nb" onclick="gm('Fenster Café Vienna')">📍 導航</button></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-hdr" onclick="tog('d_v25')"><span class="db bconf">8/25</span><span class="c-title">你妹返台·你家搭ICE→薩爾斯堡</span><span class="c-sub">二</span><span class="chev">▾</span></div>
-      <div class="card-body" id="d_v25">
-        <div class="ib ibr">⚠️ 你妹 CI0064 11:15 起飛；你家 ICE 11:13 開車，無法送機。早餐後分開前往機場與中央車站。</div>
-        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">09:45–10:00</div><div class="rp">Adina退房→步行到 Wien Hauptbahnhof</div><div class="rd">由 Karl-Popper-Straße 出發，依路標走向「Hauptbahnhof／BahnhofCity」約5–10分鐘。進站後看藍色電子看板找 <strong>ICE 1214、Salzburg、11:13</strong>；你的票顯示月台7，但當天仍以電子看板為準。</div><button class="nb" onclick="gm('Wien Hauptbahnhof')">📍 中央車站</button></div></div>
-        <div class="tbox"><div class="tbox-t">🚆 已購票：ICE 1214</div>Wien Hbf 11:13 → Salzburg Hbf 14:00｜3人｜車程2小時47分。進月台不需閘門，直接上車；查票時打開 ÖBB App 的 Show ticket，並準備護照。</div>
-        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">14:00</div><div class="rp">Salzburg Hbf→HOTEL max70</div><div class="rd">出站往「Südtiroler Platz／Bus」方向，到站前公車區找<strong>1號公車</strong>；上車前用 Salzburg Verkehr App 輸入終點「Salzburg Glansteg」確認方向。於 Glansteg 下車，飯店約步行1分鐘。</div><button class="nb" onclick="gm('Salzburg Glansteg')">📍 Glansteg站</button></div></div>
-        <div class="spot"><div class="sico" style="background:#FAEEDA">🏨</div><div><div class="sname">15:00 HOTEL max70 入住</div><div class="sdesc">向櫃台索取 Guest Mobility Ticket。下午只去米拉貝爾花園或附近散步。</div><button class="nb" onclick="gm('Hotel max70 Salzburg')">📍 飯店</button></div></div>
-      </div>
-    </div>
-
-    <div class="ib ibp" style="margin:10px 0">👨‍👩‍👧 8/25後你家繼續！薩爾斯堡住4晚再回維也納</div>
-    <div class="ib iba"><strong>🎫 先做這3件事</strong><br>① 手機安裝 ÖBB App（火車、月台、延誤）與 Salzburg Verkehr App（公車即時班次）。<br>② 8/25入住 HOTEL max70 時，向櫃台索取3人的 <strong>Guest Mobility Ticket</strong>（QR Code／PDF）；住宿期間薩爾斯堡邦內的大眾交通可使用。<br>③ 國王湖跨入德國、哈修塔特進入上奧地利，超出免費範圍的路段仍須另買票。</div>
-
-    <div class="card">
-      <div class="card-hdr" onclick="tog('d_sal26')"><span class="db bconf">⭐8/26</span><span class="c-title">國王湖·純電動船·紅頂教堂</span><span class="c-sub">三</span><span class="chev">▾</span></div>
-      <div class="card-body" id="d_sal26">
-        <div class="ib ibr">⚠️ 國王湖在德國，帶全家護照。Guest Mobility Ticket只涵蓋840到奧德邊境，德國路段與船票要另買。</div>
-        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">約07:00</div><div class="rp">飯店→Salzburg Hbf</div><div class="rd">步行1分鐘到「Salzburg Glansteg」，搭1號公車到「Salzburg Hauptbahnhof」。前一晚在 Salzburg Verkehr App 搜尋 Salzburg Glansteg→Königssee，依當日班次提早出門。</div></div></div>
-        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">車站轉車</div><div class="rp">搭840號區域公車</div><div class="rd">從Hbf出站到站前區域公車站，找車頭顯示 <strong>840 Berchtesgaden／Königssee</strong>。月台可能調整，以 Salzburg Verkehr App 與站牌電子顯示為準。若班車只到 Berchtesgaden Hbf，再在同站轉841到「Königssee」。</div></div></div>
-        <div class="tbox"><div class="tbox-t">🎫 公車票怎麼買</div>先出示 Guest Mobility Ticket；再向840司機說「Königssee, two adults and one four-year-old child」購買德國路段／合適日票。也可在 DB Navigator 查票。不要只拿Guest Ticket一路坐到底。</div>
-        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">抵達 Königssee站</div><div class="rp">步行到船票中心</div><div class="rd">下車跟著「Seelände／Schifffahrt」標誌，穿過商店街約5–10分鐘到碼頭。船票可事先在國王湖官方網站買，或到碼頭售票處購買「St. Bartholomä 往返」。</div><button class="nb" onclick="gm('Königssee Seelände')">📍 國王湖碼頭</button></div></div>
-        <div class="spot"><div class="sico" style="background:#E6F1FB">⛵</div><div><div class="sname">電動船→St. Bartholomä</div><div class="sdesc">下船後湖畔散步、教堂與午餐；記住回程船時間。回程原路：船→841（若需要）→840→Salzburg Hbf→1號公車→Glansteg。</div></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-hdr" onclick="tog('d_sal27')"><span class="db bconf">⭐8/27</span><span class="c-title">哈修塔特 Hallstatt 一日遊</span><span class="c-sub">四</span><span class="chev">▾</span></div>
-      <div class="card-body" id="d_sal27">
-        <div class="ib ibr">⚠️ 重要：Hallstatt鹽礦與Salzberg纜車預計8/29/2026才重新開放，所以你們8/27不能排鹽礦；今天改成湖畔老城慢遊。</div>
-        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">約06:30</div><div class="rp">飯店→Salzburg Hbf</div><div class="rd">Glansteg搭1號公車到Hauptbahnhof。前一晚用 Salzburg Verkehr App 或 ÖBB Scotty 搜尋「Salzburg Hbf→Hallstatt Lahn」，選<strong>150＋543公車</strong>方案。</div></div></div>
-        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">第一段</div><div class="rp">150號 Salzburg Hbf→Bad Ischl Bahnhof</div><div class="rd">在中央車站站前區域公車區找150，方向 Bad Ischl。Guest Mobility Ticket可涵蓋這段；車程較長，坐右側或依現場湖景選位。</div></div></div>
-        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">Bad Ischl轉車</div><div class="rp">543號→Hallstatt Lahn</div><div class="rd">150下車處就在Bad Ischl車站前，查看站牌找543往Hallstatt/Gosau方向，在「Hallstatt Lahn」下車。此段已超出Salzburg邦，需在ÖBB／OÖVV App或向司機另買票；買票時輸入2大1名4歲兒童。</div></div></div>
-        <div class="spot"><div class="sico" style="background:#E1F5EE">📸</div><div><div class="sname">Hallstatt Lahn→老城與明信片角度</div><div class="sdesc">下車後沿湖岸向北走：湖畔→市集廣場→路德教堂→再走到北側明信片觀景點。全程慢走約20–30分鐘；推車可走，但部分路面不平。</div><button class="nb" onclick="gm('Hallstatt Lahn')">📍 下車站</button> <button class="nb" onclick="gm('Classic Village Viewpoint Hallstatt')">📍 經典角度</button></div></div>
-        <div class="tbox"><div class="tbox-t">🚌 回程</div>回到「Hallstatt Lahn」搭543→Bad Ischl Bahnhof，再轉150→Salzburg Hbf，最後搭1號→Glansteg。上車前務必在App確認末班與轉車時間。</div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-hdr" onclick="tog('d_sal28')"><span class="db bext">8/28</span><span class="c-title">海布倫噴水宮·自然之屋</span><span class="c-sub">五</span><span class="chev">▾</span></div>
-      <div class="card-body" id="d_sal28">
-        <div class="ib ibr">⚠️ 噴水宮會濕身，帶換洗衣物、防水袋與小毛巾。</div>
-        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">08:15左右</div><div class="rp">飯店→市中心／中央車站</div><div class="rd">Glansteg搭1號公車；可到Hauptbahnhof或市中心Rathaus轉車。用 Salzburg Verkehr App 搜尋「Salzburg Glansteg→Schloss Hellbrunn」，跟著當日建議轉乘。</div></div></div>
-        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">轉25號</div><div class="rp">25號往 Untersbergbahn→Schloss Hellbrunn</div><div class="rd">車頭需顯示「25 Untersbergbahn」，在「Schloss Hellbrunn」下車；官方資訊顯示由中央車站約30分鐘、由市中心約25分鐘。Guest Mobility Ticket可用。</div></div></div>
-        <div class="spot"><div class="sico" style="background:#E6F1FB">💦</div><div><div class="sname">海布倫惡作劇噴水宮</div><div class="sdesc">門票在官方網站預購或現場售票處買；預留約2–3小時。</div><button class="nb" onclick="gm('Schloss Hellbrunn Salzburg')">📍 導航</button></div></div>
-        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">下午</div><div class="rp">25號回Rathaus→步行自然之屋</div><div class="rd">在原下車站對向搭25號回市區，於「Rathaus」下車；沿河岸往西北步行約10–15分鐘至 Museumsplatz 5。若小孩累，直接搭車回飯店。</div></div></div>
-        <div class="spot"><div class="sico" style="background:#FAEEDA">🦕</div><div><div class="sname">自然之屋 Haus der Natur</div><div class="sdesc">門票可現場買；館內很大，建議挑恐龍、水族館與Science Center，不必全部走完。</div><button class="nb" onclick="gm('Haus der Natur Salzburg')">📍 導航</button></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-hdr" onclick="tog('d_sal29')"><span class="db bext">8/29</span><span class="c-title">薩爾斯堡採購·IC743返維也納</span><span class="c-sub">六</span><span class="chev">▾</span></div>
-      <div class="card-body" id="d_sal29">
-        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">10:30前</div><div class="rp">HOTEL max70退房、寄放行李</div><div class="rd">向櫃台說「Could you store our luggage until about 3 p.m.?」上午搭1號到市中心，採購後最晚14:45開始回飯店。</div></div></div>
-        <div class="spot"><div class="sico" style="background:#FAEEDA">🛍️</div><div><div class="sname">上午 薩爾斯堡舊城與最後採購</div><div class="sdesc">約15:00回飯店取行李；Glansteg搭1號直達Salzburg Hauptbahnhof，預留塞車與找月台時間。</div></div></div>
-        <div class="tbox"><div class="tbox-t">🚆 已購票：IC 743</div>Salzburg Hbf 16:11 → Wien Hbf 19:03｜3人｜票面月台5A–B。建議15:35前到車站，看電子看板確認IC743與月台；進月台無閘門，直接上車。</div>
-        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">19:03</div><div class="rp">Wien Hbf→Adina</div><div class="rd">下車後依「Sonnwendgasse／Südtiroler Platz」出口指標，開Google Maps步行約5–10分鐘到 Karl-Popper-Straße 6。</div><button class="nb" onclick="gm('Adina Serviced Apartments Vienna Belvedere')">📍 Adina</button></div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-hdr" onclick="tog('d_v30')"><span class="db bext">8/30</span><span class="c-title">普拉特摩天輪（週日照常！）·最後悠閒日</span><span class="c-sub">日</span><span class="chev">▾</span></div>
-      <div class="card-body" id="d_v30">
-        <div class="ib ibg">✅ 週日景點正常，但一般商店多半休息；今天排咖啡館與普拉特。</div>
-        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">上午</div><div class="rp">Adina→Café Central</div><div class="rd">步行到U1「Südtiroler Platz–Hauptbahnhof」，搭往 Leopoldau方向至「Stephansplatz」；轉U3往 Ottakring方向坐1站到「Herrengasse」，步行約3–5分鐘。維也納市區票可在 WienMobil App或地鐵站紅色售票機購買，搭車前需持有效票。</div><button class="nb" onclick="gm('Café Central Vienna')">📍 Café Central</button></div></div>
-        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">傍晚</div><div class="rp">市中心→Praterstern</div><div class="rd">回到U1「Stephansplatz」，搭往 Leopoldau方向，在「Praterstern」下車；依「Riesenrad／Prater」出口，出站後步行約5分鐘到摩天輪。</div></div></div>
-        <div class="spot"><div class="sico" style="background:#E6F1FB">🎢</div><div><div class="sname">普拉特百年摩天輪</div><div class="sdesc">摩天輪全年營業；門票可官方網站預購或入口售票處購買。其他遊樂設施多為各自單次付費。</div><button class="nb" onclick="gm('Wiener Riesenrad Vienna')">📍 導航</button></div></div>
-        <div class="ib ibr">🧳 今晚打包行李！明天CI0064 VIE 11:15回台，建議08:30前到機場</div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-hdr" onclick="tog('d_v31')"><span class="db bconf">8/31</span><span class="c-title">Adina退房·搭Railjet到VIE機場·返台</span><span class="c-sub">一</span><span class="chev">▾</span></div>
-      <div class="card-body" id="d_v31">
-        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">07:30–07:45</div><div class="rp">退房→步行Wien Hbf</div><div class="rd">帶行李步行約5–10分鐘。若有退稅或托運行李多，建議更早離開。</div></div></div>
-        <div class="tbox"><div class="tbox-t">🚆 Wien Hbf→Flughafen Wien</div>最簡單選「Railjet直達機場」，約15分鐘、通常約30分鐘一班。前一晚在ÖBB App搜尋 Wien Hbf→Flughafen Wien，購買2大人＋1名4歲兒童的票；也可在Wien Hbf紅色ÖBB售票機買。不要只用維也納市區票，機場在核心區外。</div>
-        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">抵達機場站</div><div class="rp">跟著 Flugterminal／Terminal 指標</div><div class="rd">搭手扶梯或電梯上樓進航廈，找China Airlines報到看板；CI0064 11:15起飛，建議最晚08:30抵達。先辦退稅／托運，再過安檢與證照查驗。</div><button class="nb" onclick="gm('Vienna International Airport Terminal 3')">📍 VIE T3</button></div></div>
-      </div>
-    </div>
-  </div>
 
     </div>
   <!-- 住宿子分頁 -->
@@ -713,103 +645,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
       <button class="nb" onclick="openUrl('https://pid.cz/en/maps-and-schematics/')">🗺️ 布拉格官方路線圖</button> <button class="nb" onclick="openUrl('https://pid.cz/en/tickets-and-fare/how-to-buy-ticket/')">🎫 購票打票教學</button>
     </div></div>
 
-    <div class="ib ibp">👩‍👧 <strong>妹妹一家：8/12晚出發，8/13早上抵達</strong></div>
-    <div class="card"><div class="card-hdr" onclick="tog('tr13')"><span class="db bmei">8/13</span><span class="c-title">VIE機場→Novotel→景點→回飯店</span><span class="chev">▾</span></div><div class="card-body" id="tr13">
-      <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rp">VIE行李轉盤→機場火車站</div><div class="rd">領完行李跟著綠色「Train／Bahnhof」指標下樓。ÖBB紅色售票機選 Flughafen Wien→Wien Hauptbahnhof；24小時市區票不能單獨涵蓋機場外圍段。</div></div></div>
-      <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rp">Railjet直達 Wien Hbf</div><div class="rd">看電子看板找 Wien Hauptbahnhof 方向的 Railjet；約15分鐘。到站後依「Canettistraße」出口，Novotel就在車站旁。</div><button class="nb" onclick="gd('Vienna International Airport','Novotel Wien Hauptbahnhof')">🗺️ 機場→飯店</button></div></div>
-      <div class="tbox"><div class="tbox-t">當日順序</div>Novotel→HGM軍事史博物館→Ribs of Vienna→霍夫堡→Demel→Böhmerwald→Novotel。</div>
-      <button class="nb" onclick="gd('Novotel Wien Hauptbahnhof','Heeresgeschichtliches Museum Vienna')">🗺️ 飯店→HGM</button> <button class="nb" onclick="gd('Böhmerwald Vienna','Novotel Wien Hauptbahnhof')">🏨 晚餐→飯店</button>
-    </div></div>
-
-    <div class="card"><div class="card-hdr" onclick="tog('tr14')"><span class="db bmei">8/14</span><span class="c-title">Novotel→林茲→Park Inn→回飯店</span><span class="chev">▾</span></div><div class="card-body" id="tr14">
-      <div class="tbox"><div class="tbox-t">08:57 IC546</div>Novotel退房→步行至Wien Hbf→看電子板確認IC546及月台8A–B→10:28 Linz Hbf。</div>
-      <div class="rd">Linz Hbf出站後搭Tram 1／2／3／4往市中心，在「Mozartkreuzung」下車，步行約5分鐘至Park Inn寄放行李。</div>
-      <button class="nb" onclick="gd('Linz Hauptbahnhof','Park Inn by Radisson Linz')">🗺️ Linz站→飯店</button>
-      <div class="tbox"><div class="tbox-t">當日順序</div>Park Inn→Hauptplatz→Pöstlingbergbahn／Grottenbahn→Café Jindrak→Donaulände→Park Inn。</div>
-      <button class="nb" onclick="gd('Donaulände Linz','Park Inn by Radisson Linz')">🏨 河畔→飯店</button>
-    </div></div>
-
-    <div class="card"><div class="card-hdr" onclick="tog('tr15')"><span class="db bmei">8/15</span><span class="c-title">林茲市區一日＋回Park Inn</span><span class="chev">▾</span></div><div class="card-body" id="tr15">
-      <div class="tbox"><div class="tbox-t">步行＋電車最簡單</div>Park Inn→JINDRAK Landstraße 70→Tram至Hauptplatz→步行過橋到Ars Electronica→林茲城堡→新主教座堂→Wirtshaus Keintzel→Park Inn。</div>
-      <button class="nb" onclick="gd('Park Inn by Radisson Linz','Jindrak Landstraße 70 Linz')">🗺️ 飯店→早餐</button> <button class="nb" onclick="gd('Wirtshaus Keintzel Linz','Park Inn by Radisson Linz')">🏨 晚餐→飯店</button>
-    </div></div>
-
-    <div class="card"><div class="card-hdr" onclick="tog('tr16')"><span class="db bmei">8/16</span><span class="c-title">Park Inn→Salzburg Süd→Cocoon→回飯店</span><span class="chev">▾</span></div><div class="card-body" id="tr16">
-      <div class="rd">退房後從Park Inn搭Tram至Linz Hbf；10:14搭IC1142。11:38 Salzburg Süd下車後，依電子板搭往Salzburg Hbf的S-Bahn；到Hbf出站，Cocoon在站旁。</div>
-      <button class="nb" onclick="gd('Salzburg Süd','Cocoon Salzburg')">🗺️ 南站→Cocoon</button>
-      <div class="tbox"><div class="tbox-t">當日順序</div>Cocoon→糧食胡同／Café Mozart→薩爾斯堡要塞→米拉貝爾花園→Soja Ramen→Hbf SPAR→步行回Cocoon。</div>
-      <button class="nb" onclick="gd('Soja Ramen Salzburg','Cocoon Salzburg')">🏨 晚餐→飯店</button>
-    </div></div>
-
-    <div class="card"><div class="card-hdr" onclick="tog('tr17s')"><span class="db bmei">8/17</span><span class="c-title">Cocoon→25號公車景點→回飯店</span><span class="chev">▾</span></div><div class="card-body" id="tr17s">
-      <div class="rd">Cocoon步行至Salzburg Hbf站前公車區，搭25號往Untersbergbahn。先在纜車站下車；回程同線在Schloss Hellbrunn下車。之後25號回市區，前往Haus der Natur與Mönchsberg。</div>
-      <button class="nb" onclick="gd('Cocoon Salzburg','Untersbergbahn')">🗺️ 飯店→纜車</button>
-      <div class="rd">晚餐Mr Wen後，用Google Maps選大眾運輸回Salzburg Hbf，再步行回Cocoon。</div>
-      <button class="nb" onclick="gd('Mr Wen Asia Food Salzburg','Cocoon Salzburg')">🏨 晚餐→飯店</button>
-    </div></div>
-
-    <div class="ib ibp">👨‍👩‍👧 <strong>你們一家：8/17晚出發，8/18抵達；妹妹一家同日由薩爾斯堡回維也納</strong></div>
-    <div class="card"><div class="card-hdr" onclick="tog('tr18')"><span class="db bconf">8/18</span><span class="c-title">你們VIE→Leonardo；妹妹Salzburg→Leonardo</span><span class="chev">▾</span></div><div class="card-body" id="tr18">
-      <div class="sec-lbl">你們一家</div><div class="rd">VIE領行李→跟Train／Bahnhof下樓→買Flughafen Wien→Wien Hbf票→搭Railjet直達Wien Hbf→依Sonnwendgasse出口步行約3–5分鐘到Leonardo Hotel寄放行李。</div>
-      <button class="nb" onclick="gd('Vienna International Airport','Leonardo Hotel Vienna Hauptbahnhof')">🗺️ VIE→Leonardo</button>
-      <div class="sec-lbl">妹妹一家</div><div class="rd">Cocoon退房→步行Salzburg Hbf→10:00 ICE1211→12:47 Wien Hbf→Sonnwendgasse出口→步行至Leonardo，兩家會合。</div>
-      <div class="tbox"><div class="tbox-t">下午／晚上</div>司法宮等市區景點→科技博物館→卡爾教堂／金色大廳→Magic Noodle→Leonardo。</div>
-      <button class="nb" onclick="gd('Magic Noodle Vienna','Leonardo Hotel Vienna Hauptbahnhof')">🏨 晚餐→飯店</button>
-    </div></div>
-
-    <div class="card"><div class="card-hdr" onclick="tog('tr19')"><span class="db bpg">8/19</span><span class="c-title">Leonardo→RegioJet→The Gold Bank→回飯店</span><span class="chev">▾</span></div><div class="card-body" id="tr19">
-      <div class="rd">前一晚打包。約05:50從Leonardo步行到Wien Hbf，找RegioJet 06:39與月台；第3車廂61–66座。10:56抵達Praha hl.n.後，步行約10–15分鐘或搭電車至The Gold Bank寄放行李。</div>
-      <button class="nb" onclick="gd('Praha hlavní nádraží','The Gold Bank Prague')">🗺️ 布拉格站→飯店</button>
-      <div class="tbox"><div class="tbox-t">回飯店</div>跳舞的房子附近搭Tram 17往市中心，下車後依Google Maps步行至The Gold Bank。</div>
-      <button class="nb" onclick="gd('Dancing House Prague','The Gold Bank Prague')">🏨 跳舞的房子→飯店</button>
-    </div></div>
-
-    <div class="card"><div class="card-hdr" onclick="tog('tr20')"><span class="db bpg">8/20</span><span class="c-title">The Gold Bank→城堡→查理大橋→回飯店</span><span class="chev">▾</span></div><div class="card-body" id="tr20">
-      <div class="rd">飯店步行至Jindřišská／Václavské náměstí一帶站牌，搭Tram 22往城堡方向，於Pražský hrad下車。一路下坡玩至小城與查理大橋。</div>
-      <button class="nb" onclick="gd('The Gold Bank Prague','Prague Castle')">🗺️ 飯店→城堡</button>
-      <div class="rd">晚餐後從老城區步行約15–20分鐘回The Gold Bank；小孩累可直接叫Bolt。</div>
-      <button class="nb" onclick="gd('Charles Bridge Prague','The Gold Bank Prague')">🏨 查理大橋→飯店</button>
-    </div></div>
-
-    <div class="card"><div class="card-hdr" onclick="tog('tr21')"><span class="db bpg">8/21</span><span class="c-title">公園→Café Louvre→遊船→回飯店</span><span class="chev">▾</span></div><div class="card-body" id="tr21">
-      <div class="tbox"><div class="tbox-t">順序</div>The Gold Bank→萊特納公園→Café Louvre→遊船碼頭→The Gold Bank。</div>
-      <button class="nb" onclick="gd('The Gold Bank Prague','Letná Park Prague')">🗺️ 飯店→公園</button> <button class="nb" onclick="gd('Prague Boats','The Gold Bank Prague')">🏨 碼頭→飯店</button>
-    </div></div>
-
-    <div class="card"><div class="card-hdr" onclick="tog('tr22')"><span class="db bp">8/22</span><span class="c-title">The Gold Bank→Praha hl.n.→Adina</span><span class="chev">▾</span></div><div class="card-body" id="tr22">
-      <div class="rd">11:00退房，可先寄行李；逛瓦茨拉夫廣場後，最晚12:30走到Praha hl.n.。13:01 RegioJet→17:21 Vienna。請確認票面抵達站；若是Wien Hbf，依Sonnwendgasse／Canettistraße出口，步行約5–10分鐘到Adina。</div>
-      <button class="nb" onclick="gd('Wien Hauptbahnhof','Adina Serviced Apartments Vienna Belvedere')">🗺️ Wien Hbf→Adina</button>
-      <div class="rd">百水公寓與Plachutta晚餐後，搭大眾運輸回Wien Hbf一帶，再步行回Adina。</div>
-      <button class="nb" onclick="gd('Plachutta Wollzeile','Adina Serviced Apartments Vienna Belvedere')">🏨 晚餐→Adina</button>
-    </div></div>
-
-    <div class="card"><div class="card-hdr" onclick="tog('tr23')"><span class="db bconf">8/23</span><span class="c-title">AMEE與家人兩條路線＋回Adina</span><span class="chev">▾</span></div><div class="card-body" id="tr23">
-      <div class="sec-lbl">你去AMEE</div><div class="rd">Adina→U1 Südtiroler Platz–Hauptbahnhof→往Leopoldau→Kaisermühlen–VIC→步行Austria Center。回程原路搭U1往Oberlaa，在Südtiroler Platz–Hauptbahnhof下車→步行Adina。</div>
-      <button class="nb" onclick="gd('Adina Serviced Apartments Vienna Belvedere','Austria Center Vienna')">🗺️ Adina→AMEE</button> <button class="nb" onclick="gd('Austria Center Vienna','Adina Serviced Apartments Vienna Belvedere')">🏨 AMEE→Adina</button>
-      <div class="sec-lbl">家人</div><div class="rd">Adina→U1到Karlsplatz→轉U2／步行博物館區→自然史、藝術史博物館→Tram D至Schloss Belvedere→Figlmüller→U1回Hauptbahnhof→Adina。</div>
-      <button class="nb" onclick="gd('Figlmüller Wollzeile','Adina Serviced Apartments Vienna Belvedere')">🏨 晚餐→Adina</button>
-    </div></div>
-
-    <div class="card"><div class="card-hdr" onclick="tog('tr24')"><span class="db bp">8/24</span><span class="c-title">Adina→美泉宮→舊城→回飯店</span><span class="chev">▾</span></div><div class="card-body" id="tr24">
-      <div class="rd">Adina→U1 Südtiroler Platz至Karlsplatz→轉U4往Hütteldorf→Schönbrunn下車→步行皇宮。動物園在園區較深處，預留步行時間。</div>
-      <button class="nb" onclick="gd('Adina Serviced Apartments Vienna Belvedere','Schönbrunn Palace')">🗺️ Adina→美泉宮</button>
-      <div class="rd">傍晚U4由Hietzing／Schönbrunn往Heiligenstadt至Schwedenplatz→Fenster-Café、教堂、精品街。回程Stephansplatz搭U1往Oberlaa，在Südtiroler Platz下車。</div>
-      <button class="nb" onclick="gd('Stephansplatz Vienna','Adina Serviced Apartments Vienna Belvedere')">🏨 舊城→Adina</button>
-    </div></div>
-
-    <div class="card"><div class="card-hdr" onclick="tog('tr25')"><span class="db bconf">8/25</span><span class="c-title">兩家分開：妹妹返台／你們去薩爾斯堡</span><span class="chev">▾</span></div><div class="card-body" id="tr25">
-      <div class="sec-lbl">妹妹一家返台</div><div class="ib ibr">CI 11:15起飛且需退稅，建議07:15–07:30離開Adina。步行Wien Hbf→Railjet直達Flughafen Wien→Terminal 1A。</div>
-      <button class="nb" onclick="gd('Adina Serviced Apartments Vienna Belvedere','Vienna International Airport Terminal 1A')">🗺️ 妹妹→VIE</button>
-      <div class="sec-lbl">你們一家去薩爾斯堡</div><div class="rd">退房後步行Wien Hbf；最晚10:20–10:30抵達。看電子板找<strong>ICE1214、11:13、Salzburg</strong>，票面月台7但以當日看板為準。14:00抵達Salzburg Hbf後到站前公車區搭1號往Glansteg；Glansteg下車步行約1分鐘到HOTEL max70。</div>
-      <button class="nb" onclick="gd('Wien Hauptbahnhof','Salzburg Hauptbahnhof')">🚆 Wien→Salzburg</button> <button class="nb" onclick="gd('Salzburg Hauptbahnhof','Hotel max70 Salzburg')">🏨 Salzburg站→max70</button>
-    </div></div>
-
-    <div class="card"><div class="card-hdr" onclick="tog('tr26')"><span class="db bconf">8/26</span><span class="c-title">HOTEL max70→國王湖→回飯店</span><span class="chev">▾</span></div><div class="card-body" id="tr26">
-      <div class="ib ibr">國王湖在德國，3人護照都帶著。Guest Mobility Ticket不一定涵蓋完整德國段，向司機購買跨境所需票。</div>
-      <div class="rd">Glansteg搭1號→Salzburg Hbf站前區域公車區→840往Berchtesgaden／Königssee；若840只到Berchtesgaden Hbf，同站轉841至Königssee。下車跟Seelände／Schifffahrt步行5–10分鐘到碼頭，買St. Bartholomä往返船票。</div>
-      <button class="nb" onclick="gd('Hotel max70 Salzburg','Königssee Seelände')">🗺️ 飯店→國王湖</button>
-      <div class="rd">回程：船→841（若需要）→Berchtesgaden→840→Salzburg Hbf→1號→Glansteg→HOTEL max70。先記下最後一班船與巴士。</div>
-    </div></div>
+    <div class="ib ibg">📅 8/13–8/25每日詳細走法已整合進「每日行程」分頁的各日期卡片中，點開卡片即可看到完整時間、交通與景點步驟，不需再切換頁面。</div>
 
     <div class="card"><div class="card-hdr" onclick="tog('tr27')"><span class="db bconf">8/27</span><span class="c-title">HOTEL max70→哈修塔特→回飯店</span><span class="chev">▾</span></div><div class="card-body" id="tr27">
       <div class="ib ibr">8/27不排鹽礦：鹽礦與Salzberg纜車預計8/29才重新開放。</div>
@@ -999,11 +835,75 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
   </div>
 </div>
 
+<!-- 花費分帳分頁 -->
+<div id="tab-expense" class="tab">
+  <div class="exp-total">
+    <div class="exp-total-l">💰 目前總花費（換算成台幣）</div>
+    <div class="exp-total-n" id="expGrandTotal">NT$0</div>
+    <div class="exp-split">
+      <div class="exp-split-card"><div class="exp-split-t">👨‍👩‍👧 你家</div><div class="exp-split-n" id="expMineTotal">NT$0</div></div>
+      <div class="exp-split-card"><div class="exp-split-t">👩‍👧 妹妹家</div><div class="exp-split-n" id="expSisTotal">NT$0</div></div>
+      <div class="exp-split-card"><div class="exp-split-t">🤝 共同</div><div class="exp-split-n" id="expBothTotal">NT$0</div></div>
+    </div>
+  </div>
+
+  <div class="sblk">
+    <h3>📊 同步到 Google 試算表</h3>
+    <div id="sheetSyncStatus" class="ib iba" style="margin-bottom:8px">尚未設定同步網址，資料目前只存在這支手機。</div>
+    <div class="exp-form">
+      <div class="full"><label>Google Apps Script 網址</label><input id="sheetUrl" type="text" placeholder="貼上 https://script.google.com/macros/s/.../exec"></div>
+      <button class="nb" style="grid-column:1/2" onclick="saveSheetUrl()">💾 儲存網址</button>
+      <button class="nb" style="grid-column:2/3" onclick="syncAllToSheet()">🔁 全部同步一次</button>
+    </div>
+  </div>
+
+  <div class="sblk">
+    <h3>➕ 新增一筆花費</h3>
+    <div class="exp-form">
+      <div><label>家庭</label><select id="expFamily"><option value="mine">👨‍👩‍👧 你家</option><option value="sis">👩‍👧 妹妹家</option><option value="both">🤝 共同</option></select></div>
+      <div><label>類別</label><select id="expCategory"><option value="hotel">🏨 住宿</option><option value="food">🍽️ 餐飲</option><option value="travel">🚆 交通/景點</option><option value="sim">📱 網卡</option><option value="other">🧾 其他</option></select></div>
+      <div class="full"><label>項目說明</label><input id="expDesc" type="text" placeholder="例如：Leonardo飯店 2晚"></div>
+      <div><label>金額</label><input id="expAmount" type="number" inputmode="decimal" placeholder="0"></div>
+      <div><label>幣別</label><select id="expCurrency"><option value="EUR">€ 歐元</option><option value="TWD">NT$ 台幣</option></select></div>
+      <div class="full"><label>日期</label><input id="expDate" type="date"></div>
+      <button class="exp-add-btn" onclick="addExpense()">新增這筆花費</button>
+    </div>
+  </div>
+
+  <div class="sblk">
+    <h3>📊 分類統計</h3>
+    <div id="expCatBreakdown"></div>
+  </div>
+
+  <div class="sblk">
+    <h3>📋 花費明細</h3>
+    <div id="expList"></div>
+  </div>
+
+  <div class="sblk">
+    <h3>📈 複製成試算表格式（免設定，最簡單）</h3>
+    <div class="ib ibg">不用架設任何東西：按下面按鈕複製，打開 Google 試算表點一個空白儲存格，貼上（Ctrl/Cmd+V）就會自動分好欄位。想更新資料時再複製貼上一次即可（適合旅程結束後統一匯出）。</div>
+    <button class="nb" style="width:100%;margin-bottom:8px" onclick="copyExpensesAsSheet()">📋 複製成試算表格式</button>
+    <textarea id="expSheetBox" readonly style="width:100%;min-height:100px;border-radius:8px;border:1.5px solid #e0dfe8;padding:9px 10px;font-size:12px;font-family:monospace;background:#fdfdfb" placeholder="按上面按鈕產生表格文字…"></textarea>
+  </div>
+
+  <div class="sblk">
+    <h3>🔄 備份／同步到記事本</h3>
+    <div class="ib iba">資料目前只存在這支手機的瀏覽器裡，換手機、清瀏覽器資料或部署到雲端後都不會自動帶過去。用下面「複製」把資料存到手機記事本或雲端筆記，之後在任何裝置打開這個頁面，貼上「匯入」就能還原／合併紀錄。</div>
+    <button class="nb" style="width:100%;margin-bottom:8px" onclick="exportExpenses()">📤 複製花費資料（貼到記事本備份）</button>
+    <textarea id="expExportBox" readonly style="width:100%;min-height:80px;border-radius:8px;border:1.5px solid #e0dfe8;padding:9px 10px;font-size:12px;font-family:monospace;margin-bottom:10px;background:#fdfdfb" placeholder="按上面按鈕產生備份文字…"></textarea>
+    <div style="font-size:12px;color:#888;margin-bottom:6px">從記事本貼回這裡（會合併，不會覆蓋現有紀錄）：</div>
+    <textarea id="expImportBox" style="width:100%;min-height:80px;border-radius:8px;border:1.5px solid #e0dfe8;padding:9px 10px;font-size:12px;font-family:monospace;margin-bottom:8px;background:#fdfdfb" placeholder="貼上先前複製的備份文字…"></textarea>
+    <button class="nb" style="width:100%" onclick="importExpenses()">📥 匯入／合併資料</button>
+  </div>
+</div>
+
 <!-- 底部導覽 -->
 <nav class="bnav">
   <button class="bn active" id="bn-map" onclick="showTab('map')"><span class="bn-icon">🗺️</span>地圖</button>
   <button class="bn" id="bn-plan" onclick="showTab('plan')"><span class="bn-icon">📅</span>行程</button>
   <button class="bn" id="bn-fx" onclick="showTab('fx')"><span class="bn-icon">💱</span>換算</button>
+  <button class="bn" id="bn-expense" onclick="showTab('expense')"><span class="bn-icon">💰</span>花費</button>
   <button class="bn" id="bn-transmap" onclick="showTab('transmap')"><span class="bn-icon">🗂️</span>路線圖</button>
   <button class="bn" id="bn-airport" onclick="showTab('airport')"><span class="bn-icon">✈️</span>機場</button>
   <button class="bn" id="bn-sos" onclick="showTab('sos')"><span class="bn-icon">🆘</span>緊急</button>
@@ -1011,7 +911,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
 
 <script>
 var rate = 36.79;
-var TABS = ['map','plan','fx','transmap','airport','sos'];
+var TABS = ['map','plan','fx','expense','transmap','airport','sos'];
 var ISECS = ['iday','ihotel','ifood','ilang','isave','itrans'];
 
 function showTab(n){
@@ -1070,6 +970,7 @@ function fetchRate(){
       if(rateText){ rateText.textContent=t; }
       if(rateText2){ rateText2.textContent=t; }
       updateHotelFx();
+      renderExpenses();
     }).catch(function(){});
 }
 
@@ -1095,7 +996,267 @@ function updateHotelFx(){
   if(hotelFx2){ hotelFx2.innerHTML=html; }
 }
 
-window.onload=function(){ fetchRate(); updateHotelFx(); };
+/* ===== 花費分帳 ===== */
+var EXP_KEY = 'aut_cz_2026_expenses_v1';
+var EXP_FAMILY_LABEL = { mine:'👨‍👩‍👧 你家', sis:'👩‍👧 妹妹家', both:'🤝 共同' };
+var EXP_CAT_LABEL = { hotel:'🏨 住宿', food:'🍽️ 餐飲', travel:'🚆 交通/景點', sim:'📱 網卡', other:'🧾 其他' };
+
+function loadExpenses(){
+  try{
+    var raw = localStorage.getItem(EXP_KEY);
+    return raw ? JSON.parse(raw) : [];
+  }catch(e){ return []; }
+}
+function saveExpenses(list){
+  try{ localStorage.setItem(EXP_KEY, JSON.stringify(list)); }catch(e){}
+}
+function expToTWD(amount, currency){
+  if(currency === 'TWD') return amount;
+  return amount * rate;
+}
+function addExpense(){
+  var family = document.getElementById('expFamily').value;
+  var category = document.getElementById('expCategory').value;
+  var desc = document.getElementById('expDesc').value.trim();
+  var amount = parseFloat(document.getElementById('expAmount').value);
+  var currency = document.getElementById('expCurrency').value;
+  var date = document.getElementById('expDate').value;
+  if(!desc || isNaN(amount) || amount <= 0){
+    alert('請填寫項目說明與有效金額');
+    return;
+  }
+  var list = loadExpenses();
+  var newItem = {
+    id: Date.now().toString(36) + Math.random().toString(36).slice(2,7),
+    family: family, category: category, desc: desc,
+    amount: amount, currency: currency, date: date || ''
+  };
+  list.push(newItem);
+  saveExpenses(list);
+  pushToSheet([newItem]);
+  document.getElementById('expDesc').value = '';
+  document.getElementById('expAmount').value = '';
+  renderExpenses();
+}
+function deleteExpense(id){
+  var list = loadExpenses().filter(function(e){ return e.id !== id; });
+  saveExpenses(list);
+  renderExpenses();
+}
+function renderExpenses(){
+  var list = loadExpenses();
+  var totals = { mine:0, sis:0, both:0 };
+  var catTotals = {};
+  var grand = 0;
+  list.forEach(function(e){
+    var twd = expToTWD(e.amount, e.currency);
+    grand += twd;
+    totals[e.family] = (totals[e.family]||0) + twd;
+    catTotals[e.category] = (catTotals[e.category]||0) + twd;
+  });
+
+  var gt = document.getElementById('expGrandTotal');
+  if(gt) gt.textContent = 'NT$' + Math.round(grand).toLocaleString();
+  var mt = document.getElementById('expMineTotal');
+  if(mt) mt.textContent = 'NT$' + Math.round(totals.mine||0).toLocaleString();
+  var st = document.getElementById('expSisTotal');
+  if(st) st.textContent = 'NT$' + Math.round(totals.sis||0).toLocaleString();
+  var bt = document.getElementById('expBothTotal');
+  if(bt) bt.textContent = 'NT$' + Math.round(totals.both||0).toLocaleString();
+
+  var catHtml = '';
+  var catOrder = ['hotel','food','travel','sim','other'];
+  var anyCat = false;
+  catOrder.forEach(function(c){
+    if(catTotals[c]){
+      anyCat = true;
+      catHtml += '<div class="exp-cat-row"><span>'+EXP_CAT_LABEL[c]+'</span><span style="font-weight:700;color:#3C3489">NT$'+Math.round(catTotals[c]).toLocaleString()+'</span></div>';
+    }
+  });
+  var catEl = document.getElementById('expCatBreakdown');
+  if(catEl) catEl.innerHTML = anyCat ? catHtml : '<div class="exp-empty">還沒有花費紀錄</div>';
+
+  var listEl = document.getElementById('expList');
+  if(listEl){
+    if(list.length === 0){
+      listEl.innerHTML = '<div class="exp-empty">還沒有花費紀錄，新增第一筆吧！</div>';
+    } else {
+      var sorted = list.slice().sort(function(a,b){ return (b.date||'').localeCompare(a.date||'') || 0; });
+      var html = '';
+      sorted.forEach(function(e){
+        var twd = expToTWD(e.amount, e.currency);
+        var amtLabel = e.currency === 'EUR' ? ('€'+e.amount+' ≈ NT$'+Math.round(twd).toLocaleString()) : ('NT$'+Math.round(twd).toLocaleString());
+        html += '<div class="exp-item">'
+          + '<div class="exp-item-l">'
+          + '<div class="exp-item-t">'+e.desc+'</div>'
+          + '<div class="exp-item-s"><span class="exp-tag">'+EXP_CAT_LABEL[e.category]+'</span><span class="exp-tag">'+EXP_FAMILY_LABEL[e.family]+'</span>'+(e.date?(' '+e.date):'')+'</div>'
+          + '</div>'
+          + '<div style="text-align:right"><div class="exp-item-amt">'+amtLabel+'</div>'
+          + '<button class="exp-del" onclick="deleteExpense(\''+e.id+'\')">刪除</button></div>'
+          + '</div>';
+      });
+      listEl.innerHTML = html;
+    }
+  }
+}
+
+function copyExpensesAsSheet(){
+  var list = loadExpenses();
+  var box = document.getElementById('expSheetBox');
+  if(list.length === 0){
+    box.value = '（目前沒有花費紀錄）';
+    return;
+  }
+  var familyLabel = { mine:'你家', sis:'妹妹家', both:'共同' };
+  var catLabel = { hotel:'住宿', food:'餐飲', travel:'交通/景點', sim:'網卡', other:'其他' };
+  var sorted = list.slice().sort(function(a,b){ return (a.date||'').localeCompare(b.date||''); });
+  var rows = ['日期\t家庭\t類別\t項目說明\t金額\t幣別\t約合台幣'];
+  sorted.forEach(function(e){
+    var twd = Math.round(expToTWD(e.amount, e.currency));
+    rows.push([
+      e.date || '',
+      familyLabel[e.family] || e.family,
+      catLabel[e.category] || e.category,
+      e.desc,
+      e.amount,
+      e.currency,
+      twd
+    ].join('\t'));
+  });
+  var text = rows.join('\n');
+  box.value = text;
+  box.focus();
+  box.select();
+  try{
+    navigator.clipboard.writeText(text).then(function(){
+      alert('已複製！打開 Google 試算表，點一個空白儲存格，貼上（Ctrl/Cmd+V）就會自動分欄。');
+    }).catch(function(){
+      alert('已產生表格文字，請手動選取上面文字框全部內容並複製。');
+    });
+  }catch(e){
+    alert('已產生表格文字，請手動選取上面文字框全部內容並複製。');
+  }
+}
+
+function exportExpenses(){
+  var list = loadExpenses();
+  var box = document.getElementById('expExportBox');
+  if(list.length === 0){
+    box.value = '（目前沒有花費紀錄）';
+    return;
+  }
+  var payload = { v:1, exportedAt: new Date().toISOString(), items: list };
+  var text = '#奧捷花費備份\n' + JSON.stringify(payload);
+  box.value = text;
+  box.focus();
+  box.select();
+  try{
+    navigator.clipboard.writeText(text).then(function(){
+      alert('已複製！貼到記事本、Line給自己、或雲端筆記都可以，之後用「匯入」貼回來即可還原。');
+    }).catch(function(){
+      alert('已產生備份文字，請手動選取上面文字框全部內容並複製。');
+    });
+  }catch(e){
+    alert('已產生備份文字，請手動選取上面文字框全部內容並複製。');
+  }
+}
+
+function importExpenses(){
+  var raw = document.getElementById('expImportBox').value.trim();
+  if(!raw){ alert('請先貼上備份文字'); return; }
+  var jsonPart = raw;
+  var marker = '#奧捷花費備份';
+  if(raw.indexOf(marker) === 0){
+    jsonPart = raw.slice(marker.length).trim();
+  }
+  var payload;
+  try{
+    payload = JSON.parse(jsonPart);
+  }catch(e){
+    alert('格式不對，請確認貼上的是完整的備份文字（從「複製」按鈕產生的內容）。');
+    return;
+  }
+  var incoming = (payload && payload.items) ? payload.items : (Array.isArray(payload) ? payload : null);
+  if(!incoming){
+    alert('備份內容格式不對，找不到花費項目。');
+    return;
+  }
+  var existing = loadExpenses();
+  var existingIds = {};
+  existing.forEach(function(e){ existingIds[e.id] = true; });
+  var added = 0;
+  incoming.forEach(function(e){
+    if(e && e.id && !existingIds[e.id]){
+      existing.push(e);
+      existingIds[e.id] = true;
+      added++;
+    }
+  });
+  saveExpenses(existing);
+  renderExpenses();
+  document.getElementById('expImportBox').value = '';
+  alert('已合併 '+added+' 筆新紀錄（重複的自動略過）。');
+}
+
+/* ===== Google 試算表同步 ===== */
+// 👉 部署好 Apps Script 後，把下面這行單引號中間換成你的網址，
+//    例如 'https://script.google.com/macros/s/AKfycb.../exec'
+//    改完存檔，任何人打開這個網頁就會自動同步，不用再手動貼網址。
+var DEFAULT_SHEET_URL = 'https://script.google.com/macros/s/AKfycbytxz_0Th5KMKUs8wBTFI4bxI7WEUA1ZXVEji2wYo4u9wEYdfe2gELPt1v8wyfV_EdVtA/exec';
+
+var SHEET_URL_KEY = 'aut_cz_2026_sheet_url_v1';
+
+function loadSheetUrl(){
+  try{
+    var saved = localStorage.getItem(SHEET_URL_KEY);
+    if(saved) return saved;
+  }catch(e){}
+  return DEFAULT_SHEET_URL;
+}
+function saveSheetUrl(){
+  var url = document.getElementById('sheetUrl').value.trim();
+  if(!url){ alert('請先貼上網址'); return; }
+  try{ localStorage.setItem(SHEET_URL_KEY, url); }catch(e){}
+  updateSheetSyncStatus();
+  alert('已儲存！之後新增的花費會自動同步到試算表。');
+}
+function updateSheetSyncStatus(){
+  var url = loadSheetUrl();
+  var box = document.getElementById('sheetUrl');
+  var status = document.getElementById('sheetSyncStatus');
+  if(box) box.value = url;
+  if(status){
+    if(url && url === DEFAULT_SHEET_URL){
+      status.textContent = '✅ 已內建同步網址，打開就會自動同步到試算表，不用設定。';
+    } else if(url){
+      status.textContent = '已設定同步網址，新增花費會自動送到試算表。';
+    } else {
+      status.textContent = '尚未設定同步網址，資料目前只存在這支手機。';
+    }
+  }
+}
+function pushToSheet(items){
+  var url = loadSheetUrl();
+  if(!url) return;
+  try{
+    fetch(url, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify({ items: items.map(function(it){ return Object.assign({}, it, { rate: rate }); }) })
+    }).catch(function(){});
+  }catch(e){}
+}
+function syncAllToSheet(){
+  var url = loadSheetUrl();
+  if(!url){ alert('請先設定並儲存 Google Apps Script 網址'); return; }
+  var list = loadExpenses();
+  if(list.length === 0){ alert('目前沒有花費紀錄可以同步'); return; }
+  pushToSheet(list);
+  alert('已送出 '+list.length+' 筆到試算表！由於是單向傳送無法即時確認結果，請到試算表確認資料是否進來（若沒有，檢查網址是否貼對、部署權限是否選「所有人」）。');
+}
+
+window.onload=function(){ fetchRate(); updateHotelFx(); renderExpenses(); updateSheetSyncStatus(); };
 </script>
 </body>
 </html>
