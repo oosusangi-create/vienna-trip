@@ -166,7 +166,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
 <body>
 
 <div class="hdr">
-  <span class="hdr-badge">最終版 · 2026</span>
+  <span class="hdr-badge">v12 · 含8/31</span>
   <h1>🇦🇹🇨🇿 奧捷親子大環線</h1>
   <p>8/12–8/31 · 維也納＋林茲＋薩爾斯堡＋布拉格 · AMEE整合版</p>
 </div>
@@ -206,8 +206,9 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
     <div class="itab active" id="it0" onclick="ishow('iday','it0')">📅 行程</div>
     <div class="itab" id="it1" onclick="ishow('ihotel','it1')">🏨 住宿</div>
     <div class="itab" id="it2" onclick="ishow('ifood','it2')">🍽️ 美食</div>
-    <div class="itab" id="it3" onclick="ishow('isave','it3')">💰 省錢</div>
-    <div class="itab" id="it4" onclick="ishow('itrans','it4')">🚇 每日交通</div>
+    <div class="itab" id="it3" onclick="ishow('ilang','it3')">🗣️ 用語</div>
+    <div class="itab" id="it4" onclick="ishow('isave','it4')">💰 省錢</div>
+    <div class="itab" id="it5" onclick="ishow('itrans','it5')">🚇 每日交通</div>
   </div>
 
   <!-- 行程子分頁 -->
@@ -316,7 +317,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
     <!-- 舊版行程備份（隱藏） -->
     <!-- 日曆總覽 -->
     <div style="background:#1e1e1e;color:#e8e8e8;border-radius:12px;padding:12px 13px;font-size:11px;line-height:2;margin-bottom:10px">
-      <div style="color:#6C5CE7;font-weight:700;margin-bottom:4px">📅 雙家庭完整行程 · FG9E28</div>
+      <div style="color:#6C5CE7;font-weight:700;margin-bottom:4px">📅 雙家庭完整行程</div>
       <span style="color:#DAA520">你妹家先出發</span><br>
       <span style="color:#aaa">8/13四</span> 抵達·ZOOM兒博·Albertina 🏨Novotel<br>
       <span style="color:#aaa">8/14五</span> 搭IC→林茲·童話洞穴火車 🏨Park Inn<br>
@@ -530,7 +531,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
         <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">10:30前</div><div class="rp">HOTEL max70退房、寄放行李</div><div class="rd">向櫃台說「Could you store our luggage until about 3 p.m.?」上午搭1號到市中心，採購後最晚14:45開始回飯店。</div></div></div>
         <div class="spot"><div class="sico" style="background:#FAEEDA">🛍️</div><div><div class="sname">上午 薩爾斯堡舊城與最後採購</div><div class="sdesc">約15:00回飯店取行李；Glansteg搭1號直達Salzburg Hauptbahnhof，預留塞車與找月台時間。</div></div></div>
         <div class="tbox"><div class="tbox-t">🚆 已購票：IC 743</div>Salzburg Hbf 16:11 → Wien Hbf 19:03｜3人｜票面月台5A–B。建議15:35前到車站，看電子看板確認IC743與月台；進月台無閘門，直接上車。</div>
-        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">19:03</div><div class="rp">Wien Hbf→Adina</div><div class="rd">下車後依「Sonnwendgasse／Südtiroler Platz」出口指標，開Google Maps步行約5–10分鐘到 Karl-Popper-Straße 6。確認號碼 CI60J2YK。</div><button class="nb" onclick="gm('Adina Serviced Apartments Vienna Belvedere')">📍 Adina</button></div></div>
+        <div class="rstop"><div class="rlw"><div class="rdot"></div><div class="rline"></div></div><div class="rc"><div class="rt">19:03</div><div class="rp">Wien Hbf→Adina</div><div class="rd">下車後依「Sonnwendgasse／Südtiroler Platz」出口指標，開Google Maps步行約5–10分鐘到 Karl-Popper-Straße 6。</div><button class="nb" onclick="gm('Adina Serviced Apartments Vienna Belvedere')">📍 Adina</button></div></div>
       </div>
     </div>
 
@@ -580,17 +581,52 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
 
   <!-- 美食子分頁 -->
   <div id="ifood" class="isec">
-    <div class="ib ibg">💡 Mittagsmenü午間套餐11–14點，€10–13含湯+主菜，晚上同餐€18+</div>
-    <div class="fcard"><div class="fnm">Café Central 中央咖啡館</div><div class="ftags"><span class="ft ftf">必去</span><span class="ft ftk">親子ok</span></div><div class="fd">📍 U3 Herrengasse · 9點前人少光線最美 · Melange+可頌€14/人</div><button class="nb" onclick="gm('Café Central Vienna')">📍 導航</button></div>
-    <div class="fcard"><div class="fnm">Figlmüller Wollzeile 百年炸豬排</div><div class="ftags"><span class="ft ftf">必吃</span></div><div class="fd">📍 步行圈 · 比臉大的炸豬排 · 建議提前預約</div><button class="nb" onclick="gm('Figlmüller Wollzeile Vienna')">📍 導航</button></div>
-    <div class="fcard"><div class="fnm">Ribs of Vienna 一公尺豬肋排</div><div class="ftags"><span class="ft ftf">必吃</span><span class="ft ftk">親子ok</span></div><div class="fd">📍 維也納超有名 · 份量超大 · 帶小孩很適合</div><button class="nb" onclick="gm('Ribs of Vienna')">📍 導航</button></div>
-    <div class="fcard"><div class="fnm">Café Demel 德梅爾咖啡館</div><div class="ftags"><span class="ft ftb">皇室御用</span></div><div class="fd">📍 格拉本大街旁 · 沙河蛋糕+Espresso · 人均€15–20</div><button class="nb" onclick="gm('Café Demel Vienna')">📍 導航</button></div>
-    <div class="fcard"><div class="fnm">Café Hawelka 文藝咖啡館</div><div class="ftags"><span class="ft ftb">1939年老店</span></div><div class="fd">📍 格拉本旁 · Buchteln甜麵包招牌 · 傍晚最有氛圍</div><button class="nb" onclick="gm('Café Hawelka Vienna')">📍 導航</button></div>
-    <div class="fcard"><div class="fnm">Heuriger Mayer am Pfarrplatz</div><div class="ftags"><span class="ft ftk">當地人最愛</span></div><div class="fd">📍 維也納葡萄酒農莊餐廳 · 傍晚最有氣氛 · 帶小孩舒適</div><button class="nb" onclick="gm('Heuriger Mayer am Pfarrplatz Vienna')">📍 導航</button></div>
-    <div class="fcard"><div class="fnm">Café Residenz（美泉宮內）</div><div class="ftags"><span class="ft ftb">皇家氛圍</span></div><div class="fd">📍 美泉宮內 · 蘋果捲+咖啡 · 哈布斯堡氛圍 · 人均€12–15</div><button class="nb" onclick="gm('Café Residenz Schönbrunn')">📍 導航</button></div>
-    <div style="margin-top:14px"><div class="ib ibp">🇨🇿 布拉格推薦（物價比維也納便宜40%！）</div>
-    <div class="fcard"><div class="fnm">捷克傳統烤豬腳+啤酒</div><div class="ftags"><span class="ft ftf">必吃</span></div><div class="fd">小城區/老城區都有，一家四口吃飽不到€30！</div></div>
-    <div class="fcard"><div class="fnm">Café Louvre 百年羅浮咖啡館</div><div class="ftags"><span class="ft ftb">1902年</span></div><div class="fd">📍 寬敞推車友善，知識份子聚集地</div><button class="nb" onclick="gm('Café Louvre Prague')">📍 導航</button></div></div>
+    <div class="ib ibg"><strong>🍽️ 按日期用餐表</strong><br>餐廳依當天景點排列；臨時客滿時可按導航，在附近搜尋「Restaurant」替代。</div>
+    <div class="fcard"><div class="fnm">8/13 維也納</div><div class="fd">午餐：12:30 Ribs of Vienna（一公尺豬肋排）<br>下午茶：14:30 Café Demel（沙河蛋糕＋Espresso）<br>晚餐：Böhmerwald（回Novotel前）</div><button class="nb" onclick="gm('Ribs of Vienna')">🍖 午餐</button> <button class="nb" onclick="gm('Café Demel Vienna')">☕ 下午茶</button> <button class="nb" onclick="gm('Böhmerwald Vienna')">🍽️ 晚餐</button></div>
+    <div class="fcard"><div class="fnm">8/14 林茲</div><div class="fd">下午茶：Café Jindrak，品嚐Linzer Torte。<br>晚餐：林茲主廣場或Park Inn附近，孩子累就不要再跨區。</div><button class="nb" onclick="gm('Café Jindrak Linz')">🎂 Jindrak</button></div>
+    <div class="fcard"><div class="fnm">8/15 林茲</div><div class="fd">早餐：JINDRAK Landstraße 70。<br>晚餐：Wirtshaus Keintzel傳統奧地利菜。</div><button class="nb" onclick="gm('Jindrak Landstraße 70 Linz')">🥐 早餐</button> <button class="nb" onclick="gm('Wirtshaus Keintzel Linz')">🍽️ 晚餐</button></div>
+    <div class="fcard"><div class="fnm">8/16 薩爾斯堡</div><div class="fd">午餐：12:45 Café Mozart，薩爾斯堡舒芙蕾。<br>點心：聖彼得修道院烘焙坊。<br>晚餐：Soja Ramen；餐後Hbf SPAR採買隔日早餐。</div><button class="nb" onclick="gm('Café Mozart Salzburg')">☕ 午餐</button> <button class="nb" onclick="gm('Soja Ramen Salzburg')">🍜 晚餐</button></div>
+    <div class="fcard"><div class="fnm">8/17 薩爾斯堡</div><div class="fd">午餐：海爾布倫草坪野餐，早上先在SPAR買麵包、水果與飲料。<br>晚餐：Mr Wen Asia Food。</div><button class="nb" onclick="gm('Mr Wen Asia Food Salzburg')">🍜 晚餐</button></div>
+    <div class="fcard"><div class="fnm">8/18 維也納</div><div class="fd">下午：Café Landtmann（市政廳附近）。<br>晚餐：Magic Noodle，適合奔波後吃熱湯麵。</div><button class="nb" onclick="gm('Café Landtmann Vienna')">☕ 下午茶</button> <button class="nb" onclick="gm('Magic Noodle Vienna')">🍜 晚餐</button></div>
+    <div class="fcard"><div class="fnm">8/19 布拉格</div><div class="fd">午餐：The Gold Bank寄放行李後在舊城區彈性用餐。<br>晚餐：跳舞的房子附近或回舊城區；以孩子體力決定。</div><button class="nb" onclick="gm('restaurants near Old Town Square Prague')">🍽️ 舊城餐廳</button></div>
+    <div class="fcard"><div class="fnm">8/20 布拉格</div><div class="fd">午餐：布拉格城堡／小城區。<br>晚餐：捷克傳統烤豬腳與啤酒；可與孩子共食並另點湯或麵包。</div><button class="nb" onclick="gm('traditional Czech restaurant Malá Strana Prague')">🍖 小城區餐廳</button></div>
+    <div class="fcard"><div class="fnm">8/21 布拉格</div><div class="fd">中午：Café Louvre，空間較寬、推車友善。<br>遊船前：先買水與小點心，避免船上選擇有限。</div><button class="nb" onclick="gm('Café Louvre Prague')">☕ Café Louvre</button></div>
+    <div class="fcard"><div class="fnm">8/22 布拉格→維也納</div><div class="fd">早餐：飯店。<br>火車點心：Praha hl.n.上車前購買。<br>晚餐：Plachutta Wollzeile清燉牛肉湯。</div><button class="nb" onclick="gm('Plachutta Wollzeile Vienna')">🍲 晚餐</button></div>
+    <div class="fcard"><div class="fnm">8/23 維也納／AMEE</div><div class="fd">家人早餐：ERZHERZOGTUM皇帝煎餅。<br>中午：博物館區或館內咖啡廳。<br>晚餐：Figlmüller Wollzeile（已預約）。AMEE參加者19:00另有Networking Reception。</div><button class="nb" onclick="gm('ERZHERZOGTUM Vienna Kaiserschmarrn')">🥞 早餐</button> <button class="nb" onclick="gm('Figlmüller Wollzeile Vienna')">🍖 晚餐</button></div>
+    <div class="fcard"><div class="fnm">8/24 維也納</div><div class="fd">上午點心：Café Residenz（美泉宮內）。<br>午餐：動物園內餐廳。<br>傍晚：Fenster-Café特色甜筒咖啡；晚餐在舊城精品街周邊。</div><button class="nb" onclick="gm('Café Residenz Schönbrunn')">☕ Residenz</button> <button class="nb" onclick="gm('Fenster Café Vienna')">☕ Fenster</button></div>
+    <div class="fcard"><div class="fnm">8/25 維也納→薩爾斯堡</div><div class="fd">早餐：Adina／Wien Hbf。<br>午餐：ICE車上自備麵包水果。<br>晚餐：HOTEL max70附近或搭1號至市中心；今天以早點休息為主。</div><button class="nb" onclick="gm('restaurants near Hotel max70 Salzburg')">🍽️ 飯店附近</button></div>
+    <div class="fcard"><div class="fnm">8/26 國王湖</div><div class="fd">早餐：飯店。<br>午餐：St. Bartholomä湖畔餐廳；另帶孩子零食與水。<br>晚餐：回薩爾斯堡後在Hbf或飯店附近。</div><button class="nb" onclick="gm('restaurants St. Bartholomä Königssee')">🍽️ 湖畔午餐</button></div>
+    <div class="fcard"><div class="fnm">8/27 哈修塔特</div><div class="fd">早餐：飯店。<br>午餐：Hallstatt湖畔／市集廣場，避開正午最擁擠時段。<br>晚餐：回Salzburg後簡單用餐。</div><button class="nb" onclick="gm('family restaurant Hallstatt')">🍽️ Hallstatt午餐</button></div>
+    <div class="fcard"><div class="fnm">8/28 海布倫＋自然之屋</div><div class="fd">午餐：海布倫草坪野餐或園區餐廳。<br>下午點心：自然之屋咖啡區。<br>晚餐：市中心或回飯店附近。</div><button class="nb" onclick="gm('restaurants Schloss Hellbrunn Salzburg')">🍽️ 海布倫附近</button></div>
+    <div class="fcard"><div class="fnm">8/29 薩爾斯堡→維也納</div><div class="fd">午餐：舊城採購時用餐。<br>火車：上車前在Hbf買晚餐／點心。<br>19:03抵達後以Wien Hbf超市或Adina附近為主。</div><button class="nb" onclick="gm('restaurants Salzburg Altstadt')">🍽️ 舊城午餐</button></div>
+    <div class="fcard"><div class="fnm">8/30 維也納</div><div class="fd">早餐／早午餐：Café Central。<br>午餐：舊城區。<br>晚餐：普拉特園區或回Adina自煮；週日超市多休息，前一天先買食材。</div><button class="nb" onclick="gm('Café Central Vienna')">☕ Café Central</button> <button class="nb" onclick="gm('restaurants Prater Vienna')">🍽️ Prater</button></div>
+    <div class="fcard"><div class="fnm">8/31 返台</div><div class="fd">早餐：前一晚準備可攜帶的麵包／水果。通過機場安檢後再裝水；帶孩子熟悉的小零食上機。</div></div>
+  </div>
+
+  <!-- 當地用語子分頁 -->
+  <div id="ilang" class="isec">
+    <div class="ib ibg"><strong>🗣️ 不用會德文也能走</strong><br>把這頁直接拿給工作人員看即可。奧地利用德文；布拉格用捷克文，但觀光區英文通常可通。</div>
+    <div class="sblk"><h3>🚉 車站標示：最容易誤會</h3>
+      <div class="sdesc"><strong>Hbf／Hauptbahnhof</strong>＝中央車站，不是某間飯店。<br><strong>Bahnhof</strong>＝車站；<strong>Flughafen</strong>＝機場。<br><strong>Abfahrt／Departures</strong>＝出發；<strong>Ankunft／Arrivals</strong>＝抵達。<br><strong>Gleis</strong>＝火車月台／軌道；<strong>Bahnsteig</strong>＝候車月台。<br><strong>Richtung</strong>＝方向，後面通常寫終點站；搭地鐵一定要看它。<br><strong>Ausgang</strong>＝出口；<strong>Eingang</strong>＝入口。<br><strong>Umsteigen</strong>＝轉乘；<strong>Ersatzverkehr</strong>＝替代運輸。<br><strong>Verspätung</strong>＝誤點；<strong>fällt aus</strong>＝取消。<br><strong>Wagen</strong>＝車廂；<strong>Sitzplatz</strong>＝座位。<br><strong>Lift／Aufzug</strong>＝電梯；<strong>Rolltreppe</strong>＝手扶梯。</div>
+    </div>
+    <div class="sblk"><h3>🎫 車票與查票</h3>
+      <div class="sdesc"><strong>Fahrkarte／Ticket</strong>＝車票。<br><strong>Entwerten</strong>＝打票／啟用紙票，不是把票「作廢」。<br><strong>Gültig</strong>＝有效；<strong>ungültig</strong>＝無效。<br><strong>Fahrkartenkontrolle</strong>＝查票。<br><strong>Einzelfahrt</strong>＝單程；<strong>Tageskarte</strong>＝日票；<strong>Hin und zurück</strong>＝來回。<br><br>可說：<strong>Two adults and one four-year-old child, please.</strong><br>「這張票要打票嗎？」<strong>Do I need to validate this ticket?</strong><br>「這班車到……嗎？」<strong>Does this train/bus go to …?</strong></div>
+    </div>
+    <div class="sblk"><h3>🏨 飯店</h3>
+      <div class="sdesc">「我們有訂房」<strong>We have a reservation under the name …</strong><br>「可以先寄放行李嗎？」<strong>Could you store our luggage until check-in?</strong><br>「可否給我們Guest Mobility Ticket？」<strong>Could we have the Guest Mobility Tickets for two adults and one child?</strong><br>「孩子需要嬰兒床嗎？」當地可能說<strong>cot／baby cot</strong>，不是crib。<br><strong>Zimmer</strong>＝房間；<strong>Frühstück</strong>＝早餐；<strong>Rezeption</strong>＝櫃檯。</div>
+    </div>
+    <div class="sblk"><h3>🍽️ 餐廳與菜單</h3>
+      <div class="sdesc"><strong>Speisekarte</strong>＝菜單；<strong>Getränkekarte</strong>＝飲料單。<br><strong>Leitungswasser</strong>＝自來水；只說water常會拿到付費瓶裝水。<br><strong>Still</strong>＝無氣泡水；<strong>prickelnd／mit Kohlensäure</strong>＝氣泡水。<br><strong>Rechnung</strong>＝帳單；歐洲通常要主動說<strong>Die Rechnung, bitte.</strong><br><strong>Service</strong>不一定已包含小費，可先看帳單。<br>「孩子可以分食嗎？」<strong>Can our child share our meal?</strong><br>「不要辣」<strong>Not spicy, please.</strong><br>「有兒童椅嗎？」<strong>Do you have a high chair?</strong><br>奧地利<strong>Melange</strong>類似牛奶咖啡；<strong>Kaiserschmarrn</strong>是撕碎的皇帝煎餅；<strong>Schnitzel</strong>是炸肉排。</div>
+    </div>
+    <div class="sblk"><h3>👧 帶4歲孩子</h3>
+      <div class="sdesc">「哪裡有電梯？」<strong>Where is the lift/elevator?</strong><br>「推車可以上車嗎？」<strong>Can we take the stroller on this bus/train?</strong><br>「哪裡有尿布台？」<strong>Where is the baby changing room?</strong><br>「孩子需要上廁所」<strong>My child needs the toilet.</strong><br><strong>WC／Toilette</strong>＝廁所；有時需投幣。<strong>Wickelraum</strong>＝尿布台／親子更換室。<br><strong>Kinderwagen</strong>＝嬰兒推車；英式英文常說<strong>pushchair</strong>，美式英文是stroller。</div>
+    </div>
+    <div class="sblk"><h3>🇨🇿 布拉格捷克文</h3>
+      <div class="sdesc"><strong>Východ</strong>＝出口；<strong>Vstup</strong>＝入口。<br><strong>Hlavní nádraží／hl.n.</strong>＝中央車站。<br><strong>Nástupiště</strong>＝月台；<strong>Přestup</strong>＝轉乘。<br><strong>Jízdenka</strong>＝車票；<strong>Označte jízdenku</strong>＝請打票。<br><strong>Zastávka</strong>＝站牌；<strong>Tramvaj</strong>＝電車。<br><strong>Děkuji</strong>（約「捷苦伊」）＝謝謝；<strong>Prosím</strong>＝請／不客氣。<br><strong>Účet, prosím.</strong>＝請結帳。</div>
+    </div>
+    <div class="sblk"><h3>🆘 迷路與緊急</h3>
+      <div class="sdesc">「我們迷路了，可以指給我看嗎？」<strong>We are lost. Could you show me on the map?</strong><br>「這是我們的飯店」<strong>This is our hotel. How can we get there?</strong><br>「我的孩子不舒服」<strong>My child is unwell. We need a doctor.</strong><br>「請幫我叫救護車」<strong>Please call an ambulance.</strong><br>歐洲通用緊急電話：<strong>112</strong>。</div>
+    </div>
   </div>
 
   <!-- 省錢子分頁 -->
@@ -855,7 +891,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
 
 <!-- 機場分頁 -->
 <div id="tab-airport" class="tab">
-  <div class="ib ibg" style="margin-bottom:12px">✈️ 已確認機票 · 華航 · 訂位代號：FG9E28</div>
+  <div class="ib ibg" style="margin-bottom:12px">✈️ 已確認機票 · 華航</div>
 
   <div class="airport-plan">
     <div class="sname">🛬 抵達維也納後的平面流程（向右滑看完整）</div>
@@ -920,7 +956,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
     <div class="card-body" id="ap-dep">
       <div class="ib ibp">桃園 第1航廈（T1）→ 維也納 第3航廈（T3）· 飛行13小時</div>
       <div class="ap-step"><span class="ap-step-n">1</span><span class="ap-t">20:00前抵達機場</span><div class="ap-d">帶小孩建議提早！華航在桃園T1報到，計程車或機捷A1</div></div>
-      <div class="ap-step"><span class="ap-step-n">2</span><span class="ap-t">辦理報到 · 行李托運</span><div class="ap-d">華航自助報到機或到指定櫃台，確認訂位代號FG9E28</div></div>
+      <div class="ap-step"><span class="ap-step-n">2</span><span class="ap-t">辦理報到 · 行李托運</span><div class="ap-d">華航自助報到機或到當日指定櫃台，準備護照與個人訂位資料。</div></div>
       <div class="ap-step"><span class="ap-step-n">3</span><span class="ap-t">海關 · 安全檢查</span><div class="ap-d">先確認PIN碼、充電器、嬰兒用品放隨身行李</div></div>
       <div class="ap-step"><span class="ap-step-n">4</span><span class="ap-t">23:30 起飛！</span><div class="ap-d">告訴華航帶小孩，可優先登機。華航有兒童餐（出發前72小時預訂）</div></div>
       <div class="ap-step"><span class="ap-step-n">5</span><span class="ap-t">8/13 抵達VIE T3</span><div class="ap-d">出海關→領行李→前往Novotel Wien Hauptbahnhof寄放行李</div></div>
@@ -974,7 +1010,7 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
 <script>
 var rate = 36.79;
 var TABS = ['map','plan','fx','transmap','airport','sos'];
-var ISECS = ['iday','ihotel','ifood','isave','itrans'];
+var ISECS = ['iday','ihotel','ifood','ilang','isave','itrans'];
 
 function showTab(n){
   TABS.forEach(function(t){
@@ -987,7 +1023,7 @@ function ishow(sec,tab){
   ISECS.forEach(function(s){
     document.getElementById(s).className='isec'+(s===sec?' show':'');
   });
-  ['it0','it1','it2','it3','it4'].forEach(function(id){
+  ['it0','it1','it2','it3','it4','it5'].forEach(function(id){
     document.getElementById(id).className='itab';
   });
   document.getElementById(tab).className='itab active';
@@ -1001,7 +1037,7 @@ function tog(id){
 function gm(q){ window.open('https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q),'_blank'); }
 function gd(o,d){ window.open('https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(o)+'&destination='+encodeURIComponent(d)+'&travelmode=transit','_blank'); }
 function openUrl(u){ window.open(u,'_blank'); }
-function jumpTransport(){ showTab('plan'); ishow('itrans','it4'); window.scrollTo(0,0); }
+function jumpTransport(){ showTab('plan'); ishow('itrans','it5'); window.scrollTo(0,0); }
 
 function toTWD(){ var v=parseFloat(document.getElementById('eurIn').value); document.getElementById('twdIn').value=isNaN(v)?'':Math.round(v*rate); }
 function toEUR(){ var v=parseFloat(document.getElementById('twdIn').value); document.getElementById('eurIn').value=isNaN(v)?'':(v/rate).toFixed(2); }
