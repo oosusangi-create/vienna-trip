@@ -184,6 +184,14 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
 .exp-del{background:#FCE8E8;color:#C62828;border:none;border-radius:6px;padding:5px 9px;font-size:11px;cursor:pointer}
 .exp-tag{font-size:10px;padding:2px 6px;border-radius:4px;background:#EEEDFE;color:#3C3489;display:inline-block;margin-right:4px}
 .exp-empty{text-align:center;color:#999;font-size:13px;padding:20px 0}
+
+/* 用語發音 */
+.ph-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #f0f0e8}
+.ph-row:last-child{border-bottom:none}
+.ph-text{font-size:13px;line-height:1.6;color:#444;flex:1}
+.ph-speak{background:#3C3489;color:#fff;border:none;width:36px;height:36px;border-radius:50%;font-size:16px;cursor:pointer;flex-shrink:0}
+.ph-speak:active{background:#534AB7}
+.ph-speak.playing{background:#169F48}
 </style>
 </head>
 <body>
@@ -556,27 +564,77 @@ body{font-family:'Noto Sans TC',sans-serif;background:#f5f4ef;color:#333;max-wid
 
   <!-- 當地用語子分頁 -->
   <div id="ilang" class="isec">
-    <div class="ib ibg"><strong>🗣️ 不用會德文也能走</strong><br>把這頁直接拿給工作人員看即可。奧地利用德文；布拉格用捷克文，但觀光區英文通常可通。</div>
+    <div class="ib ibg"><strong>🗣️ 不用會德文也能走</strong><br>把這頁直接拿給工作人員看即可；文字旁邊按 🔊 可以直接唸出正確發音。奧地利用德文；布拉格用捷克文，但觀光區英文通常可通。</div>
+
     <div class="sblk"><h3>🚉 車站標示：最容易誤會</h3>
-      <div class="sdesc"><strong>Hbf／Hauptbahnhof</strong>＝中央車站，不是某間飯店。<br><strong>Bahnhof</strong>＝車站；<strong>Flughafen</strong>＝機場。<br><strong>Abfahrt／Departures</strong>＝出發；<strong>Ankunft／Arrivals</strong>＝抵達。<br><strong>Gleis</strong>＝火車月台／軌道；<strong>Bahnsteig</strong>＝候車月台。<br><strong>Richtung</strong>＝方向，後面通常寫終點站；搭地鐵一定要看它。<br><strong>Ausgang</strong>＝出口；<strong>Eingang</strong>＝入口。<br><strong>Umsteigen</strong>＝轉乘；<strong>Ersatzverkehr</strong>＝替代運輸。<br><strong>Verspätung</strong>＝誤點；<strong>fällt aus</strong>＝取消。<br><strong>Wagen</strong>＝車廂；<strong>Sitzplatz</strong>＝座位。<br><strong>Lift／Aufzug</strong>＝電梯；<strong>Rolltreppe</strong>＝手扶梯。</div>
+      <div class="ph-row"><div class="ph-text"><strong>Hbf／Hauptbahnhof</strong> ＝中央車站，不是某間飯店</div><button class="ph-speak" onclick="speak('Hauptbahnhof','de-DE')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Bahnhof</strong> ＝車站</div><button class="ph-speak" onclick="speak('Bahnhof','de-DE')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Flughafen</strong> ＝機場</div><button class="ph-speak" onclick="speak('Flughafen','de-DE')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Abfahrt</strong> ＝出發／<strong>Ankunft</strong> ＝抵達</div><button class="ph-speak" onclick="speak('Abfahrt, Ankunft','de-DE')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Gleis</strong> ＝火車月台／軌道</div><button class="ph-speak" onclick="speak('Gleis','de-DE')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Richtung</strong> ＝方向，後面通常寫終點站；搭地鐵一定要看它</div><button class="ph-speak" onclick="speak('Richtung','de-DE')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Ausgang</strong> ＝出口／<strong>Eingang</strong> ＝入口</div><button class="ph-speak" onclick="speak('Ausgang, Eingang','de-DE')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Umsteigen</strong> ＝轉乘</div><button class="ph-speak" onclick="speak('Umsteigen','de-DE')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Verspätung</strong> ＝誤點／<strong>fällt aus</strong> ＝取消</div><button class="ph-speak" onclick="speak('Verspätung, fällt aus','de-DE')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Wagen</strong> ＝車廂／<strong>Sitzplatz</strong> ＝座位</div><button class="ph-speak" onclick="speak('Wagen, Sitzplatz','de-DE')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Lift／Aufzug</strong> ＝電梯／<strong>Rolltreppe</strong> ＝手扶梯</div><button class="ph-speak" onclick="speak('Aufzug, Rolltreppe','de-DE')">🔊</button></div>
     </div>
+
     <div class="sblk"><h3>🎫 車票與查票</h3>
-      <div class="sdesc"><strong>Fahrkarte／Ticket</strong>＝車票。<br><strong>Entwerten</strong>＝打票／啟用紙票，不是把票「作廢」。<br><strong>Gültig</strong>＝有效；<strong>ungültig</strong>＝無效。<br><strong>Fahrkartenkontrolle</strong>＝查票。<br><strong>Einzelfahrt</strong>＝單程；<strong>Tageskarte</strong>＝日票；<strong>Hin und zurück</strong>＝來回。<br><br>可說：<strong>Two adults and one four-year-old child, please.</strong><br>「這張票要打票嗎？」<strong>Do I need to validate this ticket?</strong><br>「這班車到……嗎？」<strong>Does this train/bus go to …?</strong></div>
+      <div class="ph-row"><div class="ph-text"><strong>Fahrkarte</strong> ＝車票</div><button class="ph-speak" onclick="speak('Fahrkarte','de-DE')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Entwerten</strong> ＝打票／啟用紙票，不是把票「作廢」</div><button class="ph-speak" onclick="speak('Entwerten','de-DE')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Gültig</strong> ＝有效／<strong>ungültig</strong> ＝無效</div><button class="ph-speak" onclick="speak('Gültig, ungültig','de-DE')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Fahrkartenkontrolle</strong> ＝查票</div><button class="ph-speak" onclick="speak('Fahrkartenkontrolle','de-DE')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Einzelfahrt</strong> 單程／<strong>Tageskarte</strong> 日票／<strong>Hin und zurück</strong> 來回</div><button class="ph-speak" onclick="speak('Einzelfahrt, Tageskarte, Hin und zurück','de-DE')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text">「兩大一小（4歲）」<strong>Two adults and one four-year-old child, please.</strong></div><button class="ph-speak" onclick="speak('Two adults and one four-year-old child, please.','en-US')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text">「這張票要打票嗎？」<strong>Do I need to validate this ticket?</strong></div><button class="ph-speak" onclick="speak('Do I need to validate this ticket?','en-US')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text">「這班車到……嗎？」<strong>Does this train go to …?</strong></div><button class="ph-speak" onclick="speak('Does this train go to your destination?','en-US')">🔊</button></div>
     </div>
+
     <div class="sblk"><h3>🏨 飯店</h3>
-      <div class="sdesc">「我們有訂房」<strong>We have a reservation under the name …</strong><br>「可以先寄放行李嗎？」<strong>Could you store our luggage until check-in?</strong><br>「可否給我們Guest Mobility Ticket？」<strong>Could we have the Guest Mobility Tickets for two adults and one child?</strong><br>「孩子需要嬰兒床嗎？」當地可能說<strong>cot／baby cot</strong>，不是crib。<br><strong>Zimmer</strong>＝房間；<strong>Frühstück</strong>＝早餐；<strong>Rezeption</strong>＝櫃檯。</div>
+      <div class="ph-row"><div class="ph-text">「我們有訂房」<strong>We have a reservation under the name …</strong></div><button class="ph-speak" onclick="speak('We have a reservation under this name.','en-US')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text">「可以先寄放行李嗎？」<strong>Could you store our luggage until check-in?</strong></div><button class="ph-speak" onclick="speak('Could you store our luggage until check-in?','en-US')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text">「可否給我們 Guest Mobility Ticket？」<strong>Could we have the Guest Mobility Tickets for two adults and one child?</strong></div><button class="ph-speak" onclick="speak('Could we have the Guest Mobility Tickets for two adults and one child?','en-US')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text">「需要嬰兒床」當地說 <strong>cot／baby cot</strong>，不是 crib</div><button class="ph-speak" onclick="speak('Could we have a baby cot in the room, please?','en-US')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Zimmer</strong> 房間／<strong>Frühstück</strong> 早餐／<strong>Rezeption</strong> 櫃檯</div><button class="ph-speak" onclick="speak('Zimmer, Frühstück, Rezeption','de-DE')">🔊</button></div>
     </div>
+
     <div class="sblk"><h3>🍽️ 餐廳與菜單</h3>
-      <div class="sdesc"><strong>Speisekarte</strong>＝菜單；<strong>Getränkekarte</strong>＝飲料單。<br><strong>Leitungswasser</strong>＝自來水；只說water常會拿到付費瓶裝水。<br><strong>Still</strong>＝無氣泡水；<strong>prickelnd／mit Kohlensäure</strong>＝氣泡水。<br><strong>Rechnung</strong>＝帳單；歐洲通常要主動說<strong>Die Rechnung, bitte.</strong><br><strong>Service</strong>不一定已包含小費，可先看帳單。<br>「孩子可以分食嗎？」<strong>Can our child share our meal?</strong><br>「不要辣」<strong>Not spicy, please.</strong><br>「有兒童椅嗎？」<strong>Do you have a high chair?</strong><br>奧地利<strong>Melange</strong>類似牛奶咖啡；<strong>Kaiserschmarrn</strong>是撕碎的皇帝煎餅；<strong>Schnitzel</strong>是炸肉排。</div>
+      <div class="ph-row"><div class="ph-text"><strong>Speisekarte</strong> 菜單／<strong>Getränkekarte</strong> 飲料單</div><button class="ph-speak" onclick="speak('Speisekarte, Getränkekarte','de-DE')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Leitungswasser</strong> ＝自來水；只說 water 常會拿到付費瓶裝水</div><button class="ph-speak" onclick="speak('Leitungswasser, bitte.','de-DE')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Still</strong> 無氣泡水／<strong>prickelnd</strong> 氣泡水</div><button class="ph-speak" onclick="speak('Still, prickelnd','de-DE')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text">「請結帳」<strong>Die Rechnung, bitte.</strong></div><button class="ph-speak" onclick="speak('Die Rechnung, bitte.','de-DE')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text">「孩子可以分食嗎？」<strong>Can our child share our meal?</strong></div><button class="ph-speak" onclick="speak('Can our child share our meal?','en-US')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text">「不要辣」<strong>Not spicy, please.</strong></div><button class="ph-speak" onclick="speak('Not spicy, please.','en-US')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text">「有兒童椅嗎？」<strong>Do you have a high chair?</strong></div><button class="ph-speak" onclick="speak('Do you have a high chair?','en-US')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Melange</strong> 牛奶咖啡／<strong>Kaiserschmarrn</strong> 皇帝煎餅／<strong>Schnitzel</strong> 炸肉排</div><button class="ph-speak" onclick="speak('Melange, Kaiserschmarrn, Schnitzel','de-DE')">🔊</button></div>
     </div>
+
     <div class="sblk"><h3>👧 帶4歲孩子</h3>
-      <div class="sdesc">「哪裡有電梯？」<strong>Where is the lift/elevator?</strong><br>「推車可以上車嗎？」<strong>Can we take the stroller on this bus/train?</strong><br>「哪裡有尿布台？」<strong>Where is the baby changing room?</strong><br>「孩子需要上廁所」<strong>My child needs the toilet.</strong><br><strong>WC／Toilette</strong>＝廁所；有時需投幣。<strong>Wickelraum</strong>＝尿布台／親子更換室。<br><strong>Kinderwagen</strong>＝嬰兒推車；英式英文常說<strong>pushchair</strong>，美式英文是stroller。</div>
+      <div class="ph-row"><div class="ph-text">「哪裡有電梯？」<strong>Where is the lift?</strong></div><button class="ph-speak" onclick="speak('Where is the lift?','en-US')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text">「推車可以上車嗎？」<strong>Can we take the stroller on this bus?</strong></div><button class="ph-speak" onclick="speak('Can we take the stroller on this bus?','en-US')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text">「哪裡有尿布台？」<strong>Where is the baby changing room?</strong></div><button class="ph-speak" onclick="speak('Where is the baby changing room?','en-US')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text">「孩子需要上廁所」<strong>My child needs the toilet.</strong></div><button class="ph-speak" onclick="speak('My child needs the toilet.','en-US')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>WC／Toilette</strong> 廁所（有時需投幣）／<strong>Wickelraum</strong> 尿布台</div><button class="ph-speak" onclick="speak('Toilette, Wickelraum','de-DE')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Kinderwagen</strong> 嬰兒推車（英式 pushchair／美式 stroller）</div><button class="ph-speak" onclick="speak('Kinderwagen','de-DE')">🔊</button></div>
     </div>
+
     <div class="sblk"><h3>🇨🇿 布拉格捷克文</h3>
-      <div class="sdesc"><strong>Východ</strong>＝出口；<strong>Vstup</strong>＝入口。<br><strong>Hlavní nádraží／hl.n.</strong>＝中央車站。<br><strong>Nástupiště</strong>＝月台；<strong>Přestup</strong>＝轉乘。<br><strong>Jízdenka</strong>＝車票；<strong>Označte jízdenku</strong>＝請打票。<br><strong>Zastávka</strong>＝站牌；<strong>Tramvaj</strong>＝電車。<br><strong>Děkuji</strong>（約「捷苦伊」）＝謝謝；<strong>Prosím</strong>＝請／不客氣。<br><strong>Účet, prosím.</strong>＝請結帳。</div>
+      <div class="ph-row"><div class="ph-text"><strong>Východ</strong> 出口／<strong>Vstup</strong> 入口</div><button class="ph-speak" onclick="speak('Východ, Vstup','cs-CZ')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Hlavní nádraží／hl.n.</strong> 中央車站</div><button class="ph-speak" onclick="speak('Hlavní nádraží','cs-CZ')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Nástupiště</strong> 月台／<strong>Přestup</strong> 轉乘</div><button class="ph-speak" onclick="speak('Nástupiště, Přestup','cs-CZ')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Jízdenka</strong> 車票／<strong>Označte jízdenku</strong> 請打票</div><button class="ph-speak" onclick="speak('Jízdenka, Označte jízdenku','cs-CZ')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Zastávka</strong> 站牌／<strong>Tramvaj</strong> 電車</div><button class="ph-speak" onclick="speak('Zastávka, Tramvaj','cs-CZ')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text"><strong>Děkuji</strong>（約「捷苦伊」）謝謝／<strong>Prosím</strong> 請／不客氣</div><button class="ph-speak" onclick="speak('Děkuji, Prosím','cs-CZ')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text">「請結帳」<strong>Účet, prosím.</strong></div><button class="ph-speak" onclick="speak('Účet, prosím.','cs-CZ')">🔊</button></div>
     </div>
+
     <div class="sblk"><h3>🆘 迷路與緊急</h3>
-      <div class="sdesc">「我們迷路了，可以指給我看嗎？」<strong>We are lost. Could you show me on the map?</strong><br>「這是我們的飯店」<strong>This is our hotel. How can we get there?</strong><br>「我的孩子不舒服」<strong>My child is unwell. We need a doctor.</strong><br>「請幫我叫救護車」<strong>Please call an ambulance.</strong><br>歐洲通用緊急電話：<strong>112</strong>。</div>
+      <div class="ph-row"><div class="ph-text">「我們迷路了，可以指給我看嗎？」<strong>We are lost. Could you show me on the map?</strong></div><button class="ph-speak" onclick="speak('We are lost. Could you show me on the map?','en-US')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text">「這是我們的飯店」<strong>This is our hotel. How can we get there?</strong></div><button class="ph-speak" onclick="speak('This is our hotel. How can we get there?','en-US')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text">「我的孩子不舒服」<strong>My child is unwell. We need a doctor.</strong></div><button class="ph-speak" onclick="speak('My child is unwell. We need a doctor.','en-US')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text">「請幫我叫救護車」<strong>Please call an ambulance.</strong></div><button class="ph-speak" onclick="speak('Please call an ambulance.','en-US')">🔊</button></div>
+      <div class="ph-row"><div class="ph-text">歐洲通用緊急電話：<strong>112</strong></div><button class="ph-speak" onclick="speak('One one two','en-US')">🔊</button></div>
     </div>
   </div>
 
@@ -1254,6 +1312,23 @@ function syncAllToSheet(){
   if(list.length === 0){ alert('目前沒有花費紀錄可以同步'); return; }
   pushToSheet(list);
   alert('已送出 '+list.length+' 筆到試算表！由於是單向傳送無法即時確認結果，請到試算表確認資料是否進來（若沒有，檢查網址是否貼對、部署權限是否選「所有人」）。');
+}
+
+/* ===== 發音朗讀 ===== */
+function speak(text, lang){
+  try{
+    if(!('speechSynthesis' in window)){
+      alert('這個瀏覽器不支援語音朗讀，可以直接把畫面拿給對方看文字。');
+      return;
+    }
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.lang = lang;
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }catch(e){
+    alert('播放失敗，可以直接把畫面拿給對方看文字。');
+  }
 }
 
 window.onload=function(){ fetchRate(); updateHotelFx(); renderExpenses(); updateSheetSyncStatus(); };
